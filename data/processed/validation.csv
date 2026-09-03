@@ -1,0 +1,1001 @@
+date,origin_port,destination_port,transport_mode,product_category,distance_km,weight_mt,fuel_price_index,geopolitical_risk_score,weather_condition,carrier_reliability_score,lead_time_days,disruption
+2024-05-13,Singapore,Los Angeles,Road,Automotive,3509.34,302.53,3.47,8.3,Fog,0.596,4.25,0
+2024-09-12,Antwerp,Marseille,Sea,Automotive,8596.86,120.14,4.34,2.4,Clear,0.984,13.07,0
+2025-03-06,Busan,Dubai,Air,Perishables,10115.62,358.1,2.99,3.4,Storm,0.926,2.06,1
+2025-09-02,Antwerp,Dubai,Rail,Automotive,14455.49,288.26,1.31,7.1,Clear,0.902,14.49,1
+2025-08-20,Antwerp,Singapore,Air,Perishables,10229.69,353.41,3.34,1.7,Storm,0.684,1.3,1
+2024-09-19,Shanghai,Rotterdam,Air,Electronics,7515.97,187.13,1.73,1.1,Rain,0.863,0.5,0
+2025-08-08,Singapore,Dubai,Road,Textiles,4799.77,232.71,4.48,7.9,Storm,0.943,11.58,1
+2024-12-03,Rotterdam,Marseille,Sea,Pharmaceuticals,6765.11,84.31,3.16,8.5,Rain,0.914,15.24,0
+2025-12-06,Dubai,Busan,Sea,Electronics,13774.58,273.58,2.51,9.9,Fog,0.562,41.73,1
+2024-03-03,Rotterdam,Busan,Road,Pharmaceuticals,13442.09,470.15,2.42,9.5,Fog,0.838,18.39,1
+2025-03-27,Antwerp,Los Angeles,Road,Automotive,3406.88,278.85,2.44,6.1,Storm,0.68,8.65,1
+2024-12-04,Hamburg,Antwerp,Rail,Perishables,3528.8,37.04,2.5,3.0,Clear,0.53,3.21,1
+2024-01-31,Antwerp,Shanghai,Rail,Textiles,3136.46,99.05,2.86,8.7,Storm,0.671,9.4,1
+2024-06-27,Los Angeles,Singapore,Rail,Pharmaceuticals,6360.03,484.5,2.63,3.8,Fog,0.982,7.29,0
+2025-09-25,Dubai,Singapore,Sea,Pharmaceuticals,10143.03,80.67,3.75,1.2,Rain,0.994,18.51,0
+2025-12-10,Los Angeles,Hamburg,Sea,Automotive,11236.9,394.73,3.38,1.4,Hurricane,0.667,133.87,1
+2024-06-10,Busan,Marseille,Sea,Textiles,5539.79,70.06,4.21,6.1,Hurricane,0.866,80.27,1
+2025-09-22,Busan,Marseille,Rail,Electronics,2681.85,88.87,2.32,8.5,Hurricane,0.948,20.83,1
+2025-01-14,Los Angeles,Singapore,Rail,Pharmaceuticals,7695.75,447.65,1.98,1.5,Clear,0.702,4.59,0
+2024-01-22,Los Angeles,Dubai,Air,Automotive,4345.43,200.59,1.26,0.1,Storm,0.826,1.33,0
+2025-12-13,Busan,Antwerp,Air,Automotive,13385.56,197.78,4.22,3.7,Storm,0.884,2.37,1
+2024-02-07,Shanghai,Dubai,Road,Automotive,5457.15,105.85,4.19,9.1,Clear,0.92,4.83,1
+2024-12-29,Rotterdam,Busan,Rail,Electronics,14749.72,404.71,3.33,6.0,Fog,0.57,20.0,1
+2025-09-12,Singapore,Marseille,Road,Perishables,9162.49,412.89,4.5,7.7,Rain,0.644,9.28,0
+2025-10-08,Dubai,Hamburg,Road,Automotive,10921.41,5.66,4.14,4.1,Rain,0.644,9.89,0
+2025-10-28,Hamburg,Marseille,Sea,Automotive,12670.41,157.28,2.09,0.5,Clear,0.752,18.45,0
+2024-05-31,Los Angeles,Rotterdam,Air,Electronics,2428.64,462.97,2.23,8.9,Storm,0.792,0.5,1
+2024-09-23,Los Angeles,Dubai,Air,Automotive,6621.79,87.13,2.87,4.3,Fog,0.711,0.89,0
+2025-07-12,Rotterdam,Antwerp,Rail,Pharmaceuticals,9314.63,241.7,1.66,6.1,Clear,0.598,8.21,0
+2024-08-10,Singapore,Shanghai,Rail,Automotive,2270.59,457.79,2.44,6.1,Hurricane,0.999,16.73,1
+2024-09-03,Dubai,Hamburg,Road,Electronics,9297.61,1.12,1.27,1.8,Rain,0.675,6.94,0
+2025-08-06,Antwerp,Los Angeles,Road,Perishables,10479.98,212.67,3.36,2.4,Fog,0.896,10.76,0
+2025-07-03,Singapore,Hamburg,Air,Pharmaceuticals,7771.99,114.51,2.78,4.9,Hurricane,0.637,4.1,1
+2025-10-22,Busan,Los Angeles,Air,Perishables,7927.22,199.84,4.47,9.7,Clear,0.633,0.95,1
+2025-03-07,Shanghai,Antwerp,Road,Textiles,11553.13,59.42,3.6,3.3,Storm,0.628,23.39,1
+2025-12-01,Shanghai,Antwerp,Sea,Textiles,11354.83,275.44,1.54,9.0,Clear,0.943,22.33,0
+2024-10-09,Singapore,Busan,Sea,Textiles,5543.23,181.47,4.31,1.9,Fog,0.54,13.32,0
+2024-03-11,Busan,Rotterdam,Sea,Textiles,8355.53,95.49,1.2,4.6,Hurricane,0.922,113.89,1
+2025-11-28,Antwerp,Rotterdam,Rail,Automotive,8727.17,174.89,1.92,8.1,Rain,0.517,10.38,0
+2025-07-08,Busan,Rotterdam,Road,Pharmaceuticals,12732.92,16.38,4.16,5.7,Rain,0.551,11.92,1
+2025-07-18,Rotterdam,Singapore,Air,Electronics,13371.71,121.56,3.97,0.7,Fog,0.521,0.5,1
+2024-08-04,Dubai,Singapore,Road,Automotive,2947.75,57.44,2.04,2.0,Rain,0.528,2.62,1
+2024-07-23,Busan,Dubai,Air,Pharmaceuticals,14663.6,185.14,2.24,5.7,Fog,0.533,1.2,0
+2024-12-20,Rotterdam,Busan,Air,Perishables,1492.39,63.18,3.7,9.0,Clear,0.524,0.5,1
+2025-08-21,Singapore,Hamburg,Air,Perishables,2214.17,272.19,3.31,5.2,Storm,0.793,1.15,1
+2025-05-22,Hamburg,Shanghai,Sea,Pharmaceuticals,14418.01,396.56,3.49,1.7,Storm,0.861,65.33,1
+2024-12-11,Los Angeles,Shanghai,Road,Automotive,4641.58,232.37,2.75,0.0,Rain,0.563,2.9,0
+2025-04-10,Hamburg,Busan,Rail,Perishables,14821.97,154.24,2.19,8.8,Fog,0.622,22.16,1
+2024-08-15,Singapore,Rotterdam,Rail,Automotive,6412.78,199.68,1.76,2.0,Storm,0.638,13.91,1
+2025-05-08,Singapore,Dubai,Rail,Pharmaceuticals,5267.93,468.24,2.1,1.9,Clear,0.593,4.14,0
+2025-05-29,Hamburg,Antwerp,Air,Textiles,11061.38,257.53,3.86,3.5,Hurricane,0.772,5.27,1
+2025-11-14,Busan,Dubai,Rail,Textiles,2963.36,244.68,3.75,3.5,Storm,0.573,6.15,1
+2025-05-01,Dubai,Los Angeles,Air,Electronics,5512.18,486.31,2.04,6.6,Fog,0.841,0.54,0
+2025-03-15,Shanghai,Busan,Air,Electronics,12120.96,267.33,2.7,6.8,Clear,0.936,1.51,1
+2025-09-15,Shanghai,Singapore,Sea,Perishables,5024.93,347.98,3.77,1.0,Fog,0.963,10.44,0
+2024-05-25,Dubai,Los Angeles,Road,Electronics,1372.06,203.78,2.1,8.1,Fog,0.597,1.38,0
+2025-10-12,Antwerp,Shanghai,Air,Pharmaceuticals,6170.68,265.5,3.69,6.0,Clear,0.876,0.51,0
+2025-12-04,Busan,Singapore,Rail,Pharmaceuticals,13628.04,161.18,3.21,3.2,Storm,0.853,31.95,0
+2025-08-30,Dubai,Marseille,Air,Automotive,5813.69,246.17,2.53,6.5,Clear,0.968,0.56,0
+2025-10-11,Rotterdam,Antwerp,Air,Perishables,1823.66,263.52,1.71,3.1,Clear,0.709,0.5,0
+2024-04-01,Hamburg,Los Angeles,Air,Perishables,1987.24,289.02,2.34,6.7,Fog,0.806,0.73,0
+2024-06-28,Busan,Hamburg,Air,Electronics,7406.87,272.25,2.64,5.8,Hurricane,0.826,5.35,1
+2024-09-10,Antwerp,Busan,Rail,Textiles,9848.81,271.88,2.56,9.3,Fog,0.801,15.06,0
+2025-11-07,Busan,Shanghai,Rail,Automotive,10123.23,395.86,2.49,8.8,Fog,0.984,15.49,1
+2025-09-15,Hamburg,Shanghai,Air,Textiles,11494.46,41.89,2.96,8.0,Storm,0.761,2.07,1
+2024-03-08,Antwerp,Busan,Sea,Automotive,3707.96,131.79,2.75,6.4,Fog,0.99,9.99,0
+2024-08-24,Antwerp,Rotterdam,Rail,Electronics,11864.52,447.15,4.42,0.6,Clear,0.826,7.99,0
+2025-03-28,Los Angeles,Marseille,Sea,Automotive,3844.71,103.28,2.75,8.8,Rain,0.956,9.11,0
+2024-09-10,Rotterdam,Marseille,Road,Perishables,10035.39,150.66,3.44,8.7,Rain,0.62,10.96,0
+2024-12-29,Busan,Marseille,Sea,Textiles,2534.71,432.25,2.28,1.0,Hurricane,0.815,29.36,1
+2025-03-24,Singapore,Shanghai,Sea,Electronics,12999.62,437.51,1.69,7.0,Clear,0.698,24.68,1
+2024-07-15,Shanghai,Dubai,Rail,Textiles,10048.84,96.74,1.46,5.2,Hurricane,0.935,70.13,1
+2025-03-16,Shanghai,Hamburg,Rail,Electronics,2199.46,311.75,2.17,4.6,Fog,0.723,3.42,0
+2025-01-29,Shanghai,Rotterdam,Air,Electronics,12271.2,374.86,3.71,1.7,Rain,0.537,1.31,0
+2024-01-12,Los Angeles,Hamburg,Air,Pharmaceuticals,9226.2,360.02,1.84,4.0,Clear,0.717,0.5,0
+2024-04-12,Hamburg,Shanghai,Road,Automotive,8426.82,16.18,1.43,7.8,Fog,0.618,10.77,1
+2024-03-10,Antwerp,Busan,Rail,Automotive,9125.29,71.19,3.28,7.4,Hurricane,0.704,69.54,1
+2024-05-14,Antwerp,Hamburg,Air,Automotive,5576.82,437.32,4.46,8.5,Rain,0.819,0.5,1
+2024-02-01,Dubai,Los Angeles,Sea,Perishables,14385.57,270.87,1.36,9.0,Fog,0.786,43.72,1
+2025-09-30,Rotterdam,Singapore,Sea,Textiles,8396.05,247.5,2.5,4.7,Fog,0.83,22.55,0
+2025-07-20,Shanghai,Singapore,Air,Electronics,9915.17,91.44,1.41,4.3,Hurricane,0.926,5.08,1
+2024-06-10,Singapore,Dubai,Rail,Automotive,6065.66,117.79,1.55,9.9,Hurricane,0.976,51.32,1
+2024-04-30,Busan,Antwerp,Sea,Perishables,2488.65,46.43,2.98,8.5,Storm,0.651,14.96,1
+2025-08-23,Singapore,Hamburg,Sea,Textiles,8990.67,251.06,2.71,9.5,Hurricane,0.553,147.23,1
+2024-11-07,Shanghai,Marseille,Road,Perishables,12531.26,439.82,2.26,1.4,Storm,0.833,24.18,1
+2025-10-17,Antwerp,Busan,Road,Electronics,1085.09,190.6,3.97,6.2,Clear,0.823,0.5,0
+2025-07-15,Los Angeles,Antwerp,Road,Automotive,917.35,368.22,4.03,9.0,Clear,0.842,0.54,0
+2025-05-04,Dubai,Busan,Road,Automotive,519.63,37.12,1.6,2.9,Storm,0.527,0.81,1
+2025-07-18,Singapore,Rotterdam,Road,Automotive,7750.84,201.68,1.81,4.8,Rain,0.533,7.19,0
+2025-07-15,Antwerp,Singapore,Sea,Perishables,7301.09,283.31,1.86,7.7,Hurricane,0.599,112.18,1
+2024-11-25,Dubai,Hamburg,Road,Textiles,7599.55,370.42,2.71,7.4,Clear,0.753,5.27,1
+2024-04-27,Hamburg,Rotterdam,Rail,Automotive,4103.09,470.43,3.53,5.5,Fog,0.735,5.71,1
+2024-02-21,Antwerp,Busan,Road,Automotive,10852.31,38.01,3.57,6.4,Clear,0.99,8.77,1
+2025-01-24,Dubai,Busan,Road,Pharmaceuticals,2812.64,243.71,2.48,1.8,Rain,0.87,2.26,0
+2025-02-10,Dubai,Singapore,Air,Pharmaceuticals,8886.22,313.5,1.76,6.2,Hurricane,0.682,5.44,1
+2025-05-01,Dubai,Antwerp,Rail,Perishables,11808.2,142.1,1.97,5.4,Storm,0.977,30.18,1
+2024-11-06,Singapore,Marseille,Rail,Textiles,12155.31,414.44,1.51,7.5,Clear,0.639,12.06,1
+2025-03-10,Antwerp,Hamburg,Sea,Pharmaceuticals,9987.24,259.04,4.49,6.5,Clear,0.964,18.79,0
+2024-11-22,Antwerp,Rotterdam,Sea,Perishables,13168.63,272.69,2.28,1.6,Storm,0.954,59.87,1
+2024-07-27,Rotterdam,Shanghai,Rail,Pharmaceuticals,657.15,222.28,3.15,2.8,Clear,0.788,0.88,1
+2025-04-27,Antwerp,Marseille,Rail,Textiles,6268.0,436.94,2.93,7.2,Clear,0.857,5.6,1
+2025-07-12,Rotterdam,Hamburg,Rail,Textiles,1555.06,106.27,2.15,8.0,Clear,0.648,2.22,0
+2025-12-11,Hamburg,Dubai,Air,Perishables,8026.37,59.26,3.8,5.5,Hurricane,0.919,3.8,1
+2025-05-15,Busan,Marseille,Rail,Automotive,7919.76,38.7,4.25,7.1,Storm,0.965,23.17,1
+2024-02-27,Hamburg,Shanghai,Sea,Pharmaceuticals,1057.18,178.15,2.18,3.9,Hurricane,0.677,13.98,1
+2025-01-21,Shanghai,Busan,Rail,Textiles,5878.64,470.26,2.61,3.7,Hurricane,0.66,39.57,1
+2024-01-31,Singapore,Shanghai,Rail,Automotive,5449.12,36.44,2.49,8.0,Clear,0.73,5.7,1
+2025-05-12,Shanghai,Busan,Rail,Textiles,10776.8,429.63,3.89,3.3,Clear,0.861,9.38,0
+2024-11-17,Antwerp,Rotterdam,Air,Textiles,4267.51,38.05,1.89,2.9,Hurricane,0.609,1.77,1
+2024-03-24,Hamburg,Dubai,Road,Pharmaceuticals,12989.86,454.3,4.11,7.0,Rain,0.806,12.87,0
+2025-12-09,Busan,Marseille,Road,Automotive,6311.06,359.32,1.48,5.6,Storm,0.588,14.17,1
+2025-01-30,Shanghai,Busan,Rail,Perishables,1065.44,91.72,3.09,4.0,Hurricane,0.822,7.7,1
+2025-05-14,Antwerp,Rotterdam,Sea,Automotive,8573.38,479.21,1.56,4.9,Rain,0.603,17.4,1
+2025-01-25,Dubai,Marseille,Road,Textiles,14049.32,106.69,1.26,7.9,Fog,0.989,17.57,0
+2024-06-05,Busan,Shanghai,Sea,Automotive,11178.44,45.11,1.49,1.1,Storm,0.589,49.03,1
+2024-11-28,Hamburg,Busan,Rail,Automotive,951.44,88.07,3.27,2.8,Fog,0.9,1.04,0
+2024-08-28,Hamburg,Singapore,Rail,Automotive,12518.81,139.67,2.04,4.8,Fog,0.576,16.05,1
+2025-10-03,Antwerp,Dubai,Air,Perishables,7714.33,327.24,3.26,2.4,Rain,0.547,0.5,1
+2025-03-18,Los Angeles,Busan,Road,Textiles,1428.09,193.09,1.61,0.1,Rain,0.74,1.36,0
+2024-12-07,Dubai,Rotterdam,Sea,Automotive,13168.32,202.36,3.69,3.6,Rain,0.719,25.58,1
+2024-08-10,Rotterdam,Hamburg,Air,Electronics,10785.15,131.99,3.37,8.4,Hurricane,0.809,6.23,1
+2024-10-28,Busan,Shanghai,Sea,Automotive,7072.69,259.49,2.32,9.9,Clear,0.723,14.75,1
+2024-11-14,Dubai,Marseille,Rail,Pharmaceuticals,986.22,437.5,3.82,1.4,Hurricane,0.68,5.6,1
+2024-05-24,Dubai,Los Angeles,Rail,Perishables,669.75,352.54,3.76,5.7,Clear,0.793,1.26,0
+2024-11-20,Singapore,Rotterdam,Road,Pharmaceuticals,14241.48,232.96,3.39,7.3,Fog,0.751,16.68,1
+2024-03-16,Shanghai,Los Angeles,Sea,Electronics,4448.46,366.57,1.83,0.3,Hurricane,0.553,49.79,1
+2025-05-26,Los Angeles,Antwerp,Road,Pharmaceuticals,13132.46,296.69,3.52,4.1,Clear,0.704,9.46,0
+2024-09-22,Rotterdam,Los Angeles,Air,Pharmaceuticals,6346.51,287.57,2.93,3.2,Storm,0.59,0.92,1
+2025-06-20,Antwerp,Shanghai,Rail,Pharmaceuticals,14952.1,45.76,3.66,0.5,Hurricane,0.955,83.89,1
+2024-06-20,Hamburg,Antwerp,Sea,Electronics,11934.66,155.88,3.54,0.2,Clear,0.793,16.84,1
+2024-10-12,Antwerp,Singapore,Sea,Pharmaceuticals,13405.08,494.07,2.55,9.4,Storm,0.615,81.56,1
+2024-03-16,Busan,Los Angeles,Sea,Electronics,764.22,174.13,4.18,6.2,Clear,0.708,1.67,0
+2024-12-09,Busan,Los Angeles,Road,Pharmaceuticals,11308.87,176.89,3.08,2.4,Hurricane,0.604,60.49,1
+2024-06-12,Busan,Rotterdam,Air,Textiles,10825.99,68.26,2.55,1.1,Hurricane,0.583,4.48,1
+2025-12-13,Los Angeles,Rotterdam,Rail,Perishables,1668.72,152.3,3.14,0.1,Clear,0.96,0.57,0
+2025-08-02,Antwerp,Busan,Road,Electronics,9105.19,388.53,3.53,3.0,Storm,0.557,19.29,1
+2025-12-25,Shanghai,Marseille,Air,Electronics,2260.1,260.64,3.37,5.3,Fog,0.898,0.62,0
+2025-06-19,Shanghai,Busan,Road,Electronics,13758.97,308.53,1.47,3.2,Storm,0.815,28.78,0
+2024-11-06,Antwerp,Busan,Rail,Pharmaceuticals,14307.22,180.31,1.76,9.6,Rain,0.56,17.78,0
+2024-02-03,Singapore,Hamburg,Sea,Perishables,1530.01,229.2,2.05,2.3,Storm,0.794,7.17,1
+2024-03-21,Busan,Antwerp,Rail,Pharmaceuticals,4377.33,8.41,3.18,7.5,Fog,0.573,6.68,1
+2024-11-10,Rotterdam,Hamburg,Road,Perishables,11722.87,172.65,4.29,6.4,Storm,0.698,27.48,1
+2025-01-28,Rotterdam,Shanghai,Rail,Automotive,4654.53,212.82,1.95,6.8,Hurricane,0.892,35.04,1
+2024-01-03,Antwerp,Dubai,Sea,Textiles,12062.68,256.62,2.75,7.9,Rain,0.697,27.57,1
+2024-03-24,Busan,Antwerp,Air,Perishables,1792.3,134.57,2.09,5.0,Clear,0.61,0.5,0
+2024-08-15,Singapore,Hamburg,Air,Electronics,1570.05,165.36,2.17,7.4,Storm,0.793,0.5,1
+2025-08-24,Singapore,Busan,Sea,Perishables,12164.0,282.97,2.48,3.3,Hurricane,0.759,157.39,1
+2025-05-30,Singapore,Shanghai,Sea,Textiles,6134.09,212.76,3.71,9.9,Clear,0.87,13.33,1
+2024-02-26,Shanghai,Busan,Road,Electronics,7929.27,178.14,1.59,4.2,Rain,0.562,6.69,0
+2024-03-09,Los Angeles,Hamburg,Sea,Textiles,12087.79,358.32,2.84,5.2,Clear,0.574,21.1,0
+2025-12-10,Singapore,Hamburg,Sea,Electronics,856.51,201.86,2.49,7.7,Clear,0.797,1.29,0
+2024-12-10,Singapore,Busan,Rail,Perishables,6882.21,461.38,1.53,4.1,Storm,0.523,17.32,1
+2024-12-02,Shanghai,Dubai,Road,Pharmaceuticals,8773.84,160.83,2.52,7.8,Rain,0.916,8.25,1
+2024-09-30,Dubai,Antwerp,Road,Electronics,1463.44,472.94,3.75,2.3,Rain,0.566,0.52,0
+2024-03-09,Hamburg,Antwerp,Air,Textiles,988.31,129.71,2.67,3.8,Clear,0.96,0.5,0
+2024-01-10,Antwerp,Dubai,Air,Electronics,13933.73,322.81,1.46,4.3,Hurricane,0.805,7.6,1
+2024-01-10,Busan,Marseille,Rail,Pharmaceuticals,723.23,365.11,4.4,2.4,Rain,0.706,1.45,1
+2024-02-04,Singapore,Antwerp,Road,Pharmaceuticals,5890.0,434.68,2.09,7.2,Rain,0.549,6.4,1
+2024-01-08,Busan,Hamburg,Air,Perishables,9794.1,432.34,2.86,0.8,Fog,0.83,0.72,1
+2025-05-31,Rotterdam,Marseille,Rail,Perishables,4783.95,118.55,3.08,3.3,Clear,0.549,4.38,0
+2025-02-23,Singapore,Busan,Air,Automotive,10593.16,186.75,4.27,3.7,Clear,0.553,0.69,0
+2025-06-01,Rotterdam,Busan,Air,Pharmaceuticals,10113.89,54.35,2.85,6.9,Fog,0.596,1.79,0
+2025-03-08,Singapore,Rotterdam,Sea,Pharmaceuticals,10678.52,470.02,2.39,3.6,Clear,0.922,18.01,1
+2025-04-23,Singapore,Antwerp,Sea,Pharmaceuticals,1645.05,331.29,2.3,7.8,Rain,0.897,3.63,1
+2025-03-26,Singapore,Los Angeles,Road,Automotive,13435.23,318.42,1.99,6.5,Hurricane,0.854,84.66,1
+2025-10-17,Shanghai,Dubai,Rail,Textiles,4690.04,375.89,1.2,4.0,Hurricane,0.551,30.46,1
+2024-11-01,Shanghai,Antwerp,Rail,Textiles,2920.82,491.82,2.98,6.4,Clear,0.968,3.69,1
+2024-11-26,Hamburg,Rotterdam,Road,Textiles,9397.75,295.04,4.46,9.9,Hurricane,0.97,67.15,1
+2024-09-12,Busan,Marseille,Road,Pharmaceuticals,981.25,390.26,3.01,4.6,Fog,0.67,0.61,0
+2025-10-26,Hamburg,Rotterdam,Air,Electronics,5767.2,331.01,2.34,8.2,Storm,0.985,0.5,1
+2024-11-08,Singapore,Marseille,Air,Textiles,9626.28,406.0,2.03,6.1,Rain,0.923,0.72,0
+2024-08-08,Hamburg,Rotterdam,Rail,Textiles,1770.82,120.45,4.14,8.7,Clear,0.879,1.61,0
+2024-09-21,Los Angeles,Busan,Rail,Perishables,5679.29,219.89,1.83,0.7,Clear,0.797,2.82,0
+2024-05-04,Rotterdam,Los Angeles,Sea,Electronics,14926.16,64.19,3.62,7.8,Clear,0.533,27.81,1
+2024-01-18,Hamburg,Busan,Rail,Pharmaceuticals,1452.78,293.71,3.2,4.9,Rain,0.844,1.63,0
+2025-07-19,Dubai,Shanghai,Air,Pharmaceuticals,924.09,418.2,3.42,2.0,Fog,0.517,0.5,0
+2025-11-04,Dubai,Busan,Sea,Textiles,4009.32,153.3,2.93,0.9,Rain,0.608,6.56,0
+2025-04-12,Los Angeles,Marseille,Air,Perishables,13927.86,458.76,3.56,0.9,Storm,0.946,2.79,0
+2025-02-28,Antwerp,Rotterdam,Sea,Electronics,10331.23,55.09,1.91,8.9,Hurricane,0.571,166.26,1
+2024-10-06,Busan,Singapore,Road,Automotive,9638.58,267.58,2.07,7.3,Rain,0.891,10.22,0
+2024-07-28,Antwerp,Hamburg,Sea,Electronics,11955.44,66.72,1.32,6.1,Fog,0.676,32.75,0
+2025-08-25,Busan,Rotterdam,Sea,Textiles,6050.58,265.9,4.49,5.0,Storm,0.501,31.03,1
+2025-06-19,Dubai,Busan,Rail,Perishables,2720.6,279.56,2.69,9.0,Storm,0.913,8.23,1
+2025-05-04,Rotterdam,Antwerp,Sea,Electronics,5701.38,364.58,2.53,8.4,Storm,0.701,34.37,1
+2024-10-26,Busan,Singapore,Sea,Automotive,8504.68,259.12,4.03,8.4,Rain,0.748,19.88,1
+2025-11-02,Dubai,Los Angeles,Air,Textiles,8875.1,417.95,1.78,7.5,Hurricane,0.796,5.55,1
+2025-01-21,Shanghai,Singapore,Sea,Pharmaceuticals,2368.61,151.29,2.27,6.0,Rain,0.539,5.84,1
+2025-01-17,Antwerp,Hamburg,Road,Automotive,13381.85,333.23,3.33,2.8,Fog,0.653,13.92,0
+2024-08-19,Rotterdam,Dubai,Rail,Pharmaceuticals,9860.8,118.47,1.49,1.3,Storm,0.832,22.17,0
+2025-07-09,Hamburg,Antwerp,Rail,Perishables,14198.61,122.49,3.57,7.6,Clear,0.665,13.66,0
+2025-08-11,Los Angeles,Antwerp,Sea,Electronics,1860.93,426.84,3.4,1.8,Storm,0.97,8.24,1
+2024-01-16,Los Angeles,Singapore,Rail,Electronics,942.25,141.63,2.92,3.5,Clear,0.886,0.5,0
+2024-02-19,Busan,Singapore,Rail,Electronics,8868.28,410.55,2.68,9.9,Rain,0.944,10.37,1
+2024-12-05,Dubai,Marseille,Rail,Electronics,12173.81,389.41,3.41,5.0,Rain,0.92,13.06,0
+2025-05-14,Hamburg,Shanghai,Air,Textiles,5934.96,156.58,4.07,7.1,Rain,0.986,0.78,0
+2024-05-20,Singapore,Shanghai,Sea,Textiles,11355.36,290.53,2.75,1.2,Rain,0.639,20.04,0
+2025-11-17,Shanghai,Marseille,Sea,Automotive,9545.96,193.84,1.53,10.0,Storm,0.737,59.05,1
+2024-09-28,Dubai,Los Angeles,Rail,Perishables,3636.83,231.02,2.71,4.8,Clear,0.818,2.87,1
+2025-04-29,Rotterdam,Marseille,Rail,Pharmaceuticals,3174.66,291.1,3.77,3.1,Fog,0.79,3.23,0
+2025-10-15,Singapore,Los Angeles,Air,Pharmaceuticals,3385.39,177.39,2.21,5.1,Fog,0.612,0.76,1
+2024-07-22,Rotterdam,Los Angeles,Sea,Electronics,14436.46,12.5,2.03,0.8,Storm,0.527,62.68,0
+2025-07-20,Los Angeles,Busan,Air,Textiles,14108.68,197.47,2.38,4.1,Storm,0.543,1.83,1
+2025-02-12,Busan,Singapore,Air,Pharmaceuticals,8726.03,483.7,3.87,7.6,Hurricane,0.93,5.14,1
+2024-04-19,Busan,Antwerp,Rail,Perishables,10434.45,48.29,2.75,3.3,Fog,0.731,12.94,1
+2025-11-14,Hamburg,Antwerp,Road,Automotive,12171.15,86.21,2.88,1.4,Fog,0.657,11.36,0
+2024-04-16,Rotterdam,Antwerp,Sea,Perishables,9939.12,449.91,1.61,7.2,Fog,0.714,28.06,1
+2025-09-25,Busan,Los Angeles,Sea,Textiles,3341.75,139.1,3.76,6.7,Storm,0.572,18.83,0
+2025-09-12,Antwerp,Rotterdam,Road,Pharmaceuticals,6564.52,463.95,3.03,7.8,Rain,0.829,7.24,0
+2025-04-28,Busan,Marseille,Road,Textiles,2440.51,141.26,3.04,7.8,Fog,0.805,2.62,0
+2025-10-20,Rotterdam,Shanghai,Rail,Electronics,3282.08,267.21,2.47,4.0,Clear,0.978,2.86,0
+2025-12-20,Hamburg,Busan,Air,Perishables,12690.19,170.77,3.26,8.5,Fog,0.549,1.32,1
+2024-11-30,Shanghai,Los Angeles,Air,Pharmaceuticals,12182.86,64.46,4.41,4.4,Rain,0.942,0.86,1
+2024-09-29,Busan,Shanghai,Sea,Perishables,12841.69,302.87,3.2,2.0,Clear,0.549,20.39,0
+2024-04-12,Shanghai,Rotterdam,Road,Electronics,6265.12,61.56,3.52,1.4,Hurricane,0.725,31.96,1
+2025-04-20,Singapore,Marseille,Rail,Automotive,5288.12,92.28,2.27,8.5,Rain,0.581,6.37,0
+2025-01-01,Singapore,Dubai,Sea,Automotive,4317.09,302.64,2.55,7.3,Rain,0.84,9.66,0
+2024-04-24,Singapore,Shanghai,Rail,Automotive,14285.36,237.24,2.3,7.5,Storm,0.592,40.92,1
+2025-09-03,Los Angeles,Busan,Air,Perishables,8301.33,194.49,1.3,3.3,Clear,0.787,0.69,0
+2024-07-26,Antwerp,Marseille,Rail,Automotive,5435.97,269.05,2.39,8.4,Fog,0.616,7.73,0
+2024-12-26,Shanghai,Busan,Sea,Perishables,14935.75,100.74,4.09,3.7,Fog,0.966,36.39,1
+2025-03-11,Dubai,Hamburg,Rail,Perishables,3184.43,324.48,2.96,0.0,Storm,0.886,6.68,1
+2025-02-28,Los Angeles,Rotterdam,Rail,Automotive,9022.66,64.11,2.69,6.9,Fog,0.983,12.98,0
+2025-11-30,Dubai,Hamburg,Air,Pharmaceuticals,2200.97,169.4,4.16,1.0,Hurricane,0.564,1.43,1
+2024-03-30,Los Angeles,Rotterdam,Air,Automotive,5443.9,238.35,2.27,4.6,Fog,0.612,0.99,0
+2025-05-15,Hamburg,Marseille,Air,Automotive,12576.04,182.5,3.47,2.7,Fog,0.547,0.82,0
+2024-09-21,Busan,Los Angeles,Rail,Pharmaceuticals,11520.08,190.69,2.33,7.8,Clear,0.809,10.33,0
+2025-08-23,Rotterdam,Antwerp,Sea,Textiles,1540.75,209.31,1.89,6.5,Hurricane,0.664,21.78,1
+2024-06-06,Los Angeles,Antwerp,Rail,Perishables,11873.88,57.08,1.63,0.3,Fog,0.586,12.41,0
+2024-05-22,Busan,Shanghai,Rail,Pharmaceuticals,1574.53,322.57,3.6,9.6,Fog,0.501,2.07,1
+2024-04-30,Busan,Rotterdam,Sea,Electronics,9721.13,135.92,2.39,6.2,Clear,0.521,17.42,1
+2024-09-17,Hamburg,Shanghai,Road,Perishables,4483.21,354.67,3.22,8.3,Rain,0.7,3.83,1
+2025-12-31,Singapore,Rotterdam,Air,Perishables,4560.54,127.13,4.16,5.1,Fog,0.696,1.23,0
+2024-06-23,Rotterdam,Shanghai,Road,Automotive,10164.57,253.08,2.73,3.8,Hurricane,0.52,57.62,1
+2024-06-24,Rotterdam,Shanghai,Air,Textiles,4169.97,442.24,2.52,1.1,Storm,0.757,0.72,0
+2025-07-29,Singapore,Rotterdam,Rail,Automotive,6644.2,178.74,2.07,9.1,Clear,0.809,6.93,1
+2025-10-27,Hamburg,Marseille,Sea,Textiles,6867.46,20.46,1.94,3.4,Rain,0.63,13.01,1
+2025-05-31,Antwerp,Shanghai,Road,Perishables,5720.73,344.88,2.56,8.5,Rain,0.51,5.86,1
+2025-03-16,Rotterdam,Dubai,Air,Electronics,2477.39,132.51,1.5,8.0,Fog,0.771,0.5,1
+2024-07-16,Dubai,Antwerp,Air,Perishables,4607.62,235.06,2.14,1.9,Rain,0.84,0.63,1
+2024-10-29,Shanghai,Marseille,Road,Perishables,7183.03,132.01,2.29,0.0,Storm,0.786,13.25,1
+2024-10-05,Dubai,Singapore,Rail,Pharmaceuticals,7794.72,1.64,3.7,1.1,Fog,0.545,8.47,0
+2025-09-19,Los Angeles,Shanghai,Rail,Perishables,10843.57,378.57,3.03,4.3,Storm,0.908,27.24,1
+2025-07-17,Dubai,Antwerp,Sea,Automotive,501.95,160.77,3.91,0.2,Fog,0.791,0.7,0
+2025-02-20,Antwerp,Hamburg,Road,Automotive,13348.25,52.78,4.32,0.1,Clear,0.592,7.61,0
+2025-03-12,Antwerp,Dubai,Air,Pharmaceuticals,2852.38,142.05,3.22,7.7,Storm,0.92,0.5,1
+2025-08-25,Hamburg,Singapore,Sea,Automotive,5964.57,384.43,3.76,5.8,Rain,0.72,12.07,1
+2025-02-23,Singapore,Los Angeles,Rail,Perishables,9503.28,468.8,3.25,6.3,Rain,0.781,10.65,0
+2024-11-12,Busan,Los Angeles,Air,Textiles,12907.59,142.97,1.5,5.1,Fog,0.893,0.77,0
+2025-08-20,Antwerp,Rotterdam,Rail,Electronics,11405.66,113.99,2.21,0.0,Hurricane,0.633,63.55,1
+2025-08-23,Antwerp,Marseille,Road,Automotive,10309.01,376.09,1.79,4.5,Rain,0.544,9.13,1
+2024-04-03,Busan,Los Angeles,Sea,Pharmaceuticals,2215.87,266.14,4.39,6.1,Hurricane,0.538,32.19,1
+2024-04-04,Busan,Antwerp,Rail,Electronics,7680.07,296.27,1.66,0.2,Storm,0.876,15.87,1
+2025-10-24,Antwerp,Dubai,Road,Pharmaceuticals,10114.18,123.16,2.85,2.1,Rain,0.801,7.32,1
+2025-07-25,Busan,Dubai,Sea,Electronics,12487.26,230.59,1.36,10.0,Hurricane,0.758,207.59,1
+2024-01-02,Dubai,Rotterdam,Air,Electronics,6554.92,189.3,2.46,2.4,Rain,0.653,0.5,1
+2025-11-17,Antwerp,Rotterdam,Rail,Perishables,9154.35,12.05,3.77,6.1,Rain,0.663,10.2,0
+2025-03-25,Busan,Shanghai,Road,Textiles,13916.1,376.98,4.25,5.4,Hurricane,0.65,84.12,1
+2024-06-05,Busan,Dubai,Air,Pharmaceuticals,7571.17,321.15,4.27,5.2,Clear,0.808,1.0,0
+2024-12-09,Los Angeles,Hamburg,Rail,Perishables,11535.05,312.03,3.88,1.7,Clear,0.567,8.62,0
+2024-04-10,Singapore,Los Angeles,Air,Pharmaceuticals,10666.96,16.45,1.98,8.0,Storm,0.553,2.58,1
+2024-05-01,Busan,Dubai,Air,Textiles,2484.84,169.91,1.39,2.4,Hurricane,0.997,0.7,1
+2025-08-15,Hamburg,Antwerp,Sea,Pharmaceuticals,7208.8,202.42,3.64,8.7,Fog,0.834,20.85,0
+2024-09-06,Hamburg,Rotterdam,Rail,Textiles,1965.16,214.41,3.09,7.6,Rain,0.884,1.81,0
+2024-02-10,Busan,Marseille,Road,Automotive,11423.98,310.5,3.43,3.1,Hurricane,0.574,62.72,1
+2025-11-18,Shanghai,Busan,Road,Pharmaceuticals,6128.46,302.02,4.1,8.9,Rain,0.992,5.6,0
+2025-05-31,Rotterdam,Dubai,Rail,Electronics,948.86,43.87,3.78,5.4,Hurricane,0.784,7.27,1
+2024-10-13,Shanghai,Rotterdam,Road,Perishables,13800.39,301.8,2.36,2.8,Rain,0.605,10.11,0
+2024-02-13,Antwerp,Rotterdam,Sea,Textiles,5574.1,363.06,3.57,4.4,Storm,0.733,29.13,1
+2025-01-21,Busan,Hamburg,Rail,Perishables,5582.55,101.37,3.29,6.5,Rain,0.713,6.59,1
+2025-04-30,Los Angeles,Busan,Rail,Automotive,11305.61,249.38,4.29,10.0,Clear,0.751,11.99,1
+2024-05-16,Rotterdam,Shanghai,Rail,Textiles,9529.0,213.87,1.6,8.1,Rain,0.775,10.71,0
+2024-08-17,Singapore,Shanghai,Sea,Pharmaceuticals,4831.52,273.76,1.72,1.7,Clear,0.821,7.56,0
+2024-11-04,Antwerp,Rotterdam,Road,Electronics,4917.85,429.51,1.93,4.2,Fog,0.945,5.19,1
+2025-12-03,Singapore,Busan,Rail,Pharmaceuticals,2207.39,120.26,1.29,2.5,Clear,0.538,2.41,0
+2024-04-28,Antwerp,Singapore,Road,Perishables,8036.72,347.01,3.22,1.7,Clear,0.919,5.18,0
+2025-11-01,Shanghai,Busan,Air,Textiles,10884.18,463.17,4.17,3.2,Fog,0.588,0.52,0
+2024-12-18,Dubai,Hamburg,Rail,Electronics,3502.6,275.26,3.02,4.8,Hurricane,0.757,23.51,1
+2025-04-01,Singapore,Dubai,Sea,Textiles,2109.35,406.55,2.23,1.5,Storm,0.615,9.64,1
+2025-02-06,Antwerp,Shanghai,Rail,Textiles,8184.14,54.85,2.52,3.9,Rain,0.616,7.57,1
+2025-05-16,Hamburg,Rotterdam,Road,Perishables,9499.58,187.35,2.18,4.6,Clear,0.982,5.96,0
+2025-07-17,Hamburg,Dubai,Road,Automotive,2820.36,98.92,4.43,9.2,Rain,0.512,3.08,1
+2024-05-07,Rotterdam,Shanghai,Sea,Perishables,3698.87,237.41,1.63,0.8,Rain,0.928,7.13,0
+2025-06-22,Dubai,Hamburg,Rail,Perishables,12554.92,431.52,1.54,7.8,Hurricane,0.911,96.76,1
+2024-05-27,Singapore,Marseille,Sea,Automotive,5644.18,245.17,3.38,2.6,Hurricane,0.828,70.84,1
+2024-05-13,Los Angeles,Singapore,Sea,Textiles,1243.76,238.81,2.39,5.3,Storm,0.981,7.62,1
+2025-10-16,Dubai,Marseille,Road,Electronics,7569.78,104.91,4.43,7.2,Clear,0.9,6.27,0
+2024-07-13,Rotterdam,Singapore,Rail,Textiles,12314.96,404.59,1.42,4.2,Hurricane,0.91,82.61,1
+2025-08-03,Antwerp,Busan,Sea,Automotive,2801.68,454.72,4.19,4.0,Fog,0.541,7.61,0
+2024-08-16,Singapore,Hamburg,Rail,Textiles,14227.97,264.01,1.77,4.6,Storm,0.866,36.02,1
+2024-04-15,Singapore,Antwerp,Sea,Pharmaceuticals,8555.47,348.12,4.1,2.8,Rain,0.833,15.54,1
+2025-02-11,Busan,Marseille,Sea,Electronics,3001.6,64.15,4.2,8.7,Rain,0.886,7.17,1
+2025-09-10,Rotterdam,Shanghai,Air,Perishables,7950.89,312.85,2.94,4.1,Storm,0.817,1.08,0
+2025-05-16,Los Angeles,Busan,Sea,Textiles,1253.85,257.42,3.45,3.1,Storm,0.678,6.25,1
+2025-02-16,Rotterdam,Shanghai,Road,Textiles,4757.08,153.15,2.69,0.8,Clear,0.664,2.61,0
+2025-07-17,Busan,Antwerp,Air,Perishables,12100.05,114.98,2.91,8.7,Storm,0.836,2.75,0
+2025-08-21,Hamburg,Shanghai,Road,Pharmaceuticals,2095.75,243.33,3.57,6.1,Clear,0.778,2.08,1
+2024-09-05,Rotterdam,Singapore,Road,Electronics,11505.58,191.32,2.08,3.9,Storm,0.684,24.32,1
+2024-05-15,Hamburg,Busan,Sea,Electronics,6116.18,44.38,4.45,1.4,Clear,0.738,9.11,0
+2024-09-28,Antwerp,Marseille,Rail,Electronics,8935.18,168.75,1.87,4.5,Storm,0.875,23.08,1
+2025-06-30,Los Angeles,Rotterdam,Road,Automotive,11070.23,335.0,4.41,3.2,Storm,0.607,22.53,1
+2024-04-08,Busan,Hamburg,Sea,Electronics,10022.96,400.88,1.34,1.3,Hurricane,0.57,119.11,1
+2024-06-26,Hamburg,Los Angeles,Road,Pharmaceuticals,8430.47,95.25,4.16,0.9,Rain,0.724,6.19,0
+2025-02-24,Hamburg,Busan,Sea,Electronics,9445.44,27.36,3.98,0.5,Rain,0.972,15.72,0
+2024-10-08,Rotterdam,Marseille,Rail,Textiles,11199.33,226.04,2.61,8.4,Storm,0.77,32.87,1
+2025-06-24,Hamburg,Los Angeles,Sea,Pharmaceuticals,13972.52,207.55,2.64,7.8,Hurricane,0.826,215.7,1
+2025-11-09,Shanghai,Hamburg,Road,Electronics,5308.44,298.08,2.3,1.8,Hurricane,0.741,28.09,1
+2025-12-06,Antwerp,Rotterdam,Road,Pharmaceuticals,8391.68,187.43,2.56,5.0,Storm,0.597,18.76,1
+2025-11-08,Busan,Dubai,Rail,Perishables,11992.63,19.87,3.04,9.7,Storm,0.505,38.02,1
+2024-12-03,Shanghai,Los Angeles,Rail,Perishables,14522.01,391.22,4.2,4.8,Storm,0.898,37.55,1
+2025-12-30,Singapore,Marseille,Rail,Pharmaceuticals,13942.0,78.69,4.02,1.1,Clear,0.932,9.41,1
+2025-07-28,Los Angeles,Rotterdam,Air,Electronics,4475.33,59.63,2.9,1.8,Hurricane,0.925,1.9,1
+2024-03-29,Rotterdam,Singapore,Sea,Textiles,5076.6,171.82,1.54,5.7,Hurricane,0.673,72.11,1
+2025-11-27,Dubai,Hamburg,Sea,Textiles,3809.41,212.86,3.93,1.4,Hurricane,0.543,46.07,1
+2025-01-12,Singapore,Shanghai,Rail,Electronics,3728.8,334.13,4.44,7.1,Clear,0.891,3.66,1
+2025-07-11,Los Angeles,Antwerp,Rail,Electronics,4139.02,332.15,1.88,5.9,Storm,0.793,12.02,1
+2025-11-04,Antwerp,Busan,Sea,Perishables,8587.86,251.35,4.23,0.5,Clear,0.508,11.5,0
+2025-05-25,Dubai,Busan,Road,Pharmaceuticals,11940.28,201.99,3.56,4.8,Hurricane,0.624,70.44,1
+2024-04-12,Busan,Shanghai,Air,Electronics,4435.44,105.49,3.5,1.8,Fog,0.952,0.51,0
+2025-04-22,Singapore,Busan,Air,Textiles,3013.92,425.58,4.2,6.2,Storm,0.539,1.62,1
+2025-09-09,Hamburg,Dubai,Rail,Perishables,1677.83,182.59,4.13,9.3,Hurricane,0.573,14.31,1
+2025-04-19,Singapore,Antwerp,Rail,Automotive,12393.67,176.86,2.09,0.8,Hurricane,0.816,71.05,1
+2025-02-01,Antwerp,Dubai,Road,Textiles,5191.19,162.13,1.4,0.5,Rain,0.796,3.89,1
+2024-03-27,Los Angeles,Rotterdam,Rail,Perishables,12779.86,66.77,1.9,1.2,Rain,0.751,11.25,0
+2024-06-28,Busan,Rotterdam,Air,Automotive,2431.54,351.35,3.05,9.2,Hurricane,0.689,1.78,1
+2024-11-09,Los Angeles,Antwerp,Rail,Textiles,2906.35,139.79,4.46,3.2,Clear,0.981,3.25,0
+2025-12-07,Busan,Antwerp,Rail,Automotive,5557.9,472.89,2.81,4.1,Clear,0.675,3.85,1
+2025-06-29,Antwerp,Busan,Sea,Automotive,8755.97,184.78,3.77,0.7,Clear,0.669,12.64,1
+2024-10-14,Shanghai,Singapore,Rail,Perishables,12410.13,371.36,2.25,6.7,Clear,0.536,10.83,1
+2024-11-05,Busan,Dubai,Rail,Textiles,7892.88,217.43,3.75,1.9,Clear,0.701,6.65,0
+2025-11-17,Los Angeles,Singapore,Road,Textiles,2930.48,441.34,2.69,8.0,Storm,0.865,8.07,1
+2024-06-17,Shanghai,Marseille,Sea,Automotive,14282.7,215.66,2.29,2.5,Hurricane,0.966,178.27,1
+2024-09-18,Singapore,Busan,Road,Electronics,9680.69,221.59,4.35,0.9,Storm,0.838,17.74,1
+2025-06-27,Los Angeles,Rotterdam,Road,Automotive,6920.57,441.79,2.24,2.5,Clear,0.651,5.0,0
+2025-10-12,Hamburg,Rotterdam,Road,Pharmaceuticals,4513.81,252.53,3.72,5.0,Hurricane,0.92,26.68,1
+2024-07-22,Shanghai,Los Angeles,Sea,Automotive,2729.86,366.95,3.71,8.8,Clear,0.823,5.16,0
+2025-03-01,Dubai,Rotterdam,Sea,Perishables,613.7,44.77,3.25,8.1,Clear,0.959,0.53,0
+2024-11-15,Dubai,Antwerp,Rail,Pharmaceuticals,10532.48,110.17,2.29,5.4,Rain,0.524,11.25,1
+2024-03-11,Busan,Rotterdam,Road,Pharmaceuticals,708.71,44.4,1.49,5.9,Storm,0.883,1.17,1
+2024-05-20,Los Angeles,Busan,Sea,Automotive,6343.21,127.35,3.24,3.4,Clear,0.733,11.3,1
+2024-09-03,Hamburg,Dubai,Air,Perishables,3543.63,425.94,3.27,1.6,Clear,0.52,0.64,0
+2025-07-29,Shanghai,Dubai,Air,Automotive,8568.74,62.17,3.53,1.9,Storm,0.7,1.14,0
+2025-02-13,Rotterdam,Marseille,Road,Electronics,11501.37,243.7,2.22,2.1,Hurricane,0.91,60.52,1
+2025-08-30,Los Angeles,Rotterdam,Sea,Automotive,1459.4,112.25,2.16,4.7,Clear,0.529,2.12,0
+2024-05-09,Dubai,Singapore,Air,Textiles,5545.15,231.44,1.46,6.2,Storm,0.786,1.01,1
+2025-11-13,Hamburg,Los Angeles,Rail,Pharmaceuticals,6565.84,321.46,2.39,6.3,Fog,0.636,8.3,0
+2024-12-11,Busan,Shanghai,Sea,Electronics,12830.05,335.02,1.23,9.2,Clear,0.656,26.24,1
+2024-12-26,Busan,Shanghai,Road,Pharmaceuticals,13575.55,241.47,3.05,4.4,Hurricane,0.959,78.64,1
+2024-02-28,Hamburg,Rotterdam,Sea,Automotive,7394.4,125.4,2.42,6.9,Storm,0.587,41.34,1
+2024-08-30,Antwerp,Marseille,Rail,Textiles,7641.76,148.74,4.04,8.5,Storm,0.577,23.52,1
+2024-04-14,Busan,Hamburg,Air,Automotive,12366.52,429.71,2.82,6.7,Fog,0.771,1.68,0
+2024-02-10,Singapore,Antwerp,Road,Textiles,8532.9,454.19,2.99,1.0,Fog,0.558,8.5,0
+2025-07-31,Antwerp,Shanghai,Sea,Automotive,9746.48,250.31,1.94,5.1,Storm,0.561,50.08,1
+2025-02-04,Shanghai,Los Angeles,Sea,Textiles,3224.85,99.46,1.27,0.6,Storm,0.548,13.61,1
+2025-09-06,Antwerp,Shanghai,Sea,Automotive,5512.59,54.62,3.53,3.9,Clear,0.877,9.17,0
+2025-12-01,Singapore,Hamburg,Road,Electronics,9990.41,187.3,2.62,9.8,Storm,0.953,26.61,1
+2024-09-14,Busan,Hamburg,Air,Textiles,785.8,180.01,2.48,3.1,Rain,0.881,0.5,1
+2024-08-30,Los Angeles,Shanghai,Road,Automotive,2222.86,477.38,2.93,5.5,Hurricane,0.721,12.62,1
+2025-03-04,Shanghai,Los Angeles,Road,Textiles,9340.61,222.36,2.03,4.4,Hurricane,0.939,54.72,1
+2024-12-19,Rotterdam,Los Angeles,Rail,Pharmaceuticals,12824.64,245.73,3.67,5.1,Storm,0.793,33.32,1
+2024-02-05,Shanghai,Los Angeles,Sea,Automotive,3032.38,358.37,2.2,3.4,Storm,0.804,15.02,1
+2024-12-11,Antwerp,Los Angeles,Rail,Automotive,2409.87,59.29,2.47,7.3,Fog,0.675,3.77,0
+2025-02-01,Rotterdam,Busan,Road,Pharmaceuticals,9448.6,220.86,2.27,0.5,Clear,0.924,5.13,0
+2025-12-24,Singapore,Antwerp,Rail,Pharmaceuticals,4072.83,333.31,4.07,7.4,Fog,0.835,5.57,0
+2025-04-14,Dubai,Hamburg,Rail,Electronics,10189.09,66.19,3.01,4.3,Storm,0.847,26.54,0
+2024-04-20,Busan,Rotterdam,Sea,Automotive,8763.4,368.98,3.28,1.8,Rain,0.618,15.42,0
+2025-06-30,Busan,Antwerp,Sea,Pharmaceuticals,14885.97,108.06,2.37,3.7,Fog,0.935,36.59,1
+2024-02-28,Dubai,Marseille,Rail,Textiles,6584.2,220.34,2.82,9.8,Rain,0.798,9.27,1
+2025-02-11,Busan,Hamburg,Rail,Textiles,2029.37,327.34,3.27,7.9,Clear,0.723,2.03,0
+2025-06-03,Dubai,Hamburg,Sea,Perishables,13264.56,184.27,3.72,2.3,Clear,0.911,20.99,0
+2024-12-14,Singapore,Los Angeles,Sea,Textiles,4395.82,388.63,3.95,1.5,Hurricane,0.703,51.57,1
+2024-04-05,Antwerp,Shanghai,Sea,Textiles,9060.04,97.23,3.85,0.9,Rain,0.841,15.32,0
+2025-05-17,Los Angeles,Antwerp,Road,Pharmaceuticals,4705.66,454.31,2.41,6.9,Fog,0.878,5.79,1
+2024-12-01,Busan,Singapore,Air,Electronics,5518.45,328.06,1.74,9.3,Fog,0.853,0.8,1
+2024-06-20,Antwerp,Singapore,Sea,Perishables,4002.28,180.41,2.56,7.3,Clear,0.716,7.51,0
+2025-03-21,Hamburg,Dubai,Road,Automotive,13177.46,86.42,2.26,5.1,Fog,0.629,14.71,0
+2025-08-24,Rotterdam,Marseille,Rail,Pharmaceuticals,1074.47,275.16,1.58,6.3,Fog,0.795,1.75,0
+2025-11-14,Busan,Rotterdam,Road,Textiles,9464.69,25.33,4.38,4.6,Fog,0.695,10.25,1
+2025-06-15,Rotterdam,Dubai,Road,Pharmaceuticals,4260.36,279.15,2.88,1.4,Rain,0.588,3.33,1
+2024-09-24,Dubai,Busan,Road,Pharmaceuticals,12515.47,83.2,1.87,9.0,Fog,0.873,15.84,1
+2024-10-23,Antwerp,Rotterdam,Air,Pharmaceuticals,9674.32,244.81,2.82,7.5,Hurricane,0.929,5.31,1
+2025-09-24,Los Angeles,Singapore,Air,Perishables,6221.35,327.8,1.82,6.1,Hurricane,0.717,2.79,1
+2024-11-17,Hamburg,Los Angeles,Air,Electronics,11022.93,232.53,2.1,1.9,Hurricane,0.626,4.85,1
+2025-12-04,Antwerp,Dubai,Road,Electronics,9058.34,249.99,2.78,5.7,Rain,0.517,7.57,1
+2024-10-19,Los Angeles,Rotterdam,Air,Perishables,8088.28,64.42,4.0,3.0,Fog,0.635,0.5,1
+2025-10-21,Shanghai,Marseille,Sea,Perishables,2287.09,75.25,1.45,1.3,Storm,0.541,9.96,1
+2024-03-28,Los Angeles,Shanghai,Sea,Automotive,8963.85,221.17,2.68,2.4,Fog,0.845,20.21,1
+2024-01-19,Dubai,Antwerp,Rail,Textiles,9726.22,161.52,1.76,7.4,Storm,0.961,28.22,1
+2025-02-16,Hamburg,Dubai,Sea,Pharmaceuticals,9283.8,109.19,1.44,6.7,Fog,0.623,25.82,1
+2025-03-29,Singapore,Marseille,Rail,Pharmaceuticals,2351.85,449.4,2.36,9.5,Rain,0.924,3.12,0
+2024-11-12,Shanghai,Hamburg,Rail,Electronics,6412.35,438.27,1.73,5.6,Hurricane,0.914,45.26,1
+2025-06-03,Singapore,Hamburg,Road,Textiles,9431.79,403.55,1.42,0.7,Rain,0.536,7.04,0
+2024-07-22,Singapore,Shanghai,Rail,Perishables,10685.74,281.77,2.01,7.9,Clear,0.856,10.69,1
+2024-01-13,Hamburg,Singapore,Rail,Perishables,2529.82,435.76,1.58,0.2,Hurricane,0.698,13.94,1
+2025-06-30,Busan,Dubai,Road,Pharmaceuticals,14385.66,330.09,4.04,1.3,Fog,0.968,12.66,0
+2025-08-04,Antwerp,Marseille,Air,Pharmaceuticals,8949.36,116.7,2.25,5.2,Clear,0.798,0.5,0
+2024-12-04,Busan,Rotterdam,Air,Textiles,10881.6,433.64,2.68,1.7,Clear,0.966,0.5,1
+2024-08-13,Singapore,Rotterdam,Rail,Electronics,7956.4,27.36,4.15,6.5,Fog,0.511,11.18,0
+2024-07-30,Shanghai,Dubai,Rail,Textiles,11012.59,271.47,2.62,8.8,Rain,0.834,12.74,0
+2025-01-09,Antwerp,Rotterdam,Road,Textiles,14864.85,294.26,4.29,7.5,Storm,0.748,35.38,1
+2025-10-04,Los Angeles,Hamburg,Air,Automotive,12495.88,3.18,4.11,0.9,Clear,0.721,0.63,0
+2024-07-22,Dubai,Los Angeles,Road,Electronics,12308.57,88.12,2.59,6.2,Rain,0.993,11.33,0
+2025-12-22,Shanghai,Marseille,Road,Pharmaceuticals,2109.47,205.05,1.64,1.1,Fog,0.716,1.57,0
+2025-12-20,Los Angeles,Rotterdam,Road,Automotive,12091.53,7.63,3.38,6.1,Rain,0.849,11.4,0
+2025-01-27,Singapore,Los Angeles,Sea,Pharmaceuticals,12700.99,349.96,1.96,9.2,Fog,0.761,39.22,1
+2025-04-18,Hamburg,Dubai,Sea,Electronics,1533.22,49.92,1.64,0.5,Rain,0.851,2.36,0
+2024-11-04,Antwerp,Shanghai,Rail,Pharmaceuticals,5460.56,164.46,3.91,2.8,Storm,0.522,13.51,1
+2025-09-02,Antwerp,Rotterdam,Air,Perishables,689.87,209.27,4.02,5.8,Rain,0.519,0.5,0
+2025-05-20,Hamburg,Los Angeles,Sea,Perishables,9840.16,132.08,4.47,1.0,Clear,0.513,13.88,1
+2025-05-23,Rotterdam,Busan,Road,Textiles,13639.08,123.13,2.18,9.1,Rain,0.761,14.2,0
+2025-06-09,Busan,Hamburg,Rail,Electronics,2635.89,307.31,1.7,6.4,Clear,0.869,2.35,0
+2025-10-12,Shanghai,Dubai,Air,Pharmaceuticals,14010.24,348.85,3.38,7.5,Storm,0.917,2.73,1
+2025-07-26,Singapore,Rotterdam,Road,Pharmaceuticals,8395.21,169.26,2.32,1.3,Rain,0.97,6.05,0
+2024-05-14,Shanghai,Los Angeles,Air,Automotive,1012.01,322.04,2.58,3.6,Rain,0.723,0.79,0
+2025-08-08,Singapore,Dubai,Rail,Electronics,14686.14,108.6,4.13,6.4,Fog,0.669,20.71,1
+2025-09-16,Antwerp,Hamburg,Road,Electronics,1692.95,386.24,1.5,6.8,Clear,0.701,0.91,1
+2024-08-26,Shanghai,Busan,Air,Textiles,8108.97,161.71,1.99,7.1,Storm,0.986,1.83,1
+2025-08-26,Rotterdam,Shanghai,Sea,Automotive,11614.65,51.16,2.1,1.4,Storm,0.66,51.73,0
+2025-11-09,Busan,Singapore,Road,Perishables,11410.79,170.85,1.82,9.0,Fog,0.598,14.45,1
+2024-02-08,Busan,Singapore,Sea,Automotive,6790.35,79.46,4.3,9.5,Hurricane,0.62,111.06,1
+2024-11-17,Antwerp,Marseille,Rail,Automotive,8463.79,141.99,3.02,7.8,Hurricane,0.804,65.13,1
+2025-03-12,Singapore,Dubai,Sea,Automotive,7448.14,40.95,4.12,7.1,Rain,0.565,17.43,1
+2025-09-29,Antwerp,Busan,Sea,Electronics,2617.3,40.19,2.86,0.1,Rain,0.908,4.03,0
+2025-03-04,Rotterdam,Hamburg,Road,Pharmaceuticals,12882.45,208.08,3.4,5.1,Rain,0.833,11.04,1
+2024-04-16,Antwerp,Rotterdam,Road,Perishables,5643.56,387.65,1.7,1.5,Clear,0.975,2.68,0
+2024-08-14,Antwerp,Busan,Rail,Electronics,6073.15,258.61,4.44,5.4,Storm,0.859,15.16,1
+2025-01-26,Los Angeles,Rotterdam,Sea,Electronics,12049.79,232.44,3.03,3.4,Clear,0.894,19.41,0
+2024-12-04,Dubai,Rotterdam,Sea,Textiles,3752.26,2.17,4.0,1.1,Rain,0.842,6.77,0
+2025-07-30,Shanghai,Busan,Sea,Perishables,6229.5,418.47,1.92,4.2,Fog,0.884,15.83,0
+2025-05-21,Dubai,Busan,Air,Textiles,6742.68,405.32,3.39,8.8,Storm,0.744,1.36,1
+2024-09-10,Dubai,Antwerp,Sea,Automotive,1452.58,48.97,3.88,1.7,Clear,0.673,2.76,0
+2025-06-09,Dubai,Rotterdam,Rail,Pharmaceuticals,6608.1,338.97,4.35,2.0,Rain,0.841,6.09,0
+2025-02-17,Shanghai,Busan,Rail,Pharmaceuticals,10703.04,285.86,2.58,2.7,Rain,0.517,9.89,0
+2025-08-07,Dubai,Antwerp,Rail,Pharmaceuticals,11065.52,201.42,1.53,1.2,Clear,0.893,8.29,0
+2024-10-18,Busan,Shanghai,Road,Perishables,13471.01,88.22,2.27,2.4,Rain,0.618,10.54,0
+2024-10-20,Singapore,Dubai,Road,Electronics,7503.05,417.64,1.55,8.5,Clear,0.802,6.26,1
+2025-04-23,Los Angeles,Rotterdam,Sea,Perishables,2449.01,126.91,4.44,0.3,Storm,0.953,10.95,1
+2024-12-18,Busan,Hamburg,Air,Pharmaceuticals,3966.46,31.69,2.96,8.5,Storm,0.699,1.15,1
+2025-12-22,Hamburg,Singapore,Road,Perishables,4434.56,461.4,1.32,1.5,Hurricane,0.787,23.3,1
+2024-12-15,Shanghai,Los Angeles,Road,Electronics,11464.37,206.6,4.27,1.5,Clear,0.922,7.04,0
+2024-01-25,Shanghai,Singapore,Sea,Electronics,843.76,138.0,4.49,9.7,Storm,0.943,5.37,1
+2025-01-28,Hamburg,Busan,Air,Perishables,1545.22,157.11,2.77,1.7,Hurricane,0.963,0.5,1
+2025-04-30,Shanghai,Hamburg,Air,Automotive,14327.67,495.81,2.39,5.7,Hurricane,0.621,7.12,1
+2025-04-27,Dubai,Busan,Air,Perishables,11815.45,3.67,4.18,1.9,Clear,0.772,1.58,0
+2025-03-05,Shanghai,Rotterdam,Sea,Automotive,1901.81,278.38,2.33,5.7,Rain,0.762,4.19,1
+2024-08-07,Los Angeles,Dubai,Air,Automotive,1683.18,44.04,4.42,6.1,Fog,0.964,0.5,0
+2024-01-27,Los Angeles,Busan,Air,Pharmaceuticals,5469.6,203.05,2.35,9.7,Rain,0.797,0.5,0
+2025-11-01,Los Angeles,Shanghai,Sea,Textiles,10755.54,31.16,1.74,8.7,Rain,0.532,25.33,1
+2024-07-05,Shanghai,Busan,Rail,Textiles,2302.31,47.42,1.24,3.6,Storm,0.902,6.15,1
+2024-05-27,Los Angeles,Hamburg,Sea,Pharmaceuticals,11600.43,111.35,2.1,3.8,Fog,0.83,29.87,0
+2024-08-19,Antwerp,Singapore,Air,Pharmaceuticals,8511.26,362.73,2.48,2.3,Clear,0.745,0.5,0
+2024-01-27,Singapore,Busan,Air,Automotive,9970.86,114.82,1.44,2.2,Storm,0.938,2.49,0
+2024-01-30,Antwerp,Rotterdam,Air,Electronics,5726.19,226.64,1.66,9.8,Storm,0.956,0.88,1
+2025-04-04,Antwerp,Los Angeles,Road,Electronics,8395.09,311.67,3.04,0.4,Fog,0.544,7.41,1
+2024-07-07,Dubai,Shanghai,Road,Textiles,14965.61,121.51,4.11,8.4,Rain,0.899,14.95,0
+2024-05-08,Dubai,Singapore,Air,Automotive,13088.06,298.04,2.8,0.9,Rain,0.748,0.82,0
+2024-04-22,Hamburg,Marseille,Sea,Pharmaceuticals,10038.76,134.76,2.31,7.0,Fog,0.788,28.55,1
+2025-10-04,Busan,Los Angeles,Road,Perishables,3757.53,119.52,1.68,1.6,Fog,0.563,4.37,1
+2025-02-03,Rotterdam,Singapore,Sea,Textiles,8573.06,379.73,2.18,7.9,Storm,0.762,48.98,1
+2024-07-27,Hamburg,Dubai,Road,Textiles,7421.58,171.79,1.6,1.1,Storm,0.903,14.77,1
+2024-08-04,Dubai,Antwerp,Rail,Perishables,1673.33,317.26,2.22,6.2,Storm,0.541,4.97,1
+2024-10-17,Shanghai,Dubai,Road,Automotive,2261.77,208.73,4.18,8.1,Clear,0.71,2.14,0
+2024-09-03,Antwerp,Hamburg,Sea,Pharmaceuticals,4595.85,245.74,4.08,8.7,Storm,0.647,28.11,1
+2025-11-22,Antwerp,Los Angeles,Road,Textiles,7952.85,487.83,3.28,8.7,Hurricane,0.856,54.82,1
+2024-04-26,Rotterdam,Singapore,Air,Perishables,8530.13,126.34,4.34,5.7,Fog,0.745,1.87,1
+2025-07-27,Singapore,Hamburg,Rail,Electronics,1876.31,465.84,3.37,5.7,Clear,0.755,1.66,0
+2025-02-10,Dubai,Antwerp,Road,Textiles,9903.32,482.86,2.39,5.9,Rain,0.534,8.22,0
+2025-03-19,Hamburg,Busan,Air,Perishables,12816.97,113.71,1.27,7.9,Fog,0.656,1.29,1
+2025-02-24,Rotterdam,Shanghai,Sea,Electronics,9185.19,82.29,1.89,8.2,Hurricane,0.931,144.13,1
+2025-02-12,Busan,Hamburg,Air,Pharmaceuticals,9953.44,163.78,1.59,8.6,Rain,0.62,1.15,1
+2025-06-12,Singapore,Los Angeles,Air,Perishables,8795.78,494.45,3.93,9.3,Rain,0.574,0.5,1
+2024-11-11,Shanghai,Hamburg,Rail,Pharmaceuticals,7758.75,52.37,2.19,4.0,Fog,0.772,10.43,0
+2024-09-30,Hamburg,Los Angeles,Road,Textiles,3171.26,204.61,2.08,4.3,Fog,0.721,3.04,0
+2025-11-29,Rotterdam,Singapore,Sea,Textiles,13706.17,397.54,1.97,8.3,Hurricane,0.761,215.82,1
+2024-10-25,Antwerp,Dubai,Air,Textiles,11351.16,30.21,3.97,7.2,Rain,0.952,1.44,0
+2025-02-26,Antwerp,Dubai,Road,Textiles,11124.14,237.13,4.0,5.3,Hurricane,0.892,66.88,1
+2024-11-19,Hamburg,Antwerp,Air,Pharmaceuticals,9964.82,283.36,1.38,6.9,Hurricane,0.961,6.35,1
+2025-11-30,Dubai,Hamburg,Sea,Perishables,8864.43,248.41,3.54,1.4,Hurricane,0.832,105.34,1
+2025-01-30,Singapore,Dubai,Rail,Textiles,11807.76,281.24,3.18,5.8,Hurricane,0.525,84.87,1
+2024-12-01,Dubai,Antwerp,Road,Pharmaceuticals,11209.66,435.61,2.26,5.1,Storm,0.586,25.13,1
+2025-02-01,Busan,Antwerp,Rail,Textiles,11097.62,160.03,4.36,2.7,Hurricane,0.649,70.24,1
+2025-11-19,Antwerp,Hamburg,Rail,Electronics,5515.22,31.74,2.39,9.8,Storm,0.706,16.56,1
+2025-11-24,Rotterdam,Hamburg,Air,Electronics,7459.11,49.59,1.87,5.8,Clear,0.856,0.74,0
+2024-09-12,Shanghai,Los Angeles,Sea,Perishables,5402.22,271.05,2.81,5.6,Clear,0.582,9.47,0
+2024-10-12,Hamburg,Dubai,Road,Textiles,2361.72,192.63,2.31,6.5,Hurricane,0.805,15.47,1
+2025-03-24,Shanghai,Antwerp,Sea,Electronics,14551.99,361.62,4.09,0.4,Rain,0.529,25.04,0
+2025-05-02,Singapore,Busan,Sea,Automotive,3024.59,167.52,1.3,7.2,Rain,0.574,7.38,0
+2024-01-19,Singapore,Marseille,Air,Pharmaceuticals,3903.94,88.64,2.76,0.2,Clear,0.758,0.5,0
+2024-11-28,Antwerp,Hamburg,Air,Pharmaceuticals,5037.33,251.02,3.74,8.9,Storm,0.58,1.35,1
+2025-01-29,Rotterdam,Singapore,Road,Perishables,12649.67,128.29,4.22,3.2,Hurricane,0.865,69.45,1
+2025-05-23,Hamburg,Dubai,Air,Electronics,12113.61,183.36,3.11,7.3,Storm,0.565,2.84,1
+2024-05-29,Dubai,Busan,Road,Perishables,3190.12,447.09,2.12,7.3,Clear,0.699,2.98,0
+2025-09-19,Los Angeles,Rotterdam,Sea,Electronics,11262.67,310.1,2.23,5.0,Clear,0.845,19.69,0
+2024-04-15,Shanghai,Dubai,Road,Electronics,14146.25,338.97,4.49,7.7,Fog,0.676,16.91,1
+2025-07-04,Dubai,Singapore,Road,Automotive,1869.42,216.47,2.86,6.8,Fog,0.895,1.37,0
+2025-03-30,Singapore,Rotterdam,Rail,Textiles,5971.77,445.12,2.58,5.1,Storm,0.829,15.54,1
+2025-06-27,Antwerp,Hamburg,Road,Automotive,8538.13,42.2,2.57,6.4,Clear,0.561,6.24,0
+2024-02-15,Singapore,Marseille,Sea,Perishables,2963.27,401.73,2.88,3.6,Storm,0.87,14.36,0
+2024-06-26,Dubai,Marseille,Air,Automotive,3602.92,174.64,1.81,1.0,Hurricane,0.549,1.23,1
+2024-03-02,Dubai,Shanghai,Rail,Pharmaceuticals,6144.79,386.15,2.37,2.7,Fog,0.754,6.44,0
+2025-04-11,Antwerp,Hamburg,Road,Perishables,5359.22,125.24,3.95,6.1,Clear,0.871,4.03,1
+2024-05-09,Singapore,Antwerp,Air,Electronics,2327.03,257.03,1.23,7.5,Hurricane,0.948,0.5,1
+2025-07-28,Singapore,Shanghai,Rail,Perishables,12207.88,159.7,1.27,5.7,Clear,0.848,11.27,0
+2024-06-27,Busan,Rotterdam,Road,Automotive,13324.94,164.75,2.05,5.3,Hurricane,0.811,80.53,1
+2024-10-29,Rotterdam,Busan,Sea,Automotive,8729.34,475.9,3.03,8.1,Storm,0.665,51.07,1
+2024-03-06,Antwerp,Dubai,Sea,Perishables,4150.84,63.93,2.75,9.8,Storm,0.587,25.66,1
+2024-05-20,Shanghai,Rotterdam,Rail,Electronics,11263.24,93.9,4.27,7.7,Storm,0.98,32.99,1
+2024-10-29,Antwerp,Shanghai,Road,Pharmaceuticals,754.51,269.15,2.71,8.8,Hurricane,0.598,5.81,1
+2024-10-11,Busan,Marseille,Road,Textiles,4916.9,308.98,4.15,3.8,Hurricane,0.79,27.96,1
+2024-03-17,Busan,Marseille,Sea,Electronics,9245.68,259.06,4.27,4.7,Hurricane,0.531,126.84,1
+2024-05-14,Busan,Antwerp,Road,Automotive,8844.38,249.67,3.29,3.2,Clear,0.626,5.92,0
+2024-10-18,Singapore,Hamburg,Air,Pharmaceuticals,10602.69,252.75,3.54,3.2,Storm,0.65,1.33,0
+2024-09-11,Busan,Antwerp,Rail,Automotive,5453.8,236.08,1.98,0.9,Fog,0.958,6.48,0
+2024-06-01,Hamburg,Singapore,Road,Perishables,1335.89,325.76,3.49,3.2,Rain,0.988,0.66,0
+2025-12-11,Los Angeles,Rotterdam,Air,Electronics,13091.94,162.02,3.53,9.0,Clear,0.751,0.76,0
+2025-07-23,Shanghai,Rotterdam,Air,Automotive,11817.62,92.72,4.07,7.5,Storm,0.712,1.76,1
+2025-05-26,Dubai,Los Angeles,Road,Perishables,14384.92,222.22,2.38,5.7,Fog,0.51,15.19,0
+2024-03-23,Busan,Antwerp,Road,Automotive,14727.08,117.56,3.42,3.2,Clear,0.896,10.17,0
+2025-10-18,Los Angeles,Dubai,Air,Perishables,4821.76,225.56,2.53,2.8,Storm,0.727,0.5,1
+2025-03-20,Dubai,Busan,Sea,Electronics,11855.84,323.03,1.82,2.0,Fog,0.992,27.08,0
+2024-03-04,Los Angeles,Busan,Sea,Perishables,4763.98,461.33,3.74,6.3,Hurricane,0.869,69.79,1
+2024-04-21,Rotterdam,Dubai,Road,Electronics,13377.71,479.66,1.96,2.2,Storm,0.864,26.63,0
+2024-07-18,Busan,Shanghai,Air,Automotive,6811.3,85.68,1.83,9.2,Storm,0.771,2.02,1
+2025-04-09,Shanghai,Busan,Sea,Automotive,10748.27,428.62,3.0,9.5,Clear,0.861,21.66,1
+2025-05-08,Hamburg,Shanghai,Road,Textiles,2478.38,205.74,3.39,8.5,Clear,0.509,2.31,1
+2024-08-18,Hamburg,Shanghai,Air,Electronics,2368.76,235.04,4.16,4.0,Clear,0.687,0.5,1
+2025-08-23,Los Angeles,Shanghai,Road,Pharmaceuticals,7722.88,455.49,1.72,3.6,Fog,0.584,7.94,0
+2025-05-17,Rotterdam,Los Angeles,Road,Automotive,11572.28,143.42,3.21,8.2,Storm,0.779,29.12,1
+2025-01-07,Los Angeles,Busan,Rail,Textiles,8334.3,38.47,4.38,1.1,Storm,0.789,18.3,1
+2024-09-06,Rotterdam,Hamburg,Sea,Perishables,14944.29,352.35,1.78,6.0,Clear,0.637,26.9,0
+2024-12-05,Rotterdam,Singapore,Road,Pharmaceuticals,2431.14,214.42,2.67,9.1,Clear,0.985,1.87,0
+2025-05-24,Singapore,Hamburg,Road,Electronics,14761.06,208.54,1.81,8.3,Hurricane,0.586,99.36,1
+2024-04-02,Shanghai,Hamburg,Air,Automotive,6454.9,359.25,4.45,5.6,Hurricane,0.665,3.72,1
+2024-11-11,Busan,Hamburg,Sea,Electronics,4992.2,35.43,1.57,0.4,Fog,0.581,11.11,0
+2025-05-21,Hamburg,Marseille,Sea,Pharmaceuticals,7060.37,237.79,1.6,3.0,Storm,0.768,33.26,1
+2024-01-23,Singapore,Dubai,Rail,Electronics,10497.24,160.54,3.61,8.4,Hurricane,0.595,82.99,1
+2025-10-27,Busan,Shanghai,Air,Perishables,5812.25,359.9,1.23,7.7,Hurricane,0.836,3.3,1
+2024-08-24,Shanghai,Rotterdam,Rail,Perishables,4961.35,279.63,1.88,0.6,Hurricane,0.564,28.41,1
+2024-04-02,Busan,Dubai,Air,Pharmaceuticals,10363.3,159.14,1.8,7.1,Hurricane,0.918,5.32,1
+2024-05-09,Dubai,Hamburg,Sea,Textiles,764.37,399.74,2.46,4.9,Clear,0.686,1.59,1
+2025-03-21,Shanghai,Busan,Sea,Textiles,5636.93,63.78,3.56,7.7,Fog,0.521,16.17,1
+2025-08-12,Singapore,Rotterdam,Air,Textiles,12408.23,456.19,3.17,2.5,Hurricane,0.568,4.75,1
+2025-12-18,Shanghai,Los Angeles,Air,Perishables,13805.89,166.7,3.14,9.5,Storm,0.744,3.74,1
+2025-11-27,Busan,Dubai,Air,Perishables,4739.56,391.86,1.66,7.8,Clear,0.589,0.87,0
+2025-07-16,Dubai,Singapore,Road,Textiles,12476.02,325.95,1.81,6.8,Fog,0.838,15.37,1
+2025-01-04,Hamburg,Busan,Road,Perishables,12304.82,21.12,2.18,6.6,Fog,0.87,14.93,0
+2024-05-10,Hamburg,Los Angeles,Rail,Textiles,5874.31,476.7,4.41,6.0,Clear,0.835,5.21,1
+2024-07-04,Rotterdam,Los Angeles,Air,Electronics,5240.51,425.89,2.62,9.0,Fog,0.671,0.8,1
+2024-02-07,Singapore,Busan,Air,Electronics,759.17,230.88,1.35,8.8,Fog,0.536,0.5,1
+2024-01-22,Singapore,Dubai,Sea,Automotive,7167.11,412.05,2.55,9.2,Hurricane,0.523,116.21,1
+2024-12-05,Singapore,Los Angeles,Rail,Perishables,14478.42,20.14,3.44,3.3,Storm,0.881,34.95,1
+2024-06-21,Antwerp,Los Angeles,Road,Electronics,2399.12,200.12,3.67,1.1,Clear,0.551,1.42,0
+2025-08-07,Hamburg,Antwerp,Road,Textiles,9985.53,76.96,2.22,3.2,Clear,0.984,6.92,0
+2025-04-06,Antwerp,Busan,Rail,Electronics,13274.11,234.86,2.08,5.1,Rain,0.961,14.2,0
+2025-05-20,Los Angeles,Busan,Rail,Pharmaceuticals,1668.42,51.02,1.43,7.4,Rain,0.701,1.97,1
+2024-09-03,Antwerp,Dubai,Rail,Pharmaceuticals,10200.82,60.75,2.88,0.8,Storm,0.605,21.59,1
+2024-12-16,Los Angeles,Antwerp,Road,Textiles,10313.91,43.24,1.83,6.4,Clear,0.589,9.29,0
+2025-05-05,Singapore,Hamburg,Sea,Textiles,1803.21,231.06,2.99,3.8,Storm,0.983,8.98,0
+2024-11-11,Los Angeles,Antwerp,Road,Electronics,13993.63,372.48,3.95,9.0,Hurricane,0.838,96.13,1
+2025-07-20,Busan,Singapore,Sea,Perishables,1246.44,312.13,4.03,9.4,Rain,0.747,3.64,0
+2025-08-07,Shanghai,Busan,Air,Automotive,8909.76,160.96,3.48,6.2,Storm,0.858,2.29,1
+2025-03-02,Busan,Dubai,Rail,Electronics,12619.48,200.68,3.79,7.7,Hurricane,0.854,97.76,1
+2025-01-31,Singapore,Rotterdam,Rail,Perishables,9227.28,45.42,3.84,0.3,Rain,0.654,7.76,0
+2025-06-27,Dubai,Singapore,Road,Electronics,6504.88,469.29,2.17,5.4,Storm,0.552,14.68,0
+2025-02-01,Dubai,Hamburg,Air,Perishables,14936.65,208.69,3.69,2.4,Clear,0.923,0.91,0
+2024-11-23,Shanghai,Rotterdam,Rail,Pharmaceuticals,8650.06,17.37,3.61,4.0,Storm,0.812,20.97,0
+2024-06-03,Busan,Marseille,Sea,Textiles,10074.39,387.22,4.39,6.8,Rain,0.506,22.66,1
+2025-11-30,Los Angeles,Singapore,Road,Pharmaceuticals,3256.56,132.47,2.64,7.7,Storm,0.643,7.71,1
+2025-12-12,Singapore,Shanghai,Sea,Textiles,12067.12,53.94,1.64,4.0,Storm,0.555,60.97,1
+2025-10-05,Hamburg,Singapore,Road,Electronics,8132.84,362.04,3.19,4.3,Clear,0.616,5.72,1
+2025-05-01,Singapore,Antwerp,Sea,Perishables,7395.42,307.47,3.02,9.9,Storm,0.669,46.56,1
+2025-04-07,Shanghai,Busan,Sea,Automotive,9731.71,469.42,4.07,3.6,Hurricane,0.795,128.04,1
+2025-04-29,Singapore,Marseille,Rail,Pharmaceuticals,12841.48,348.89,1.33,2.0,Clear,0.912,10.67,0
+2025-05-01,Shanghai,Marseille,Rail,Perishables,7948.76,368.27,4.18,4.3,Storm,0.946,20.47,1
+2025-01-02,Rotterdam,Shanghai,Air,Automotive,14301.27,383.66,3.42,6.0,Fog,0.606,1.54,1
+2024-07-15,Shanghai,Singapore,Air,Automotive,14881.24,255.48,2.51,2.3,Hurricane,0.59,6.96,1
+2025-11-01,Singapore,Rotterdam,Sea,Textiles,8987.64,256.53,2.87,5.0,Clear,0.967,15.24,1
+2025-10-01,Busan,Singapore,Rail,Automotive,7402.26,116.91,1.37,2.4,Storm,0.887,17.17,0
+2025-08-10,Rotterdam,Marseille,Air,Electronics,3794.1,49.31,3.39,0.0,Storm,0.89,1.22,1
+2024-07-03,Busan,Shanghai,Air,Pharmaceuticals,7929.7,343.5,1.4,5.3,Fog,0.757,0.5,1
+2025-09-18,Hamburg,Los Angeles,Air,Pharmaceuticals,3458.93,285.77,3.74,1.9,Storm,0.814,0.81,1
+2024-04-21,Dubai,Rotterdam,Rail,Textiles,2857.95,91.7,2.62,8.4,Clear,0.856,3.44,1
+2024-04-15,Dubai,Hamburg,Rail,Perishables,13788.1,362.71,3.41,3.5,Clear,0.671,10.89,1
+2025-08-06,Shanghai,Marseille,Sea,Electronics,1918.6,4.09,4.03,0.8,Clear,0.985,3.36,0
+2024-07-12,Singapore,Rotterdam,Road,Textiles,1883.29,168.64,1.28,1.8,Hurricane,0.924,10.35,1
+2025-02-10,Busan,Hamburg,Air,Automotive,14027.41,140.16,1.48,2.6,Storm,0.924,2.66,1
+2024-03-23,Dubai,Marseille,Rail,Perishables,12745.97,65.32,2.75,7.5,Storm,0.794,36.3,1
+2025-12-13,Singapore,Shanghai,Road,Textiles,11472.9,183.16,2.73,3.5,Fog,0.652,11.34,0
+2024-02-27,Busan,Marseille,Air,Automotive,8703.3,201.5,1.25,2.3,Fog,0.668,0.67,0
+2025-05-18,Hamburg,Dubai,Air,Electronics,14151.38,80.99,3.28,7.2,Hurricane,0.792,7.69,1
+2024-10-02,Hamburg,Los Angeles,Air,Textiles,5915.14,430.64,2.21,0.6,Hurricane,0.822,2.43,1
+2025-04-04,Rotterdam,Dubai,Road,Textiles,12075.28,83.93,3.26,4.1,Storm,0.632,26.6,1
+2025-12-19,Dubai,Busan,Road,Textiles,13529.13,277.48,3.05,9.0,Storm,0.794,34.99,1
+2024-10-24,Dubai,Hamburg,Air,Perishables,4574.57,28.52,1.4,9.0,Fog,0.514,0.5,0
+2025-08-14,Hamburg,Shanghai,Rail,Automotive,3040.72,99.15,1.92,5.5,Storm,0.815,7.72,1
+2025-12-07,Dubai,Singapore,Rail,Electronics,2758.71,497.76,2.61,9.7,Storm,0.886,8.64,1
+2024-02-23,Dubai,Marseille,Rail,Textiles,13219.41,341.65,1.89,3.6,Rain,0.767,12.93,0
+2024-05-02,Los Angeles,Rotterdam,Air,Textiles,12453.08,191.6,2.35,6.8,Clear,0.767,0.5,0
+2024-11-28,Busan,Singapore,Rail,Perishables,13944.08,320.05,2.25,4.0,Rain,0.635,13.75,1
+2024-09-26,Dubai,Shanghai,Air,Textiles,3351.98,132.42,2.47,3.6,Hurricane,0.545,1.68,1
+2024-08-04,Shanghai,Hamburg,Road,Automotive,2704.7,111.53,1.6,3.0,Hurricane,0.575,15.32,1
+2025-12-15,Los Angeles,Dubai,Sea,Automotive,1901.35,143.53,2.36,7.9,Rain,0.804,4.87,1
+2025-06-14,Dubai,Marseille,Road,Textiles,3859.24,11.55,3.33,9.5,Clear,0.833,3.13,1
+2024-03-10,Shanghai,Hamburg,Air,Automotive,4571.2,346.17,3.75,3.8,Clear,0.559,0.54,0
+2024-02-10,Rotterdam,Antwerp,Road,Electronics,3459.27,212.02,3.9,9.5,Clear,0.856,2.98,1
+2025-11-02,Hamburg,Busan,Road,Perishables,12708.98,454.88,3.81,8.3,Fog,0.757,15.9,1
+2025-11-01,Los Angeles,Antwerp,Sea,Pharmaceuticals,9053.81,13.3,3.53,2.3,Rain,0.787,17.8,1
+2025-06-21,Hamburg,Marseille,Air,Electronics,7850.35,105.81,2.32,3.2,Storm,0.806,1.47,1
+2024-12-18,Dubai,Hamburg,Sea,Electronics,6960.35,448.75,3.72,3.5,Storm,0.881,32.92,0
+2025-08-10,Hamburg,Los Angeles,Sea,Electronics,7567.75,482.95,3.16,9.3,Clear,0.848,15.15,0
+2025-12-23,Shanghai,Dubai,Sea,Perishables,777.18,143.34,2.74,7.4,Rain,0.674,1.54,1
+2025-09-25,Antwerp,Dubai,Air,Automotive,4286.86,251.17,4.07,9.3,Rain,0.799,0.87,1
+2025-12-18,Hamburg,Busan,Sea,Textiles,3533.19,259.59,2.79,7.4,Rain,0.854,8.03,1
+2025-03-31,Hamburg,Antwerp,Air,Electronics,14041.19,253.05,2.95,3.4,Fog,0.771,0.71,1
+2025-03-05,Busan,Rotterdam,Sea,Textiles,3395.27,130.19,4.21,3.0,Fog,0.575,9.09,0
+2025-12-11,Hamburg,Los Angeles,Sea,Electronics,12641.82,148.17,1.98,3.7,Rain,0.942,25.12,0
+2024-07-25,Singapore,Antwerp,Sea,Textiles,6923.99,339.6,3.59,5.4,Storm,0.527,36.81,1
+2025-05-04,Hamburg,Marseille,Air,Pharmaceuticals,9478.0,418.77,1.53,6.8,Clear,0.981,0.67,1
+2025-01-17,Busan,Singapore,Sea,Electronics,3889.24,201.78,4.08,2.5,Hurricane,0.625,48.59,1
+2025-04-29,Rotterdam,Dubai,Air,Automotive,3546.55,449.73,1.44,2.3,Storm,0.93,1.44,0
+2025-08-08,Hamburg,Dubai,Air,Electronics,8525.34,307.48,1.24,6.5,Clear,0.628,0.52,1
+2024-11-10,Los Angeles,Shanghai,Sea,Pharmaceuticals,10297.11,168.03,3.86,6.8,Hurricane,0.728,153.73,1
+2024-07-03,Singapore,Antwerp,Sea,Automotive,1710.23,346.59,3.8,5.4,Storm,0.981,8.69,0
+2025-01-26,Rotterdam,Shanghai,Rail,Pharmaceuticals,10308.79,473.86,2.48,1.7,Hurricane,0.884,62.59,1
+2024-07-19,Busan,Rotterdam,Rail,Pharmaceuticals,1953.56,152.42,1.99,4.4,Storm,0.518,5.07,1
+2024-05-20,Dubai,Shanghai,Rail,Perishables,10882.72,145.46,1.7,7.0,Clear,0.997,10.42,0
+2025-10-11,Shanghai,Dubai,Air,Automotive,14917.79,342.33,2.61,4.5,Fog,0.878,1.78,1
+2025-10-15,Antwerp,Shanghai,Sea,Automotive,14440.54,35.31,3.72,5.4,Storm,0.843,76.36,0
+2024-03-03,Dubai,Busan,Road,Pharmaceuticals,6006.89,111.67,2.09,3.0,Hurricane,0.59,32.76,1
+2025-11-07,Hamburg,Singapore,Road,Textiles,7507.77,124.1,3.92,5.3,Rain,0.859,5.7,0
+2024-10-23,Dubai,Singapore,Air,Pharmaceuticals,4985.9,351.73,3.14,0.3,Rain,0.818,0.5,0
+2025-01-09,Dubai,Rotterdam,Sea,Textiles,10318.25,182.44,4.5,7.7,Storm,0.651,59.99,1
+2024-06-06,Rotterdam,Shanghai,Sea,Pharmaceuticals,3191.88,144.79,3.62,9.2,Storm,0.656,19.49,1
+2025-07-10,Antwerp,Singapore,Air,Electronics,2027.79,167.01,3.44,5.2,Rain,0.776,0.5,0
+2025-03-20,Antwerp,Rotterdam,Rail,Pharmaceuticals,6768.85,96.0,3.72,3.2,Storm,0.926,16.5,1
+2024-11-03,Busan,Los Angeles,Sea,Automotive,13154.93,468.91,1.54,6.1,Rain,0.863,28.74,0
+2024-03-08,Busan,Singapore,Road,Perishables,5896.42,457.46,1.24,9.1,Fog,0.708,7.76,1
+2024-12-25,Shanghai,Dubai,Sea,Automotive,4467.79,34.48,1.82,1.1,Hurricane,0.755,52.59,1
+2024-08-24,Singapore,Rotterdam,Rail,Pharmaceuticals,8776.29,314.55,3.06,3.8,Hurricane,0.584,58.16,1
+2024-01-24,Antwerp,Busan,Sea,Perishables,10169.29,46.01,1.77,7.3,Rain,0.619,23.91,1
+2024-02-23,Los Angeles,Hamburg,Rail,Perishables,10230.85,222.45,4.25,4.9,Hurricane,0.614,70.66,1
+2025-12-07,Hamburg,Marseille,Air,Textiles,573.39,434.9,1.29,1.3,Hurricane,0.799,0.5,1
+2024-04-11,Busan,Rotterdam,Sea,Automotive,13089.93,470.4,2.52,9.0,Storm,0.673,78.96,1
+2025-03-18,Singapore,Shanghai,Sea,Electronics,1036.61,311.95,2.1,4.6,Storm,0.655,5.68,1
+2024-04-08,Hamburg,Singapore,Air,Textiles,13550.34,477.63,4.0,6.3,Storm,0.691,2.49,1
+2025-09-06,Shanghai,Los Angeles,Rail,Pharmaceuticals,842.76,460.1,3.34,7.3,Rain,0.735,1.61,1
+2025-08-01,Dubai,Hamburg,Road,Perishables,3068.67,270.06,3.94,9.4,Rain,0.65,2.57,1
+2025-11-13,Dubai,Antwerp,Rail,Electronics,7100.69,487.41,2.65,6.0,Fog,0.938,9.91,1
+2025-09-17,Antwerp,Marseille,Road,Perishables,4694.05,235.12,3.44,3.7,Storm,0.51,9.18,1
+2025-02-27,Rotterdam,Los Angeles,Sea,Textiles,2864.01,318.89,4.26,6.4,Fog,0.922,8.01,0
+2025-02-04,Singapore,Dubai,Road,Perishables,8975.88,100.49,2.6,9.5,Fog,0.679,11.14,1
+2024-10-13,Los Angeles,Busan,Rail,Pharmaceuticals,8390.88,298.64,3.0,2.5,Clear,0.767,6.42,0
+2024-10-03,Los Angeles,Marseille,Sea,Electronics,3284.23,241.21,4.04,8.0,Storm,0.622,19.23,1
+2025-03-07,Rotterdam,Antwerp,Road,Perishables,3724.24,263.05,2.09,2.3,Fog,0.54,3.36,0
+2024-04-18,Dubai,Rotterdam,Sea,Automotive,6182.7,184.11,4.21,7.2,Fog,0.909,18.31,1
+2024-08-11,Busan,Los Angeles,Road,Perishables,9596.27,343.69,4.49,7.3,Fog,0.816,11.59,0
+2024-07-03,Antwerp,Shanghai,Road,Pharmaceuticals,14295.73,13.17,2.7,2.4,Fog,0.843,14.87,1
+2024-03-19,Singapore,Busan,Road,Pharmaceuticals,4089.62,314.82,1.34,9.7,Hurricane,0.68,27.82,1
+2025-04-05,Hamburg,Antwerp,Rail,Electronics,5622.15,110.48,2.43,8.3,Fog,0.733,8.37,1
+2024-11-22,Dubai,Singapore,Air,Automotive,10194.3,134.62,3.88,6.6,Fog,0.511,1.12,1
+2024-04-02,Dubai,Hamburg,Air,Textiles,8888.14,1.03,4.4,5.7,Storm,0.848,1.23,1
+2025-08-12,Shanghai,Antwerp,Sea,Pharmaceuticals,1447.67,64.27,4.25,5.8,Fog,0.882,3.5,0
+2024-11-16,Shanghai,Los Angeles,Rail,Textiles,1016.06,426.09,3.86,5.4,Hurricane,0.564,7.35,1
+2024-02-12,Hamburg,Busan,Sea,Pharmaceuticals,11193.87,56.16,2.4,7.0,Hurricane,0.715,168.59,1
+2025-10-03,Hamburg,Antwerp,Road,Pharmaceuticals,6734.79,46.48,3.32,5.1,Rain,0.56,5.48,1
+2025-07-31,Busan,Shanghai,Sea,Automotive,11523.3,85.21,3.03,0.8,Rain,0.776,20.96,0
+2024-08-30,Shanghai,Dubai,Sea,Electronics,8933.52,314.0,2.52,1.5,Hurricane,0.652,106.84,1
+2024-03-12,Busan,Shanghai,Sea,Pharmaceuticals,7245.48,57.5,3.02,5.8,Rain,0.548,15.12,0
+2025-08-14,Los Angeles,Antwerp,Rail,Electronics,3863.23,440.97,1.56,7.0,Rain,0.965,4.41,0
+2024-12-14,Busan,Dubai,Rail,Automotive,12824.41,472.87,2.75,0.2,Fog,0.896,14.01,0
+2025-10-18,Antwerp,Busan,Rail,Pharmaceuticals,5253.72,473.41,1.37,3.0,Clear,0.962,4.41,0
+2024-09-16,Dubai,Marseille,Sea,Electronics,7145.36,439.25,2.12,5.7,Clear,0.901,13.58,0
+2024-05-24,Antwerp,Singapore,Sea,Perishables,4157.49,164.18,1.6,9.9,Fog,0.948,13.35,1
+2025-12-25,Busan,Rotterdam,Rail,Electronics,8865.11,350.85,4.04,9.2,Fog,0.914,13.98,0
+2024-06-15,Singapore,Dubai,Sea,Perishables,7154.64,327.82,3.02,6.1,Clear,0.602,12.49,0
+2024-09-22,Hamburg,Rotterdam,Sea,Perishables,12516.28,20.59,2.97,3.8,Hurricane,0.975,166.69,1
+2025-01-05,Antwerp,Los Angeles,Road,Textiles,583.5,6.01,3.1,4.3,Rain,0.859,0.62,1
+2024-08-07,Singapore,Dubai,Sea,Pharmaceuticals,635.31,104.23,2.0,9.7,Fog,0.827,1.94,1
+2025-07-30,Antwerp,Hamburg,Rail,Electronics,3520.57,442.11,1.49,1.4,Storm,0.922,7.34,1
+2025-10-01,Antwerp,Singapore,Rail,Perishables,609.66,117.22,3.27,5.5,Hurricane,0.741,3.54,1
+2024-03-30,Antwerp,Los Angeles,Sea,Automotive,9273.8,394.27,2.61,8.4,Rain,0.989,22.22,1
+2024-10-29,Hamburg,Shanghai,Air,Electronics,8548.73,246.38,2.31,7.0,Storm,0.83,1.98,1
+2024-10-07,Los Angeles,Dubai,Road,Textiles,9059.28,203.76,1.22,9.3,Storm,0.855,23.98,1
+2024-02-05,Singapore,Shanghai,Sea,Pharmaceuticals,14372.45,274.99,2.98,5.4,Fog,0.902,38.0,0
+2025-02-22,Dubai,Shanghai,Rail,Electronics,8945.13,256.25,3.75,5.7,Rain,0.681,8.93,1
+2025-09-20,Singapore,Busan,Road,Textiles,8919.36,105.62,1.69,4.8,Rain,0.773,8.02,0
+2024-08-03,Busan,Shanghai,Road,Electronics,13485.09,447.88,1.71,2.5,Rain,0.713,11.76,1
+2025-10-02,Busan,Antwerp,Rail,Automotive,8788.31,427.32,4.09,3.2,Storm,0.795,21.99,1
+2024-06-05,Singapore,Busan,Sea,Perishables,9283.73,406.61,4.11,4.9,Fog,0.608,24.06,0
+2025-08-14,Hamburg,Singapore,Sea,Pharmaceuticals,14724.32,339.65,1.9,3.0,Clear,0.825,23.83,0
+2024-12-10,Singapore,Hamburg,Road,Perishables,11401.46,219.45,3.51,4.1,Storm,0.918,25.92,1
+2025-02-18,Hamburg,Marseille,Rail,Perishables,6891.06,211.92,2.87,2.6,Hurricane,0.98,43.17,1
+2024-08-19,Dubai,Shanghai,Road,Perishables,777.75,94.84,3.82,3.6,Fog,0.859,0.58,1
+2025-04-18,Los Angeles,Marseille,Air,Electronics,8180.07,141.99,3.27,0.2,Rain,0.503,0.5,0
+2024-09-21,Dubai,Marseille,Road,Electronics,5754.71,206.06,4.14,5.0,Hurricane,0.672,33.37,1
+2025-07-19,Rotterdam,Los Angeles,Air,Electronics,1730.15,230.7,3.49,8.6,Clear,0.596,0.5,0
+2025-07-06,Hamburg,Los Angeles,Road,Textiles,13664.53,62.4,1.39,9.4,Storm,0.902,36.2,1
+2025-08-03,Rotterdam,Singapore,Road,Electronics,10256.64,64.34,1.77,6.9,Clear,0.546,9.28,1
+2024-04-16,Los Angeles,Rotterdam,Sea,Pharmaceuticals,915.46,225.82,4.28,6.5,Fog,0.717,2.54,0
+2025-08-26,Hamburg,Antwerp,Air,Electronics,3472.27,123.66,1.7,4.0,Clear,0.622,0.9,0
+2024-09-11,Shanghai,Marseille,Air,Textiles,3742.14,422.59,3.84,7.4,Clear,0.741,0.5,0
+2025-12-22,Singapore,Hamburg,Air,Textiles,8349.93,343.79,4.05,9.9,Fog,0.78,0.5,1
+2024-10-03,Dubai,Singapore,Air,Automotive,8638.52,59.87,4.0,4.0,Fog,0.705,1.94,1
+2025-10-04,Rotterdam,Singapore,Rail,Automotive,4540.32,78.19,2.82,6.4,Rain,0.935,4.27,1
+2025-05-25,Dubai,Los Angeles,Road,Automotive,12237.98,499.73,3.29,3.8,Clear,0.899,8.71,1
+2024-01-17,Shanghai,Dubai,Air,Textiles,7528.1,264.1,2.29,0.9,Clear,0.617,0.5,0
+2024-05-06,Shanghai,Los Angeles,Sea,Electronics,9089.08,337.13,3.15,8.4,Fog,0.937,26.61,1
+2025-07-19,Busan,Hamburg,Air,Pharmaceuticals,4302.83,476.18,2.68,8.6,Storm,0.686,1.49,1
+2024-07-29,Dubai,Rotterdam,Air,Perishables,3096.88,58.58,3.83,7.0,Rain,0.501,0.5,0
+2025-03-10,Shanghai,Rotterdam,Sea,Perishables,4009.65,128.58,2.13,2.1,Hurricane,0.774,49.72,1
+2024-07-05,Dubai,Marseille,Air,Automotive,9653.96,40.55,2.43,1.8,Fog,0.775,0.5,1
+2024-09-27,Busan,Marseille,Air,Automotive,6614.95,229.64,4.24,5.8,Storm,0.703,0.75,1
+2024-07-23,Singapore,Rotterdam,Rail,Pharmaceuticals,7043.76,168.44,3.75,9.5,Clear,0.625,7.24,0
+2025-11-14,Los Angeles,Antwerp,Sea,Textiles,3523.4,166.67,3.1,6.3,Hurricane,0.971,51.46,1
+2024-02-21,Rotterdam,Shanghai,Rail,Perishables,8368.35,26.04,1.53,8.9,Clear,0.628,8.56,0
+2025-04-20,Shanghai,Los Angeles,Air,Automotive,11480.6,231.72,1.7,6.8,Fog,0.899,1.54,0
+2024-11-21,Dubai,Marseille,Sea,Electronics,9661.3,28.2,4.31,8.5,Storm,0.562,57.02,1
+2025-11-24,Hamburg,Busan,Sea,Electronics,11374.68,231.77,3.65,9.6,Fog,0.978,35.28,0
+2025-10-07,Dubai,Rotterdam,Road,Pharmaceuticals,2547.39,184.46,4.46,0.7,Storm,0.514,3.91,1
+2024-08-04,Shanghai,Hamburg,Road,Pharmaceuticals,1971.34,401.12,3.8,8.0,Hurricane,0.892,13.64,1
+2025-08-03,Dubai,Shanghai,Air,Perishables,3817.57,383.53,2.25,5.8,Hurricane,0.826,3.01,1
+2025-11-03,Hamburg,Singapore,Sea,Textiles,14822.89,334.91,3.31,3.7,Clear,0.567,24.8,1
+2025-12-31,Rotterdam,Los Angeles,Rail,Automotive,2028.2,343.08,1.82,5.7,Fog,0.949,2.67,1
+2025-09-14,Dubai,Los Angeles,Air,Automotive,11393.54,327.2,3.73,10.0,Fog,0.947,1.61,1
+2025-04-17,Singapore,Hamburg,Air,Automotive,12151.3,9.96,2.53,9.7,Hurricane,0.734,6.78,1
+2024-05-06,Shanghai,Hamburg,Rail,Automotive,1077.27,365.12,1.78,1.6,Clear,0.786,0.88,0
+2024-06-21,Dubai,Singapore,Sea,Pharmaceuticals,3676.5,80.1,2.82,8.8,Fog,0.875,11.94,1
+2024-11-14,Rotterdam,Los Angeles,Sea,Textiles,847.22,304.89,2.39,8.9,Hurricane,0.902,13.21,1
+2024-03-09,Rotterdam,Singapore,Rail,Textiles,14902.2,303.24,4.23,0.5,Hurricane,0.521,85.41,1
+2025-11-19,Rotterdam,Hamburg,Sea,Automotive,13817.18,34.55,2.7,9.7,Storm,0.813,85.15,1
+2024-09-22,Los Angeles,Rotterdam,Air,Electronics,9116.51,212.01,2.35,3.4,Fog,0.739,0.5,0
+2025-09-22,Busan,Marseille,Sea,Automotive,11599.94,473.5,1.53,0.7,Hurricane,0.831,133.67,1
+2024-05-31,Singapore,Shanghai,Air,Perishables,7479.49,497.29,1.74,5.2,Rain,0.992,0.76,0
+2024-10-04,Busan,Singapore,Sea,Pharmaceuticals,4251.32,400.78,3.55,3.8,Hurricane,0.698,56.63,1
+2025-03-02,Hamburg,Marseille,Sea,Electronics,4483.61,20.61,2.58,5.0,Clear,0.861,7.96,0
+2024-07-13,Dubai,Rotterdam,Road,Pharmaceuticals,7914.46,236.34,4.24,3.8,Storm,0.893,17.11,1
+2024-03-04,Shanghai,Dubai,Sea,Textiles,14460.14,332.97,4.25,3.3,Fog,0.5,34.34,1
+2025-08-24,Busan,Rotterdam,Sea,Textiles,699.31,121.85,2.99,9.2,Fog,0.824,2.08,0
+2024-06-24,Hamburg,Antwerp,Sea,Pharmaceuticals,12137.49,65.39,4.32,4.3,Clear,0.641,20.82,1
+2024-10-06,Busan,Dubai,Air,Automotive,12069.76,119.08,3.65,3.3,Clear,0.859,1.19,0
+2024-04-27,Shanghai,Rotterdam,Sea,Perishables,9601.77,54.41,3.04,3.1,Clear,0.646,14.79,0
+2024-10-20,Hamburg,Busan,Road,Perishables,14429.09,171.63,1.32,1.1,Rain,0.819,10.95,0
+2025-11-25,Shanghai,Dubai,Road,Perishables,7977.35,221.49,4.5,1.5,Hurricane,0.671,40.91,1
+2024-09-30,Rotterdam,Antwerp,Air,Textiles,9542.91,85.71,4.41,10.0,Hurricane,0.815,5.37,1
+2025-12-03,Dubai,Hamburg,Air,Perishables,14242.81,424.14,2.4,1.6,Storm,0.929,1.43,1
+2024-01-20,Antwerp,Marseille,Road,Pharmaceuticals,8084.45,269.1,3.21,3.8,Storm,0.725,18.32,1
+2025-09-24,Singapore,Shanghai,Rail,Perishables,9668.09,403.24,2.04,7.1,Storm,0.571,27.64,1
+2025-02-08,Antwerp,Marseille,Sea,Automotive,6019.04,173.47,2.31,5.9,Rain,0.739,12.91,1
+2025-05-05,Los Angeles,Hamburg,Air,Pharmaceuticals,6665.6,123.48,3.68,0.1,Hurricane,0.961,2.8,1
+2024-10-03,Rotterdam,Singapore,Sea,Textiles,8265.53,75.48,4.0,1.1,Rain,0.809,14.26,0
+2025-04-09,Los Angeles,Marseille,Road,Perishables,10761.96,446.02,1.9,1.2,Fog,0.503,9.94,1
+2025-12-21,Singapore,Dubai,Rail,Automotive,5886.28,35.86,3.78,7.0,Fog,0.957,8.65,1
+2025-05-17,Antwerp,Los Angeles,Air,Electronics,6015.81,473.71,3.44,7.9,Clear,0.645,0.5,1
+2024-08-06,Dubai,Singapore,Road,Pharmaceuticals,11862.97,33.57,3.99,5.7,Hurricane,0.581,71.46,1
+2025-04-20,Hamburg,Rotterdam,Air,Perishables,6574.74,267.27,1.7,0.1,Fog,0.939,1.32,0
+2025-06-01,Busan,Rotterdam,Air,Automotive,6763.2,280.31,1.53,1.9,Fog,0.8,0.5,0
+2025-11-26,Hamburg,Dubai,Sea,Textiles,5623.61,167.55,1.75,8.1,Rain,0.98,13.56,0
+2024-01-18,Singapore,Rotterdam,Sea,Pharmaceuticals,3613.09,448.01,2.03,5.9,Rain,0.582,8.41,0
+2025-04-29,Antwerp,Shanghai,Air,Pharmaceuticals,4769.51,193.64,3.51,0.3,Storm,0.917,1.24,1
+2024-09-10,Antwerp,Busan,Road,Electronics,9698.27,206.51,1.68,6.8,Clear,0.797,8.0,1
+2025-10-24,Singapore,Rotterdam,Air,Pharmaceuticals,14501.77,402.3,2.37,7.4,Fog,0.853,1.53,1
+2024-05-06,Los Angeles,Rotterdam,Air,Perishables,11392.07,40.91,3.93,2.8,Clear,0.898,1.02,1
+2024-12-06,Antwerp,Busan,Sea,Textiles,13141.73,68.89,3.39,2.5,Storm,0.998,61.01,1
+2024-06-21,Busan,Antwerp,Sea,Perishables,12134.83,466.46,4.47,6.4,Fog,0.982,32.7,0
+2024-10-06,Hamburg,Dubai,Sea,Pharmaceuticals,4014.94,297.25,1.84,0.8,Storm,0.991,17.2,0
+2024-03-11,Hamburg,Dubai,Air,Electronics,5415.93,103.2,1.95,2.5,Clear,0.686,0.5,1
+2024-09-25,Busan,Singapore,Sea,Electronics,1334.6,222.91,3.78,9.4,Clear,0.963,2.87,0
+2024-12-29,Busan,Dubai,Sea,Automotive,6009.7,184.91,1.43,1.2,Storm,0.51,27.45,0
+2024-01-28,Singapore,Antwerp,Air,Pharmaceuticals,12243.18,52.63,2.98,0.4,Hurricane,0.724,5.57,1
+2025-03-09,Busan,Los Angeles,Air,Perishables,14560.99,420.84,1.62,8.2,Hurricane,0.863,8.63,1
+2025-11-11,Antwerp,Hamburg,Rail,Perishables,13174.04,424.36,3.19,4.9,Clear,0.536,10.64,1
+2024-02-18,Shanghai,Hamburg,Rail,Automotive,12897.94,229.16,3.85,8.1,Rain,0.843,15.23,0
+2024-06-24,Dubai,Antwerp,Road,Textiles,9744.58,31.91,2.58,1.4,Clear,0.534,6.24,0
+2024-07-12,Dubai,Rotterdam,Rail,Perishables,2831.02,128.08,2.29,4.2,Storm,0.811,7.3,0
+2024-07-30,Hamburg,Dubai,Road,Textiles,7147.26,243.16,2.54,1.4,Storm,0.671,14.06,0
+2025-07-18,Shanghai,Hamburg,Road,Electronics,14587.22,272.9,3.72,6.2,Rain,0.912,13.51,0
+2024-04-01,Shanghai,Singapore,Road,Textiles,4420.7,372.47,1.65,5.6,Fog,0.576,4.61,0
+2024-06-10,Shanghai,Busan,Sea,Pharmaceuticals,2766.6,58.15,1.25,6.2,Fog,0.557,7.24,1
+2025-10-23,Antwerp,Busan,Sea,Electronics,1977.44,224.76,3.34,3.7,Fog,0.618,4.18,1
+2024-11-02,Hamburg,Shanghai,Rail,Textiles,7589.02,113.38,2.6,0.6,Fog,0.827,7.15,0
+2024-06-06,Singapore,Busan,Air,Automotive,13000.85,2.96,2.42,2.4,Clear,0.757,1.25,1
+2025-03-27,Busan,Antwerp,Sea,Pharmaceuticals,8641.53,47.67,3.07,3.1,Storm,0.943,41.5,0
+2024-11-28,Busan,Singapore,Road,Perishables,10315.64,332.37,2.87,0.4,Storm,0.863,19.24,1
+2025-12-03,Rotterdam,Marseille,Air,Automotive,2650.98,131.87,2.95,7.1,Hurricane,0.804,0.57,1
+2025-08-14,Los Angeles,Dubai,Road,Perishables,2695.96,400.91,1.21,5.8,Clear,0.739,2.22,1
+2024-11-20,Shanghai,Dubai,Sea,Textiles,13284.51,365.53,2.58,3.8,Storm,0.652,65.77,1
+2024-08-11,Antwerp,Rotterdam,Road,Textiles,4892.28,70.72,4.26,9.3,Rain,0.913,5.31,1
+2024-09-04,Busan,Antwerp,Road,Textiles,13256.41,345.66,2.75,1.5,Storm,0.654,25.43,1
+2025-05-12,Shanghai,Rotterdam,Rail,Automotive,11033.69,75.55,3.05,2.5,Hurricane,0.932,68.81,1
+2024-05-18,Shanghai,Los Angeles,Air,Automotive,12967.02,111.54,3.73,8.3,Rain,0.719,1.18,1
+2024-05-15,Rotterdam,Busan,Sea,Textiles,9366.22,464.02,4.32,3.6,Hurricane,0.929,122.5,1
+2024-10-11,Antwerp,Los Angeles,Rail,Perishables,9309.4,152.08,1.22,6.5,Storm,0.893,25.79,0
+2024-06-12,Hamburg,Marseille,Sea,Perishables,11707.36,139.35,1.65,8.7,Fog,0.961,34.2,1
+2025-02-27,Singapore,Shanghai,Road,Perishables,6868.55,153.4,1.69,5.5,Hurricane,0.746,41.9,1
+2025-12-26,Antwerp,Rotterdam,Air,Perishables,14777.71,266.65,3.8,3.8,Storm,0.761,2.98,0
+2025-12-26,Antwerp,Rotterdam,Rail,Automotive,14137.31,145.3,2.2,7.7,Storm,0.595,40.75,1
+2025-05-11,Busan,Singapore,Rail,Automotive,13348.35,278.25,1.51,1.2,Fog,0.767,16.21,0
+2025-02-22,Shanghai,Hamburg,Road,Pharmaceuticals,9528.14,366.93,4.27,7.7,Storm,0.602,23.26,1
+2025-02-14,Hamburg,Marseille,Air,Automotive,9531.91,214.75,1.35,6.3,Clear,0.927,1.27,1
+2025-02-01,Hamburg,Rotterdam,Rail,Textiles,8458.66,384.82,3.55,5.5,Hurricane,0.889,60.16,1
+2025-06-30,Busan,Hamburg,Road,Perishables,5174.13,448.01,3.27,4.2,Storm,0.887,11.92,1
+2025-11-12,Shanghai,Dubai,Road,Electronics,11184.67,40.18,1.49,9.0,Clear,0.826,9.27,1
+2025-01-30,Rotterdam,Los Angeles,Sea,Electronics,12002.29,131.57,2.2,0.8,Fog,0.541,25.74,0
+2024-03-14,Shanghai,Hamburg,Sea,Textiles,1488.5,370.7,2.31,6.6,Hurricane,0.986,22.72,1
+2024-11-19,Hamburg,Busan,Road,Electronics,12919.1,497.72,3.47,4.9,Storm,0.675,28.16,1
+2025-05-01,Los Angeles,Shanghai,Air,Electronics,6793.3,24.66,3.76,0.4,Fog,0.577,1.5,0
+2025-01-02,Dubai,Singapore,Rail,Pharmaceuticals,8412.59,294.46,2.86,5.2,Fog,0.544,10.64,1
+2025-03-26,Shanghai,Busan,Road,Perishables,10590.54,307.09,3.83,3.5,Hurricane,0.861,58.4,1
+2025-04-05,Los Angeles,Singapore,Air,Electronics,8002.97,26.2,2.24,0.2,Clear,0.892,0.5,0
+2025-01-14,Hamburg,Rotterdam,Air,Pharmaceuticals,8821.05,289.46,2.18,9.0,Rain,0.733,0.53,1
+2025-10-30,Busan,Rotterdam,Rail,Perishables,935.38,486.14,1.38,4.1,Clear,0.888,0.5,0
+2024-08-12,Busan,Rotterdam,Road,Electronics,12125.06,184.3,1.67,1.5,Hurricane,0.562,60.93,1
+2025-04-17,Antwerp,Shanghai,Rail,Perishables,2377.97,336.36,2.65,2.3,Hurricane,0.813,14.14,1
+2025-01-24,Dubai,Los Angeles,Rail,Perishables,13854.42,446.99,2.59,8.8,Storm,0.647,40.78,1
+2025-09-08,Dubai,Busan,Road,Automotive,11425.35,452.09,2.59,7.1,Storm,0.785,27.18,1
+2024-02-04,Shanghai,Busan,Sea,Pharmaceuticals,12512.36,374.27,2.77,7.4,Fog,0.765,35.99,0
+2024-09-23,Singapore,Hamburg,Rail,Perishables,10225.62,252.96,4.31,3.5,Clear,0.615,8.81,1
+2025-06-03,Dubai,Los Angeles,Rail,Electronics,10886.69,480.84,1.94,1.4,Storm,0.516,23.88,1
+2025-04-23,Busan,Dubai,Air,Pharmaceuticals,4941.55,264.13,1.41,3.6,Clear,0.531,0.59,1
+2025-08-19,Antwerp,Shanghai,Rail,Electronics,13254.22,180.71,1.91,4.1,Hurricane,0.844,88.27,1
+2025-03-28,Singapore,Hamburg,Rail,Pharmaceuticals,12261.29,152.02,1.78,1.3,Hurricane,0.699,72.95,1
+2024-04-09,Antwerp,Marseille,Rail,Electronics,14360.82,155.51,3.16,0.3,Rain,0.807,11.66,0
+2025-04-12,Hamburg,Dubai,Road,Automotive,1476.58,349.02,3.21,5.6,Clear,0.655,2.05,1
+2025-10-06,Los Angeles,Busan,Rail,Pharmaceuticals,13757.33,106.83,1.85,1.7,Rain,0.577,11.98,0
+2024-12-30,Dubai,Antwerp,Sea,Pharmaceuticals,6916.91,397.74,2.0,3.2,Hurricane,0.851,88.81,1
+2024-05-16,Singapore,Rotterdam,Road,Electronics,7931.29,260.6,3.82,6.7,Rain,0.689,7.92,1
+2024-06-12,Busan,Los Angeles,Air,Automotive,5475.93,95.35,2.13,6.5,Clear,0.942,0.5,0
+2024-05-16,Shanghai,Hamburg,Sea,Electronics,5871.85,410.43,3.23,8.1,Hurricane,0.802,91.82,1
+2025-01-12,Dubai,Singapore,Sea,Textiles,13461.44,219.44,2.32,1.2,Rain,0.921,23.97,1
+2025-03-23,Dubai,Rotterdam,Sea,Perishables,2260.08,38.69,4.05,3.7,Storm,0.666,10.66,1
+2024-11-19,Rotterdam,Antwerp,Air,Automotive,13683.69,242.61,1.9,9.0,Clear,0.663,0.78,0
+2025-05-07,Los Angeles,Busan,Sea,Pharmaceuticals,13313.42,337.02,4.14,5.3,Fog,0.553,35.04,1
+2025-08-15,Antwerp,Los Angeles,Road,Textiles,8425.37,167.77,2.74,9.7,Rain,0.928,8.74,1
+2024-11-13,Los Angeles,Shanghai,Road,Pharmaceuticals,10060.63,364.89,3.4,4.9,Clear,0.865,6.99,1
+2024-07-22,Rotterdam,Hamburg,Road,Automotive,3784.19,18.18,2.0,3.1,Clear,0.575,2.96,1
+2024-10-01,Dubai,Shanghai,Air,Perishables,6285.54,290.8,3.51,9.4,Rain,0.651,0.5,1
+2025-03-05,Singapore,Rotterdam,Rail,Pharmaceuticals,9708.86,8.08,2.81,4.0,Hurricane,0.693,65.2,1
+2025-01-24,Shanghai,Antwerp,Sea,Textiles,11697.55,276.85,4.29,9.3,Fog,0.71,36.52,1
+2024-01-21,Antwerp,Busan,Air,Perishables,7414.16,126.95,1.68,3.1,Hurricane,0.547,3.68,1
+2025-08-10,Antwerp,Rotterdam,Air,Perishables,9286.96,489.98,2.13,9.0,Fog,0.876,1.24,1
+2024-08-18,Los Angeles,Antwerp,Rail,Pharmaceuticals,13223.18,494.57,2.95,3.4,Rain,0.901,13.96,0
+2024-06-19,Antwerp,Shanghai,Air,Textiles,5509.47,202.65,3.77,8.7,Rain,0.673,0.82,1
+2025-08-09,Dubai,Singapore,Road,Electronics,6497.82,156.54,1.77,8.5,Storm,0.599,16.89,1
+2024-11-16,Dubai,Busan,Sea,Textiles,14155.02,256.78,2.74,4.4,Clear,0.63,24.14,1
+2024-04-09,Antwerp,Shanghai,Road,Electronics,11108.05,289.02,2.7,7.3,Fog,0.584,14.55,1
+2025-09-12,Singapore,Dubai,Road,Electronics,14625.82,461.23,3.65,3.3,Rain,0.628,12.06,1
+2024-07-09,Antwerp,Rotterdam,Air,Electronics,14105.42,461.19,3.56,2.1,Rain,0.685,1.3,0
+2024-05-26,Antwerp,Dubai,Road,Automotive,10824.2,481.22,1.66,10.0,Hurricane,0.98,77.32,1
+2024-07-21,Antwerp,Singapore,Rail,Pharmaceuticals,6967.08,75.54,3.06,9.0,Storm,0.714,20.95,1
+2024-09-26,Hamburg,Antwerp,Sea,Electronics,8268.73,234.81,2.49,4.9,Rain,0.891,17.38,0
+2025-05-27,Shanghai,Dubai,Road,Perishables,10062.91,80.11,2.18,1.3,Rain,0.998,7.09,0
+2025-12-30,Dubai,Los Angeles,Sea,Pharmaceuticals,12371.73,240.91,4.39,4.3,Rain,0.653,25.6,0
+2024-08-13,Shanghai,Rotterdam,Air,Perishables,9651.51,299.31,2.06,8.9,Clear,0.995,1.03,0
+2025-10-24,Rotterdam,Busan,Road,Textiles,13410.57,112.1,3.9,9.8,Storm,0.501,35.6,1
+2024-06-01,Dubai,Rotterdam,Air,Pharmaceuticals,9252.74,168.82,2.11,8.9,Clear,0.953,0.95,1
+2024-12-25,Hamburg,Busan,Road,Pharmaceuticals,13613.22,300.08,2.1,5.0,Hurricane,0.754,81.41,1
+2024-04-19,Antwerp,Rotterdam,Air,Automotive,5233.69,104.55,4.1,1.8,Storm,0.648,0.5,0
+2024-03-14,Rotterdam,Dubai,Rail,Perishables,5009.24,98.28,1.31,2.4,Hurricane,0.542,31.75,1
+2025-09-20,Singapore,Dubai,Air,Textiles,11864.2,67.62,4.23,8.7,Fog,0.788,1.53,1
+2025-10-18,Busan,Rotterdam,Road,Textiles,611.13,489.15,4.14,6.1,Rain,0.58,0.95,1
+2024-02-24,Singapore,Busan,Sea,Automotive,3174.91,421.43,4.1,5.3,Rain,0.727,6.7,0
+2025-01-11,Hamburg,Singapore,Rail,Perishables,13768.81,5.57,2.54,8.3,Hurricane,0.517,108.14,1
+2025-01-05,Rotterdam,Shanghai,Road,Textiles,1155.8,279.53,2.94,2.4,Rain,0.956,1.32,0
+2025-03-14,Hamburg,Shanghai,Air,Textiles,13978.17,151.49,1.32,8.8,Rain,0.872,0.76,1
+2024-10-18,Antwerp,Singapore,Road,Electronics,14286.2,29.11,2.56,4.9,Fog,0.657,15.43,1
+2025-12-28,Antwerp,Shanghai,Sea,Pharmaceuticals,7573.6,297.26,3.7,5.9,Hurricane,0.616,108.48,1
+2025-01-16,Los Angeles,Rotterdam,Road,Perishables,593.73,464.58,2.93,3.9,Hurricane,0.932,2.64,1
+2024-02-29,Dubai,Singapore,Air,Pharmaceuticals,8179.93,469.15,1.76,2.1,Rain,0.854,0.57,0
+2025-08-09,Shanghai,Hamburg,Air,Pharmaceuticals,13438.39,306.97,3.75,2.2,Clear,0.945,1.29,0
+2024-05-24,Singapore,Shanghai,Road,Automotive,2169.62,227.42,2.62,4.0,Rain,0.782,2.03,1
+2025-08-08,Busan,Los Angeles,Rail,Automotive,10562.27,279.35,4.26,5.7,Storm,0.66,28.66,1
+2025-01-27,Antwerp,Rotterdam,Sea,Electronics,6395.56,493.01,1.41,1.8,Rain,0.779,11.59,0
+2024-04-11,Hamburg,Marseille,Sea,Electronics,5657.25,448.87,1.75,3.6,Storm,0.668,28.63,0
+2025-09-02,Shanghai,Busan,Rail,Perishables,13708.44,252.56,2.69,7.7,Hurricane,0.823,104.15,1
+2025-12-04,Busan,Singapore,Air,Textiles,12378.24,293.24,3.88,1.6,Clear,0.784,0.5,0
+2025-11-02,Rotterdam,Hamburg,Air,Textiles,10723.09,188.82,3.8,6.9,Rain,0.68,1.08,0
+2025-07-20,Dubai,Busan,Rail,Electronics,4141.95,377.96,3.97,4.8,Storm,0.531,11.15,1
+2024-10-08,Busan,Antwerp,Road,Electronics,5961.81,368.88,3.54,6.0,Rain,0.975,5.53,1
+2024-07-29,Dubai,Antwerp,Road,Perishables,10274.89,344.37,1.65,2.9,Clear,0.958,6.93,0
+2024-12-09,Busan,Antwerp,Road,Pharmaceuticals,12708.04,20.37,2.11,6.6,Hurricane,0.568,80.22,1
+2025-07-17,Los Angeles,Singapore,Air,Perishables,1597.65,423.8,4.36,5.5,Rain,0.79,0.5,0
+2025-04-30,Singapore,Dubai,Rail,Automotive,2502.82,248.59,3.75,0.8,Clear,0.992,1.35,0
+2024-01-30,Singapore,Hamburg,Rail,Textiles,3834.34,455.76,3.21,0.4,Clear,0.547,2.71,0
+2025-12-12,Shanghai,Antwerp,Sea,Perishables,3462.59,43.71,3.66,4.1,Storm,0.989,17.74,1
+2025-11-29,Hamburg,Los Angeles,Air,Automotive,7261.34,133.25,3.04,3.8,Storm,0.723,0.98,1
+2024-04-13,Singapore,Shanghai,Air,Electronics,11740.9,28.81,3.67,0.6,Rain,0.759,0.56,1
+2025-03-09,Shanghai,Dubai,Road,Perishables,5418.99,350.16,2.49,0.5,Storm,0.825,10.19,0
+2024-01-06,Antwerp,Los Angeles,Rail,Electronics,10510.73,230.19,4.07,5.5,Storm,0.823,28.33,0
+2024-09-27,Busan,Singapore,Air,Automotive,1827.94,342.53,2.39,0.1,Clear,0.575,0.5,0
+2025-08-21,Los Angeles,Singapore,Sea,Textiles,2627.08,195.44,2.42,2.8,Rain,0.672,5.26,1
+2024-09-28,Rotterdam,Hamburg,Road,Textiles,6050.37,347.96,3.98,7.8,Clear,0.789,4.66,0
+2024-10-25,Busan,Singapore,Sea,Electronics,11058.74,72.39,2.19,5.3,Fog,0.957,28.81,0
+2025-10-23,Busan,Los Angeles,Rail,Electronics,7871.23,96.36,2.61,4.3,Storm,0.895,19.1,1
+2024-10-14,Hamburg,Busan,Sea,Electronics,9047.08,371.41,4.4,4.2,Storm,0.861,45.57,0
+2025-08-02,Singapore,Busan,Air,Pharmaceuticals,7050.22,85.36,4.33,0.4,Fog,0.542,0.62,0
+2024-06-25,Singapore,Dubai,Road,Textiles,865.39,3.81,1.33,9.7,Clear,0.61,0.5,1
+2024-01-04,Antwerp,Hamburg,Road,Textiles,11977.9,96.94,1.82,3.2,Storm,0.703,24.61,0
+2025-04-21,Rotterdam,Shanghai,Road,Textiles,873.66,297.57,1.81,3.5,Clear,0.674,1.51,0
+2024-03-01,Los Angeles,Hamburg,Sea,Electronics,5723.39,160.95,1.47,4.2,Rain,0.937,11.35,0
+2024-04-05,Los Angeles,Dubai,Road,Electronics,5266.9,351.05,3.03,5.5,Hurricane,0.612,31.31,1
+2025-07-18,Antwerp,Hamburg,Road,Perishables,3692.66,39.66,3.44,0.6,Rain,0.824,2.67,0
+2024-06-15,Shanghai,Dubai,Rail,Electronics,14123.74,248.03,3.34,7.2,Fog,0.815,20.22,0
+2024-09-24,Hamburg,Singapore,Sea,Electronics,7980.0,27.66,2.01,2.8,Clear,0.889,12.61,0
+2024-11-02,Rotterdam,Los Angeles,Air,Automotive,7467.35,295.84,1.66,7.9,Storm,0.826,1.57,1
+2024-01-15,Singapore,Los Angeles,Road,Automotive,11213.57,358.6,3.72,9.7,Rain,0.86,12.3,1
+2025-12-31,Los Angeles,Rotterdam,Road,Textiles,12587.92,322.73,1.97,1.5,Fog,0.869,11.74,0
+2024-10-08,Los Angeles,Busan,Sea,Electronics,12376.42,472.94,3.18,7.0,Storm,0.754,68.82,1
+2024-04-03,Los Angeles,Rotterdam,Air,Perishables,12667.63,205.31,3.42,5.8,Rain,0.615,1.61,1
+2024-04-26,Hamburg,Busan,Rail,Pharmaceuticals,10868.95,429.48,3.1,4.4,Storm,0.703,27.44,1
+2024-08-19,Rotterdam,Shanghai,Rail,Textiles,4963.38,497.58,1.26,5.2,Rain,0.73,5.22,0
+2025-10-13,Rotterdam,Shanghai,Sea,Perishables,1390.97,140.79,1.4,7.5,Rain,0.796,3.73,0
+2025-05-19,Singapore,Hamburg,Rail,Perishables,2961.49,375.33,3.35,6.2,Hurricane,0.916,21.7,1
+2025-07-22,Rotterdam,Hamburg,Rail,Pharmaceuticals,9096.18,383.12,4.47,4.6,Fog,0.639,11.46,1
+2025-07-18,Dubai,Singapore,Sea,Textiles,6496.46,38.63,2.5,4.1,Fog,0.555,15.75,0
+2024-05-23,Rotterdam,Los Angeles,Sea,Automotive,1082.01,114.95,3.91,0.7,Storm,0.532,5.21,1
+2025-03-20,Hamburg,Rotterdam,Rail,Electronics,643.71,122.11,2.9,2.1,Hurricane,0.6,4.54,1
+2025-01-25,Los Angeles,Rotterdam,Air,Pharmaceuticals,14141.38,411.5,1.48,5.3,Hurricane,0.89,7.34,1
+2024-10-05,Dubai,Rotterdam,Road,Textiles,7826.16,479.11,1.72,8.4,Hurricane,0.972,53.31,1
+2024-10-28,Rotterdam,Los Angeles,Rail,Electronics,7545.14,34.26,3.08,5.5,Fog,0.788,10.76,1
+2024-09-01,Los Angeles,Rotterdam,Sea,Pharmaceuticals,884.41,85.41,3.79,6.0,Storm,0.73,5.2,0
+2024-11-04,Rotterdam,Hamburg,Air,Electronics,2075.9,252.38,2.52,3.1,Hurricane,0.641,0.67,1
+2024-03-07,Singapore,Busan,Air,Electronics,11036.73,74.58,3.3,6.9,Clear,0.94,1.34,0
+2024-06-05,Shanghai,Busan,Rail,Perishables,1124.95,355.41,3.11,8.6,Storm,0.813,3.02,1
+2025-09-08,Busan,Los Angeles,Road,Automotive,9421.82,33.85,3.85,2.9,Clear,0.659,6.85,1
+2024-04-25,Los Angeles,Busan,Air,Automotive,6716.18,280.79,2.44,3.6,Hurricane,0.623,2.85,1
+2024-04-23,Shanghai,Busan,Rail,Automotive,1326.89,291.93,1.28,9.5,Clear,0.772,1.72,0
+2024-12-26,Dubai,Marseille,Rail,Pharmaceuticals,10195.33,106.65,3.61,7.6,Rain,0.772,11.76,1
+2024-11-28,Hamburg,Marseille,Road,Pharmaceuticals,2064.43,20.92,1.75,0.3,Clear,0.596,0.99,0
+2024-07-24,Dubai,Antwerp,Air,Pharmaceuticals,6304.54,167.73,2.57,10.0,Rain,0.647,0.7,1
+2024-04-14,Hamburg,Singapore,Road,Textiles,10509.68,371.06,4.13,8.1,Rain,0.957,10.68,0
+2024-08-12,Antwerp,Marseille,Sea,Textiles,13156.46,8.81,1.4,9.9,Storm,0.854,81.32,1
+2024-08-12,Singapore,Marseille,Rail,Automotive,7959.69,454.58,1.55,6.4,Clear,0.999,7.53,1
+2024-08-24,Los Angeles,Dubai,Rail,Perishables,2009.57,497.83,3.18,1.8,Clear,0.751,1.59,1
+2024-11-26,Antwerp,Busan,Sea,Perishables,1294.04,464.45,1.87,0.6,Hurricane,0.734,15.26,1
+2025-02-21,Busan,Marseille,Rail,Electronics,4411.37,428.43,1.44,7.1,Fog,0.866,7.18,0
+2024-05-04,Shanghai,Dubai,Road,Pharmaceuticals,4809.95,473.77,3.02,5.3,Clear,0.763,3.81,0
+2024-11-12,Singapore,Dubai,Sea,Textiles,2821.04,471.65,3.57,5.4,Clear,0.573,4.17,1
+2025-03-13,Rotterdam,Los Angeles,Road,Pharmaceuticals,12186.89,280.01,2.88,9.9,Rain,0.854,13.59,0
+2025-12-29,Antwerp,Los Angeles,Rail,Perishables,12384.56,230.73,2.4,9.3,Hurricane,0.636,100.9,1
+2025-11-08,Shanghai,Busan,Air,Textiles,8816.67,163.24,3.11,7.6,Rain,0.607,0.5,1
+2025-04-14,Rotterdam,Hamburg,Road,Perishables,10534.73,190.72,1.84,0.8,Clear,0.814,6.91,0
+2025-05-02,Busan,Dubai,Sea,Textiles,1781.58,288.18,3.29,6.6,Storm,0.792,10.15,1
+2024-10-12,Hamburg,Singapore,Road,Perishables,12638.23,66.04,4.07,2.2,Rain,0.902,9.95,1
+2024-02-08,Singapore,Hamburg,Air,Pharmaceuticals,11864.98,211.47,1.6,8.6,Rain,0.544,0.5,0
+2024-12-09,Dubai,Busan,Rail,Automotive,6584.6,425.89,2.53,8.1,Fog,0.593,9.39,1
+2024-04-18,Singapore,Dubai,Road,Perishables,2653.35,99.55,2.57,5.5,Fog,0.992,3.13,1
+2025-02-09,Antwerp,Rotterdam,Sea,Textiles,9420.68,403.82,1.54,5.3,Fog,0.523,23.25,0
+2024-02-02,Los Angeles,Rotterdam,Air,Textiles,5058.16,285.88,4.44,1.9,Storm,0.654,0.78,0
+2025-12-04,Busan,Shanghai,Sea,Perishables,9806.38,56.09,1.94,3.7,Fog,0.767,24.48,1
+2025-10-23,Los Angeles,Hamburg,Road,Pharmaceuticals,1375.11,15.62,4.33,5.9,Storm,0.672,3.1,0
+2024-07-22,Shanghai,Rotterdam,Rail,Pharmaceuticals,6260.67,359.97,1.87,9.0,Hurricane,0.558,49.9,1
+2024-05-15,Los Angeles,Rotterdam,Rail,Electronics,6293.02,72.4,4.49,4.7,Fog,0.843,7.53,1
+2025-07-07,Busan,Rotterdam,Road,Perishables,6056.62,155.99,2.43,5.8,Clear,0.817,3.76,0
+2024-10-25,Rotterdam,Busan,Air,Textiles,6906.59,402.98,3.74,0.6,Clear,0.857,0.52,0
+2024-05-16,Antwerp,Rotterdam,Rail,Automotive,14183.67,493.19,3.5,2.7,Rain,0.759,11.56,0
+2024-03-24,Shanghai,Hamburg,Sea,Perishables,2868.82,395.89,4.37,7.7,Rain,0.512,7.92,0
+2024-02-22,Dubai,Busan,Sea,Electronics,12343.3,90.05,2.61,5.6,Fog,0.534,31.77,0
+2024-11-07,Los Angeles,Rotterdam,Rail,Pharmaceuticals,9494.49,319.91,4.41,9.1,Storm,0.566,29.34,1
+2025-07-03,Dubai,Antwerp,Rail,Pharmaceuticals,14558.98,99.58,3.87,8.7,Fog,0.522,21.27,0
+2025-01-03,Singapore,Hamburg,Road,Automotive,9129.41,440.67,3.62,2.9,Storm,0.999,17.73,0
+2024-08-29,Singapore,Busan,Road,Pharmaceuticals,12614.46,265.41,3.67,7.7,Fog,0.578,15.87,1
+2025-10-04,Hamburg,Rotterdam,Sea,Perishables,6219.91,164.8,1.27,5.6,Hurricane,0.747,88.27,1
+2025-07-04,Shanghai,Hamburg,Air,Perishables,8802.8,124.72,1.23,9.9,Rain,0.793,0.5,1
+2024-10-20,Dubai,Shanghai,Air,Textiles,4797.19,382.04,4.15,5.1,Rain,0.654,0.61,1
+2024-03-04,Hamburg,Los Angeles,Road,Textiles,14470.74,468.06,3.58,0.6,Rain,0.874,9.78,1
+2025-10-16,Singapore,Los Angeles,Air,Pharmaceuticals,4350.95,381.25,3.83,0.2,Clear,0.683,0.5,0
+2024-10-09,Shanghai,Antwerp,Air,Pharmaceuticals,5645.06,93.97,3.96,1.8,Hurricane,0.932,3.05,1
+2025-07-03,Shanghai,Rotterdam,Air,Perishables,4514.0,472.56,3.68,3.5,Storm,0.531,1.8,0
+2024-09-15,Dubai,Busan,Air,Pharmaceuticals,1834.97,129.3,2.15,8.9,Fog,0.774,0.58,0
+2024-02-19,Singapore,Hamburg,Rail,Textiles,8509.31,423.31,2.68,7.1,Hurricane,0.701,64.17,1
+2025-04-05,Rotterdam,Singapore,Rail,Textiles,8242.53,99.36,1.68,8.1,Clear,0.994,8.66,1
+2024-12-24,Shanghai,Dubai,Rail,Pharmaceuticals,2858.58,209.57,4.15,4.2,Storm,0.535,7.52,1
+2025-02-19,Singapore,Hamburg,Air,Electronics,2443.22,57.14,1.55,9.2,Hurricane,0.702,1.41,1
+2025-01-11,Rotterdam,Hamburg,Air,Pharmaceuticals,10540.32,227.53,2.76,3.8,Clear,0.802,0.5,1
+2024-06-27,Antwerp,Busan,Rail,Automotive,12750.63,225.51,2.79,3.5,Storm,0.707,30.76,1
+2024-12-06,Busan,Singapore,Road,Textiles,9509.29,319.27,2.38,3.8,Hurricane,0.827,53.27,1
+2025-05-24,Los Angeles,Hamburg,Road,Electronics,14688.62,234.76,1.86,3.6,Fog,0.894,14.99,0
+2024-06-25,Hamburg,Shanghai,Air,Textiles,7227.73,366.39,1.48,9.3,Rain,0.726,1.35,0
+2024-03-22,Busan,Dubai,Sea,Perishables,9348.26,120.73,4.37,5.5,Storm,0.707,49.56,1
+2025-04-12,Hamburg,Antwerp,Air,Automotive,3322.05,128.75,4.49,5.1,Rain,0.848,0.5,0
+2025-04-04,Dubai,Busan,Air,Electronics,11077.87,16.5,4.32,9.7,Rain,0.851,0.63,1
+2024-04-27,Los Angeles,Rotterdam,Road,Perishables,3973.65,101.7,1.99,8.5,Rain,0.528,3.09,1
+2024-05-29,Antwerp,Marseille,Road,Textiles,8732.05,202.04,4.24,3.7,Rain,0.67,8.14,0
+2025-11-29,Busan,Hamburg,Sea,Perishables,6698.26,132.2,2.8,3.2,Fog,0.597,17.27,1
+2025-04-10,Shanghai,Marseille,Sea,Pharmaceuticals,10169.53,258.08,2.73,2.6,Hurricane,0.68,128.34,1
+2024-11-11,Shanghai,Marseille,Air,Automotive,6973.08,294.82,2.94,9.7,Hurricane,0.938,3.82,1
+2025-03-09,Dubai,Antwerp,Sea,Pharmaceuticals,13010.56,440.75,2.15,7.4,Fog,0.527,37.52,1
+2024-02-09,Antwerp,Rotterdam,Sea,Pharmaceuticals,10428.6,155.81,3.83,6.6,Clear,0.713,19.37,1
+2025-07-06,Shanghai,Singapore,Rail,Pharmaceuticals,5703.04,338.89,2.4,5.1,Hurricane,0.667,40.12,1
+2025-01-30,Hamburg,Antwerp,Road,Textiles,3990.04,97.62,1.41,6.8,Rain,0.927,4.27,0
+2024-12-27,Rotterdam,Busan,Rail,Perishables,14728.81,492.18,3.07,8.0,Storm,0.764,43.35,1
+2024-08-07,Hamburg,Shanghai,Air,Electronics,14695.23,290.82,1.32,0.3,Clear,0.668,0.5,0
+2024-10-17,Hamburg,Marseille,Sea,Electronics,5746.87,27.73,4.47,3.6,Rain,0.708,11.45,0
+2025-06-08,Antwerp,Busan,Rail,Textiles,5639.16,189.52,3.04,5.7,Hurricane,0.7,40.29,1
+2025-05-01,Los Angeles,Rotterdam,Rail,Pharmaceuticals,8222.95,294.31,2.67,5.7,Storm,0.986,22.69,1
+2025-10-11,Hamburg,Busan,Rail,Perishables,7088.01,126.87,3.71,6.6,Storm,0.804,19.92,1
+2025-11-30,Rotterdam,Shanghai,Sea,Perishables,5298.02,418.9,3.36,3.8,Fog,0.621,13.62,1
+2024-02-26,Dubai,Busan,Sea,Electronics,13086.82,123.93,1.97,10.0,Hurricane,0.834,218.0,1
+2025-07-21,Singapore,Los Angeles,Rail,Perishables,14369.27,29.49,1.78,5.4,Fog,0.799,19.04,0
+2024-12-18,Hamburg,Rotterdam,Sea,Pharmaceuticals,11721.26,128.89,4.44,7.6,Rain,0.925,26.96,1
+2024-02-15,Busan,Dubai,Sea,Pharmaceuticals,1206.08,133.72,3.33,5.1,Clear,0.969,2.86,0
