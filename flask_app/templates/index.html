@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Supply Chain Risk Intelligence | Executive Dashboard</title>
+  
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="dashboard-container">
+
+    <!-- ==============================================================
+         1. EXECUTIVE TOP NAVIGATION BAR
+         ============================================================== -->
+    <header class="app-navbar">
+      <div class="nav-brand-group">
+        <div class="brand-badge-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-title">SupplyChain<span class="brand-highlight">.AI</span></div>
+          <div class="brand-subtitle">Global Disruption Intelligence &bull; Physical Feasibility Engine</div>
+        </div>
+      </div>
+
+      <div class="nav-links-tabs">
+        <a href="/" class="nav-tab active">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <span>Route Predictor</span>
+        </a>
+        <a href="/analytics" class="nav-tab">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span>Analytics & Visualizations</span>
+        </a>
+      </div>
+
+      <div class="nav-center-corridor" id="navCorridorBadge">
+        <span class="live-pulse-dot"></span>
+        <span class="corridor-origin" id="navOriginText">{{ default_origin }}</span>
+        <span class="corridor-arrow">➔</span>
+        <span class="corridor-dest" id="navDestText">{{ default_destination }}</span>
+        <span class="corridor-mode" id="navModeText">(Sea Freight)</span>
+      </div>
+
+      <div class="nav-meta-group">
+        <div class="meta-pill meta-model">
+          <span class="pill-dot"></span>
+          <span>XGBoost &bull; 99.4% ROC-AUC</span>
+        </div>
+        <div class="meta-pill meta-connectivity">
+          <span>195 Global Nodes</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==============================================================
+         2. UNIFIED SHIPMENT & ROUTE CONFIGURATION CONSOLE
+         ============================================================== -->
+    <form id="predictionForm" class="config-form" autocomplete="off">
+      <section class="pro-card console-card">
+        
+        <div class="card-header-bar">
+          <div class="card-header-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+            </svg>
+            <span>Shipment Parameters & Route Configuration</span>
+          </div>
+          <div class="card-header-actions">
+            <button type="button" id="btnSyncMapDist" class="btn-text-action">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+              </svg>
+              <span>Sync Geodesic Distance</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Section 1: Route Nodes & Feasibility -->
+        <div class="route-nodes-row">
+          
+          <!-- Origin -->
+          <div class="form-group">
+            <label for="origin_port">
+              <span class="input-pin-dot pin-origin"></span> Origin Port / Country
+            </label>
+            <div class="select-wrapper">
+              <select id="origin_port" name="origin_port" class="pro-select" required>
+                {% for port in ports %}
+                  <option value="{{ port }}" {% if port == default_origin %}selected{% endif %}>{{ port }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+
+          <!-- Transit Connector -->
+          <div class="route-transit-divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">✈</div>
+            <div class="divider-line"></div>
+          </div>
+
+          <!-- Destination -->
+          <div class="form-group">
+            <label for="destination_port">
+              <span class="input-pin-dot pin-dest"></span> Destination Port / Country
+            </label>
+            <div class="select-wrapper">
+              <select id="destination_port" name="destination_port" class="pro-select" required>
+                {% for port in ports %}
+                  <option value="{{ port }}" {% if port == default_destination %}selected{% endif %}>{{ port }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+
+          <!-- Transport Mode -->
+          <div class="form-group">
+            <label for="transport_mode">
+              <span>Selected Mode</span>
+              <span id="allowedCountBadge" class="badge-allowed-count">(Checking...)</span>
+            </label>
+            <div class="select-wrapper">
+              <select id="transport_mode" name="transport_mode" class="pro-select" required>
+                <!-- Populated dynamically -->
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Alerts -->
+        <div id="sameLocationAlert" class="pro-alert alert-danger" style="display: none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <span>Origin and destination cannot be the same location. Please select distinct trading points.</span>
+        </div>
+
+        <div id="blockedModesAlert" class="pro-alert alert-warning" style="display: none;">
+          <!-- Dynamically populated via JS -->
+        </div>
+
+        <!-- Feasibility Matrix Badges -->
+        <div class="feasibility-strip">
+          <span class="feasibility-caption">Corridor Physical Connectivity:</span>
+          <div class="feasibility-badges-grid">
+            
+            <div class="f-badge f-available" id="badgeSea">
+              <span class="f-icon">🚢</span>
+              <span class="f-name">Sea Freight</span>
+              <strong class="f-status" id="statusSea">Available</strong>
+            </div>
+
+            <div class="f-badge f-available" id="badgeAir">
+              <span class="f-icon">✈️</span>
+              <span class="f-name">Air Cargo</span>
+              <strong class="f-status" id="statusAir">Available</strong>
+            </div>
+
+            <div class="f-badge f-blocked" id="badgeRoad">
+              <span class="f-icon">🚚</span>
+              <span class="f-name">Road Transit</span>
+              <strong class="f-status" id="statusRoad">No Road Link</strong>
+            </div>
+
+            <div class="f-badge f-blocked" id="badgeRail">
+              <span class="f-icon">🚆</span>
+              <span class="f-name">Rail Freight</span>
+              <strong class="f-status" id="statusRail">No Rail Link</strong>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Section 2: Parameters Grid (8 Items in clean responsive matrix) -->
+        <div class="params-matrix-grid">
+          
+          <!-- Date -->
+          <div class="form-group">
+            <label for="date">Shipment Date</label>
+            <input type="date" id="date" name="date" class="pro-input" value="{{ today_date }}" required>
+          </div>
+
+          <!-- Product Category -->
+          {% if "product_category" in feature_metadata %}
+          <div class="form-group">
+            <label for="product_category">Product Category</label>
+            <div class="select-wrapper">
+              <select id="product_category" name="product_category" class="pro-select">
+                {% for opt in feature_metadata["product_category"]["options"] %}
+                  <option value="{{ opt }}">{{ opt }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Distance km -->
+          {% if "distance_km" in feature_metadata %}
+          <div class="form-group">
+            <label for="distance_km">Distance (km)</label>
+            <input type="number" step="1" id="distance_km" name="distance_km" class="pro-input" 
+                   min="{{ feature_metadata['distance_km']['min'] }}" 
+                   max="{{ feature_metadata['distance_km']['max'] }}" 
+                   value="{{ feature_metadata['distance_km']['median'] }}" required>
+          </div>
+          {% endif %}
+
+          <!-- Cargo Weight MT -->
+          {% if "weight_mt" in feature_metadata %}
+          <div class="form-group">
+            <label for="weight_mt">Cargo Weight (MT)</label>
+            <input type="number" step="1" id="weight_mt" name="weight_mt" class="pro-input" 
+                   min="{{ feature_metadata['weight_mt']['min'] }}" 
+                   max="{{ feature_metadata['weight_mt']['max'] }}" 
+                   value="{{ feature_metadata['weight_mt']['median'] }}" required>
+          </div>
+          {% endif %}
+
+          <!-- Weather Condition -->
+          {% if "weather_condition" in feature_metadata %}
+          <div class="form-group">
+            <label for="weather_condition">Weather Forecast</label>
+            <div class="select-wrapper">
+              <select id="weather_condition" name="weather_condition" class="pro-select">
+                {% for opt in feature_metadata["weather_condition"]["options"] %}
+                  <option value="{{ opt }}">{{ opt }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Lead Time Days -->
+          {% if "lead_time_days" in feature_metadata %}
+          <div class="form-group">
+            <label for="lead_time_days">Lead Time (Days)</label>
+            <input type="number" step="1" id="lead_time_days" name="lead_time_days" class="pro-input" 
+                   min="{{ feature_metadata['lead_time_days']['min'] }}" 
+                   max="{{ feature_metadata['lead_time_days']['max'] }}" 
+                   value="{{ feature_metadata['lead_time_days']['median'] }}">
+          </div>
+          {% endif %}
+
+          <!-- Carrier Reliability -->
+          {% if "carrier_reliability_score" in feature_metadata %}
+          <div class="form-group">
+            <label for="carrier_reliability_score">Carrier Reliability</label>
+            <input type="number" step="0.01" id="carrier_reliability_score" name="carrier_reliability_score" class="pro-input" 
+                   min="{{ feature_metadata['carrier_reliability_score']['min'] }}" 
+                   max="{{ feature_metadata['carrier_reliability_score']['max'] }}" 
+                   value="{{ feature_metadata['carrier_reliability_score']['median'] }}">
+          </div>
+          {% endif %}
+
+          <!-- Geopolitical Risk Score -->
+          {% if "geopolitical_risk_score" in feature_metadata %}
+          <div class="form-group">
+            <label for="geopolitical_risk_score">Geopolitical Risk (0-5)</label>
+            <input type="number" step="0.1" id="geopolitical_risk_score" name="geopolitical_risk_score" class="pro-input" 
+                   min="{{ feature_metadata['geopolitical_risk_score']['min'] }}" 
+                   max="{{ feature_metadata['geopolitical_risk_score']['max'] }}" 
+                   value="{{ feature_metadata['geopolitical_risk_score']['median'] }}">
+          </div>
+          {% endif %}
+
+        </div>
+
+        <!-- Predict Action Strip -->
+        <div class="action-strip">
+          <div class="action-strip-note">
+            <span class="note-icon">ℹ️</span>
+            <span>Clicking predict evaluates 11 multidimensional risk factors through the pre-trained XGBoost pipeline.</span>
+          </div>
+          <button type="submit" id="predictBtn" class="btn-primary-predict">
+            <span class="btn-spinner" id="btnSpinner" style="display: none;"></span>
+            <svg class="btn-thunder-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            <span id="btnLabel">Run Disruption Assessment</span>
+          </button>
+        </div>
+
+      </section>
+    </form>
+
+    <!-- ==============================================================
+         3. TWIN INTELLIGENCE WORKSPACE (50% MAP | 50% AI REPORT)
+         ============================================================== -->
+    <section class="twin-workspace-grid">
+
+      <!-- LEFT: High-Res Geospatial Visualizer -->
+      <div class="pro-card map-workspace-card">
+        
+        <div class="card-header-bar">
+          <div class="card-header-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
+              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+              <line x1="8" y1="2" x2="8" y2="18"></line>
+              <line x1="16" y1="6" x2="16" y2="22"></line>
+            </svg>
+            <span>Active Corridor Map</span>
+          </div>
+          <div class="map-metric-pill" id="distancePill">
+            <span>Great-Circle Arc:</span>
+            <strong id="distMetricVal">1,530 km</strong>
+          </div>
+        </div>
+
+        <!-- Crisp Framed Map Viewport -->
+        <div class="map-frame">
+          <div id="routeMap" class="leaflet-map-element"></div>
+        </div>
+
+        <!-- Map Footer Legend -->
+        <div class="map-footer-legend">
+          <div class="legend-unit">
+            <span class="legend-pin pin-origin"></span>
+            <span>Origin: <strong id="mapLegendOrigin">{{ default_origin }}</strong></span>
+          </div>
+          <div class="legend-unit">
+            <span class="legend-pin pin-dest"></span>
+            <span>Destination: <strong id="mapLegendDest">{{ default_destination }}</strong></span>
+          </div>
+          <div class="legend-unit">
+            <span class="legend-pin pin-arc"></span>
+            <span id="mapLegendArc">Great-Circle Arc</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: AI Disruption Intelligence Center -->
+      <div class="pro-card report-workspace-card" id="reportWorkspaceCard">
+        
+        <div class="card-header-bar">
+          <div class="card-header-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+            </svg>
+            <span>AI Disruption Risk Assessment</span>
+          </div>
+          <div class="report-meta-tag" id="reportMetaTag">
+            <span>Engine Ready</span>
+          </div>
+        </div>
+
+        <!-- 1. Idle Placeholder State (Shown prior to first run) -->
+        <div class="report-idle-state" id="reportIdleState">
+          <div class="idle-radar-pulse">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="6"></circle>
+              <circle cx="12" cy="12" r="2"></circle>
+              <line x1="12" y1="2" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <h3 class="idle-title">Awaiting Prediction Execution</h3>
+          <p class="idle-text">Review your corridor configuration above and click <strong>Run Disruption Assessment</strong> to generate complete logistical risk analytics, delay buffers, and factor impacts.</p>
+        </div>
+
+        <!-- 2. Evaluated Report State (Shown upon prediction) -->
+        <div class="report-evaluated-state" id="reportEvaluatedState" style="display: none;">
+          
+          <!-- Outcome Hero Banner -->
+          <div class="outcome-hero-banner" id="outcomeHeroBanner">
+            <div class="banner-top-meta">
+              <div class="status-risk-pill" id="statusRiskPill">ELEVATED RISK</div>
+              <div class="confidence-badge" id="confidenceBadge">Confidence: 94.8%</div>
+              <div class="prob-large-number" id="probLargeNumber">50.68%</div>
+            </div>
+
+            <!-- Progress Meter -->
+            <div class="meter-track">
+              <div class="meter-fill" id="meterFill" style="width: 50.68%;"></div>
+            </div>
+
+            <div class="meter-sub-stats">
+              <span>Disruption Probability: <strong id="statDisruptProb">50.68%</strong></span>
+              <span>On-Schedule Probability: <strong id="statOnTimeProb">49.32%</strong></span>
+            </div>
+
+            <h4 class="outcome-headline" id="outcomeHeadline">Disruption Expected Along Corridor</h4>
+            <p class="outcome-subtext" id="outcomeSubtext">Analysis indicates high vulnerability to logistical delay or customs bottleneck on this route.</p>
+          </div>
+
+          <!-- Schedule & Delivery Variance (2 Key Metrics) -->
+          <div class="delivery-metrics-grid">
+            <div class="delivery-metric-box">
+              <div class="metric-icon-box">⏱️</div>
+              <div>
+                <span class="metric-caption">Expected Delay Variance</span>
+                <strong class="metric-val" id="valDelayVariance">+2 to +5 Days Buffer</strong>
+              </div>
+            </div>
+            <div class="delivery-metric-box">
+              <div class="metric-icon-box">📅</div>
+              <div>
+                <span class="metric-caption">Projected Delivery Window</span>
+                <strong class="metric-val" id="valDeliveryWindow">Sep 11, 2026 – Sep 14, 2026</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Risk Factor Impact Breakdown (4 Cards) -->
+          <div class="factors-section">
+            <div class="section-micro-title">Contributing Risk Factor Drivers:</div>
+            <div class="factors-matrix">
+              
+              <div class="factor-card" id="cardWeather">
+                <div class="factor-header">
+                  <span class="factor-icon">⛅</span>
+                  <span class="factor-label">Weather</span>
+                </div>
+                <strong class="factor-val" id="valWeather">Clear</strong>
+                <span class="factor-status-tag tag-favorable" id="statusWeather">Favorable</span>
+              </div>
+
+              <div class="factor-card" id="cardGeopolitics">
+                <div class="factor-header">
+                  <span class="factor-icon">🌐</span>
+                  <span class="factor-label">Geopolitics</span>
+                </div>
+                <strong class="factor-val" id="valGeopolitics">2.0 / 5.0</strong>
+                <span class="factor-status-tag tag-favorable" id="statusGeopolitics">Stable</span>
+              </div>
+
+              <div class="factor-card" id="cardCarrier">
+                <div class="factor-header">
+                  <span class="factor-icon">🚢</span>
+                  <span class="factor-label">Carrier</span>
+                </div>
+                <strong class="factor-val" id="valCarrier">90% Rating</strong>
+                <span class="factor-status-tag tag-favorable" id="statusCarrier">Optimal</span>
+              </div>
+
+              <div class="factor-card" id="cardLeadTime">
+                <div class="factor-header">
+                  <span class="factor-icon">⏱️</span>
+                  <span class="factor-label">Lead Time</span>
+                </div>
+                <strong class="factor-val" id="valLeadTime">5 Days</strong>
+                <span class="factor-status-tag tag-favorable" id="statusLeadTime">Standard</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Tactical Recommendations Checklist -->
+          <div class="recommendations-container">
+            <div class="section-micro-title">Tactical Supply Chain Recommendations:</div>
+            <ul class="recommendations-checklist" id="recommendationsList">
+              <!-- Populated dynamically via JS -->
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div>SupplyChain.AI &bull; Autonomous Disruption Prediction System &bull; Machine Learning Pipeline</div>
+    </footer>
+
+  </div>
+
+  <!-- Leaflet Map JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Client Application Logic -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
