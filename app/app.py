@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
+from datetime import date
 from pathlib import Path
 
 
@@ -112,6 +113,30 @@ st.sidebar.header(
 
 user_input = {}
 
+date_column = "date"
+
+if date_column in feature_names:
+
+    latest_training_date = pd.to_datetime(
+        train_df[date_column],
+        errors="coerce"
+    ).max().date()
+
+    selected_date = st.sidebar.date_input(
+        "Shipment date",
+        value=max(date.today(), latest_training_date),
+        min_value=pd.to_datetime(
+            train_df[date_column],
+            errors="coerce"
+        ).min().date()
+    )
+
+    user_input[date_column] = selected_date.isoformat()
+
+    st.sidebar.caption(
+        f"Training data available through {latest_training_date.isoformat()}"
+    )
+
 
 # --------------------------------------------------
 # CREATE INPUT FIELDS
@@ -120,6 +145,10 @@ user_input = {}
 for column in feature_names:
 
     if column not in train_df.columns:
+
+        continue
+
+    if column == date_column:
 
         continue
 
