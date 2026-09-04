@@ -305,8 +305,9 @@
   </div>
 
   <!-- Inject Analytics Data JSON for Chart.js Rendering -->
+  <script id="analytics-data" type="application/json">{{ analytics | tojson | safe }}</script>
   <script>
-    window.ANALYTICS_DATA = {{ analytics | tojson | safe }};
+    window.ANALYTICS_DATA = JSON.parse(document.getElementById('analytics-data').textContent || '{}');
   </script>
 
   <!-- Script for Rendering All Charts -->

@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Global Supply Chain Risk Intelligence | Executive Dashboard</title>
-  
+
   <!-- Google Fonts: Outfit & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
   <!-- Leaflet Map CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
   <!-- Design System CSS -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
 
   <div class="dashboard-container">
@@ -26,7 +31,8 @@
     <header class="app-navbar">
       <div class="nav-brand-group">
         <div class="brand-badge-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
             <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
           </svg>
@@ -78,7 +84,7 @@
          ============================================================== -->
     <form id="predictionForm" class="config-form" autocomplete="off">
       <section class="pro-card console-card">
-        
+
         <div class="card-header-bar">
           <div class="card-header-title">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
@@ -99,7 +105,7 @@
 
         <!-- Section 1: Route Nodes & Feasibility -->
         <div class="route-nodes-row">
-          
+
           <!-- Origin -->
           <div class="form-group">
             <label for="origin_port">
@@ -108,7 +114,7 @@
             <div class="select-wrapper">
               <select id="origin_port" name="origin_port" class="pro-select" required>
                 {% for port in ports %}
-                  <option value="{{ port }}" {% if port == default_origin %}selected{% endif %}>{{ port }}</option>
+                <option value="{{ port }}" {% if port==default_origin %}selected{% endif %}>{{ port }}</option>
                 {% endfor %}
               </select>
             </div>
@@ -129,7 +135,7 @@
             <div class="select-wrapper">
               <select id="destination_port" name="destination_port" class="pro-select" required>
                 {% for port in ports %}
-                  <option value="{{ port }}" {% if port == default_destination %}selected{% endif %}>{{ port }}</option>
+                <option value="{{ port }}" {% if port==default_destination %}selected{% endif %}>{{ port }}</option>
                 {% endfor %}
               </select>
             </div>
@@ -168,7 +174,7 @@
         <div class="feasibility-strip">
           <span class="feasibility-caption">Corridor Physical Connectivity:</span>
           <div class="feasibility-badges-grid">
-            
+
             <div class="f-badge f-available" id="badgeSea">
               <span class="f-icon">🚢</span>
               <span class="f-name">Sea Freight</span>
@@ -198,7 +204,7 @@
 
         <!-- Section 2: Parameters Grid (8 Items in clean responsive matrix) -->
         <div class="params-matrix-grid">
-          
+
           <!-- Date -->
           <div class="form-group">
             <label for="date">Shipment Date</label>
@@ -212,7 +218,7 @@
             <div class="select-wrapper">
               <select id="product_category" name="product_category" class="pro-select">
                 {% for opt in feature_metadata["product_category"]["options"] %}
-                  <option value="{{ opt }}">{{ opt }}</option>
+                <option value="{{ opt }}">{{ opt }}</option>
                 {% endfor %}
               </select>
             </div>
@@ -223,10 +229,9 @@
           {% if "distance_km" in feature_metadata %}
           <div class="form-group">
             <label for="distance_km">Distance (km)</label>
-            <input type="number" step="1" id="distance_km" name="distance_km" class="pro-input" 
-                   min="{{ feature_metadata['distance_km']['min'] }}" 
-                   max="{{ feature_metadata['distance_km']['max'] }}" 
-                   value="{{ feature_metadata['distance_km']['median'] }}" required>
+            <input type="number" step="1" id="distance_km" name="distance_km" class="pro-input"
+              min="{{ feature_metadata['distance_km']['min'] }}" max="{{ feature_metadata['distance_km']['max'] }}"
+              value="{{ feature_metadata['distance_km']['median'] }}" required>
           </div>
           {% endif %}
 
@@ -234,10 +239,9 @@
           {% if "weight_mt" in feature_metadata %}
           <div class="form-group">
             <label for="weight_mt">Cargo Weight (MT)</label>
-            <input type="number" step="1" id="weight_mt" name="weight_mt" class="pro-input" 
-                   min="{{ feature_metadata['weight_mt']['min'] }}" 
-                   max="{{ feature_metadata['weight_mt']['max'] }}" 
-                   value="{{ feature_metadata['weight_mt']['median'] }}" required>
+            <input type="number" step="1" id="weight_mt" name="weight_mt" class="pro-input"
+              min="{{ feature_metadata['weight_mt']['min'] }}" max="{{ feature_metadata['weight_mt']['max'] }}"
+              value="{{ feature_metadata['weight_mt']['median'] }}" required>
           </div>
           {% endif %}
 
@@ -248,7 +252,7 @@
             <div class="select-wrapper">
               <select id="weather_condition" name="weather_condition" class="pro-select">
                 {% for opt in feature_metadata["weather_condition"]["options"] %}
-                  <option value="{{ opt }}">{{ opt }}</option>
+                <option value="{{ opt }}">{{ opt }}</option>
                 {% endfor %}
               </select>
             </div>
@@ -259,10 +263,10 @@
           {% if "lead_time_days" in feature_metadata %}
           <div class="form-group">
             <label for="lead_time_days">Lead Time (Days)</label>
-            <input type="number" step="1" id="lead_time_days" name="lead_time_days" class="pro-input" 
-                   min="{{ feature_metadata['lead_time_days']['min'] }}" 
-                   max="{{ feature_metadata['lead_time_days']['max'] }}" 
-                   value="{{ feature_metadata['lead_time_days']['median'] }}">
+            <input type="number" step="1" id="lead_time_days" name="lead_time_days" class="pro-input"
+              min="{{ feature_metadata['lead_time_days']['min'] }}"
+              max="{{ feature_metadata['lead_time_days']['max'] }}"
+              value="{{ feature_metadata['lead_time_days']['median'] }}">
           </div>
           {% endif %}
 
@@ -270,10 +274,10 @@
           {% if "carrier_reliability_score" in feature_metadata %}
           <div class="form-group">
             <label for="carrier_reliability_score">Carrier Reliability</label>
-            <input type="number" step="0.01" id="carrier_reliability_score" name="carrier_reliability_score" class="pro-input" 
-                   min="{{ feature_metadata['carrier_reliability_score']['min'] }}" 
-                   max="{{ feature_metadata['carrier_reliability_score']['max'] }}" 
-                   value="{{ feature_metadata['carrier_reliability_score']['median'] }}">
+            <input type="number" step="0.01" id="carrier_reliability_score" name="carrier_reliability_score"
+              class="pro-input" min="{{ feature_metadata['carrier_reliability_score']['min'] }}"
+              max="{{ feature_metadata['carrier_reliability_score']['max'] }}"
+              value="{{ feature_metadata['carrier_reliability_score']['median'] }}">
           </div>
           {% endif %}
 
@@ -281,10 +285,10 @@
           {% if "geopolitical_risk_score" in feature_metadata %}
           <div class="form-group">
             <label for="geopolitical_risk_score">Geopolitical Risk (0-5)</label>
-            <input type="number" step="0.1" id="geopolitical_risk_score" name="geopolitical_risk_score" class="pro-input" 
-                   min="{{ feature_metadata['geopolitical_risk_score']['min'] }}" 
-                   max="{{ feature_metadata['geopolitical_risk_score']['max'] }}" 
-                   value="{{ feature_metadata['geopolitical_risk_score']['median'] }}">
+            <input type="number" step="0.1" id="geopolitical_risk_score" name="geopolitical_risk_score"
+              class="pro-input" min="{{ feature_metadata['geopolitical_risk_score']['min'] }}"
+              max="{{ feature_metadata['geopolitical_risk_score']['max'] }}"
+              value="{{ feature_metadata['geopolitical_risk_score']['median'] }}">
           </div>
           {% endif %}
 
@@ -294,11 +298,13 @@
         <div class="action-strip">
           <div class="action-strip-note">
             <span class="note-icon">ℹ️</span>
-            <span>Clicking predict evaluates 11 multidimensional risk factors through the pre-trained XGBoost pipeline.</span>
+            <span>Clicking predict evaluates 11 multidimensional risk factors through the pre-trained XGBoost
+              pipeline.</span>
           </div>
           <button type="submit" id="predictBtn" class="btn-primary-predict">
             <span class="btn-spinner" id="btnSpinner" style="display: none;"></span>
-            <svg class="btn-thunder-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <svg class="btn-thunder-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
             <span id="btnLabel">Run Disruption Assessment</span>
@@ -315,7 +321,7 @@
 
       <!-- LEFT: High-Res Geospatial Visualizer -->
       <div class="pro-card map-workspace-card">
-        
+
         <div class="card-header-bar">
           <div class="card-header-title">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
@@ -356,11 +362,13 @@
 
       <!-- RIGHT: AI Disruption Intelligence Center -->
       <div class="pro-card report-workspace-card" id="reportWorkspaceCard">
-        
+
         <div class="card-header-bar">
           <div class="card-header-title">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
-              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+              <path
+                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
+              </path>
             </svg>
             <span>AI Disruption Risk Assessment</span>
           </div>
@@ -380,12 +388,13 @@
             </svg>
           </div>
           <h3 class="idle-title">Awaiting Prediction Execution</h3>
-          <p class="idle-text">Review your corridor configuration above and click <strong>Run Disruption Assessment</strong> to generate complete logistical risk analytics, delay buffers, and factor impacts.</p>
+          <p class="idle-text">Review your corridor configuration above and click <strong>Run Disruption
+              Assessment</strong> to generate complete logistical risk analytics, delay buffers, and factor impacts.</p>
         </div>
 
         <!-- 2. Evaluated Report State (Shown upon prediction) -->
         <div class="report-evaluated-state" id="reportEvaluatedState" style="display: none;">
-          
+
           <!-- Outcome Hero Banner -->
           <div class="outcome-hero-banner" id="outcomeHeroBanner">
             <div class="banner-top-meta">
@@ -405,7 +414,8 @@
             </div>
 
             <h4 class="outcome-headline" id="outcomeHeadline">Disruption Expected Along Corridor</h4>
-            <p class="outcome-subtext" id="outcomeSubtext">Analysis indicates high vulnerability to logistical delay or customs bottleneck on this route.</p>
+            <p class="outcome-subtext" id="outcomeSubtext">Analysis indicates high vulnerability to logistical delay or
+              customs bottleneck on this route.</p>
           </div>
 
           <!-- Schedule & Delivery Variance (2 Key Metrics) -->
@@ -430,7 +440,7 @@
           <div class="factors-section">
             <div class="section-micro-title">Contributing Risk Factor Drivers:</div>
             <div class="factors-matrix">
-              
+
               <div class="factor-card" id="cardWeather">
                 <div class="factor-header">
                   <span class="factor-icon">⛅</span>
@@ -492,9 +502,11 @@
   </div>
 
   <!-- Leaflet Map JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
   <!-- Client Application Logic -->
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
+
 </html>
