@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global Supply Chain Risk Intelligence | Analytics & Visualizations</title>
+  <title>Routexa | Dynamic Prediction Analytics & Simulation Studio</title>
   
   <!-- Google Fonts: Outfit & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,28 +25,51 @@
          ============================================================== -->
     <header class="app-navbar">
       <div class="nav-brand-group">
-        <div class="brand-badge-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+        <div class="brand-badge-icon" title="Routexa Global Navigation Engine">
+          <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="routeLogoGrad2" x1="6" y1="6" x2="42" y2="42" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#38bdf8"/>
+                <stop offset="50%" stop-color="#818cf8"/>
+                <stop offset="100%" stop-color="#c084fc"/>
+              </linearGradient>
+              <filter id="routeGlow2" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#38bdf8" flood-opacity="0.65"/>
+              </filter>
+            </defs>
+            <!-- Hexagonal Hub Framework -->
+            <polygon points="24,4 43,14.5 43,33.5 24,44 5,33.5 5,14.5" stroke="url(#routeLogoGrad2)" stroke-width="2.6" stroke-linejoin="round" fill="rgba(15, 23, 42, 0.65)"/>
+            <!-- Dynamic Stylized 'R' + Transit Vector -->
+            <path d="M17 34V14H27C30.3 14 33 16.7 33 20C33 23.3 30.3 26 27 26H17M25 26L34 34" stroke="url(#routeLogoGrad2)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Luminous Geodesic Waypoint Nodes -->
+            <circle cx="24" cy="4" r="3.2" fill="#38bdf8" filter="url(#routeGlow2)"/>
+            <circle cx="43" cy="14.5" r="2.8" fill="#818cf8"/>
+            <circle cx="43" cy="33.5" r="2.8" fill="#c084fc"/>
+            <circle cx="24" cy="44" r="3.2" fill="#38bdf8" filter="url(#routeGlow2)"/>
+            <circle cx="5" cy="33.5" r="2.8" fill="#38bdf8"/>
+            <circle cx="5" cy="14.5" r="2.8" fill="#818cf8"/>
+            <circle cx="27" cy="20" r="2.8" fill="#ffffff" filter="url(#routeGlow2)"/>
           </svg>
         </div>
         <div>
-          <div class="brand-title">SupplyChain<span class="brand-highlight">.AI</span></div>
-          <div class="brand-subtitle">Global Disruption Intelligence &bull; Visual Analytics Hub</div>
+          <div class="brand-title-wrap">
+            <span class="brand-title">Route<span class="brand-highlight">xa</span></span>
+            <span class="brand-tag">INTELLIGENCE</span>
+          </div>
+          <div class="brand-subtitle">Dynamic Disruption Visualizer &bull; What-If Simulation Studio</div>
         </div>
       </div>
 
       <!-- Navigation Tabs -->
       <div class="nav-links-tabs">
         <a href="/" class="nav-tab">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
           </svg>
           <span>Route Predictor</span>
         </a>
         <a href="/analytics" class="nav-tab active">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
             <line x1="18" y1="20" x2="18" y2="10"></line>
             <line x1="12" y1="20" x2="12" y2="4"></line>
             <line x1="6" y1="20" x2="6" y2="14"></line>
@@ -55,148 +78,319 @@
         </a>
       </div>
 
+      <div class="nav-center-corridor" id="navCorridorBadge">
+        <span class="live-pulse-dot"></span>
+        <span class="corridor-origin" id="navOriginText">{{ default_origin }}</span>
+        <span class="corridor-arrow">➔</span>
+        <span class="corridor-dest" id="navDestText">{{ default_destination }}</span>
+        <span class="corridor-mode" id="navModeText">(Sea Freight)</span>
+      </div>
+
       <div class="nav-meta-group">
         <div class="meta-pill meta-model">
           <span class="pill-dot"></span>
           <span>XGBoost &bull; 99.4% ROC-AUC</span>
         </div>
         <div class="meta-pill meta-connectivity">
-          <span>5,000 Records</span>
+          <span id="syncStatusBadge">⚡ Live Simulation Mode</span>
         </div>
       </div>
     </header>
 
     <!-- ==============================================================
-         2. EXECUTIVE KPI CARDS STRIP (4 METRICS)
+         2. INTERACTIVE SHIPMENT & SIMULATION CONSOLE
+         ============================================================== -->
+    <form id="simForm" class="config-form" autocomplete="off">
+      <section class="pro-card console-card sim-console-card">
+        
+        <div class="card-header-bar">
+          <div class="card-header-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+            </svg>
+            <span>Live Shipment Parameters & Simulation Controls</span>
+          </div>
+          <div class="sim-notice-tag">
+            <span>Visualizations below auto-update immediately when you click predict</span>
+          </div>
+        </div>
+
+        <!-- Row 1: Corridor & Transport Mode -->
+        <div class="route-nodes-row">
+          
+          <div class="form-group">
+            <label for="origin_port">
+              <span class="input-pin-dot pin-origin"></span> Origin Port / Country
+            </label>
+            <div class="select-wrapper">
+              <select id="origin_port" name="origin_port" class="pro-select" required>
+                {% for port in ports %}
+                  <option value="{{ port }}" {% if port == default_origin %}selected{% endif %}>{{ port }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+
+          <div class="route-transit-divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">➔</div>
+            <div class="divider-line"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="destination_port">
+              <span class="input-pin-dot pin-dest"></span> Destination Port / Country
+            </label>
+            <div class="select-wrapper">
+              <select id="destination_port" name="destination_port" class="pro-select" required>
+                {% for port in ports %}
+                  <option value="{{ port }}" {% if port == default_destination %}selected{% endif %}>{{ port }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="transport_mode">
+              <span>Transport Mode</span>
+              <span id="allowedCountBadge" class="badge-allowed-count">(Checking...)</span>
+            </label>
+            <div class="select-wrapper">
+              <select id="transport_mode" name="transport_mode" class="pro-select" required>
+                <option value="Sea" selected>🚢 Sea</option>
+                <option value="Air">✈️ Air</option>
+                <option value="Road">🚚 Road</option>
+                <option value="Rail">🚆 Rail</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Route Feasibility Alerts -->
+        <div id="sameLocationAlert" class="pro-alert alert-danger" style="display: none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <span>Origin and destination cannot be the same location.</span>
+        </div>
+
+        <div id="blockedModesAlert" class="pro-alert alert-warning" style="display: none;"></div>
+
+        <!-- Row 2: Detailed Parameters Matrix -->
+        <div class="params-matrix-grid">
+          
+          <!-- Weather Condition -->
+          <div class="form-group">
+            <label for="weather_condition">Weather Forecast</label>
+            <div class="select-wrapper">
+              <select id="weather_condition" name="weather_condition" class="pro-select">
+                <option value="Clear" selected>☀️ Clear</option>
+                <option value="Rain">🌧️ Rain</option>
+                <option value="Fog">🌫️ Fog</option>
+                <option value="Storm">⛈️ Storm</option>
+                <option value="Hurricane">🌪️ Hurricane</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Product Category -->
+          <div class="form-group">
+            <label for="product_category">Cargo Category</label>
+            <div class="select-wrapper">
+              <select id="product_category" name="product_category" class="pro-select">
+                {% if "product_category" in feature_metadata %}
+                  {% for opt in feature_metadata["product_category"]["options"] %}
+                    <option value="{{ opt }}" {% if opt == "Electronics" %}selected{% endif %}>{{ opt }}</option>
+                  {% endfor %}
+                {% else %}
+                  <option value="Electronics" selected>Electronics</option>
+                  <option value="Pharmaceuticals">Pharmaceuticals</option>
+                  <option value="Perishables">Perishables</option>
+                  <option value="Automotive">Automotive</option>
+                  <option value="Textiles">Textiles</option>
+                  <option value="Consumer Goods">Consumer Goods</option>
+                {% endif %}
+              </select>
+            </div>
+          </div>
+
+          <!-- Scheduled Lead Time -->
+          <div class="form-group">
+            <label for="lead_time_days">Scheduled Lead Time (Days)</label>
+            <input type="number" step="1" id="lead_time_days" name="lead_time_days" class="pro-input" min="1" max="60" value="5" required>
+          </div>
+
+          <!-- Carrier Reliability Score -->
+          <div class="form-group">
+            <label for="carrier_reliability_score">Carrier Reliability (0.10 - 1.00)</label>
+            <input type="number" step="0.05" id="carrier_reliability_score" name="carrier_reliability_score" class="pro-input" min="0.1" max="1.0" value="0.90" required>
+          </div>
+
+          <!-- Geopolitical Risk Score -->
+          <div class="form-group">
+            <label for="geopolitical_risk_score">Geopolitical Risk (0.0 - 5.0)</label>
+            <input type="number" step="0.1" id="geopolitical_risk_score" name="geopolitical_risk_score" class="pro-input" min="0.0" max="5.0" value="2.0" required>
+          </div>
+
+          <!-- Cargo Weight MT -->
+          <div class="form-group">
+            <label for="weight_mt">Cargo Weight (MT)</label>
+            <input type="number" step="10" id="weight_mt" name="weight_mt" class="pro-input" min="1" max="50000" value="500" required>
+          </div>
+
+          <!-- Route Distance km -->
+          <div class="form-group">
+            <label for="distance_km">Route Distance (km)</label>
+            <input type="number" step="1" id="distance_km" name="distance_km" class="pro-input" min="50" max="40000" value="1542" required>
+          </div>
+
+          <!-- Shipment Date -->
+          <div class="form-group">
+            <label for="date">Shipment Date</label>
+            <input type="date" id="date" name="date" class="pro-input" value="{{ today_date }}" required>
+          </div>
+
+        </div>
+
+        <!-- Action Strip with Predict Button -->
+        <div class="action-strip">
+          <div class="action-strip-note">
+            <span class="note-icon">⚡</span>
+            <span>Entering data and clicking predict evaluates all 11 model features and immediately redraws all 5 visualizations below.</span>
+          </div>
+          <button type="submit" id="simPredictBtn" class="btn-primary-predict">
+            <span class="btn-spinner" id="simSpinner" style="display: none;"></span>
+            <svg class="btn-thunder-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            <span id="simBtnLabel">Run Disruption Assessment & Auto-Update Visualizations</span>
+          </button>
+        </div>
+
+      </section>
+    </form>
+
+    <!-- ==============================================================
+         3. DYNAMIC LIVE KPI CARDS STRIP (4 METRICS)
          ============================================================== -->
     <section class="analytics-kpi-grid">
       
-      <!-- Card 1 -->
-      <div class="pro-card kpi-card">
+      <!-- KPI 1: Live Disruption Probability -->
+      <div class="pro-card kpi-card" id="kpiProbCard">
         <div class="kpi-header">
-          <span class="kpi-label">Total Shipments Analyzed</span>
-          <span class="kpi-icon-box">📦</span>
+          <span class="kpi-label">Predicted Disruption Probability</span>
+          <span class="kpi-icon-box">🎯</span>
         </div>
-        <div class="kpi-number">{{ analytics.kpis.total_shipments }}</div>
+        <div class="kpi-number" id="kpiDisruptProb">56.5%</div>
         <div class="kpi-meta">
-          <span class="trend-positive">Verified Data</span>
-          <span class="kpi-subtext">Cross-border maritime & overland</span>
+          <span class="trend-alert" id="kpiProbTag">Elevated Vulnerability</span>
+          <span class="kpi-subtext" id="kpiOnTimeProb">43.5% On-Time Probability</span>
         </div>
       </div>
 
-      <!-- Card 2 -->
+      <!-- KPI 2: Risk Classification Tier -->
+      <div class="pro-card kpi-card" id="kpiRiskCard">
+        <div class="kpi-header">
+          <span class="kpi-label">Risk Classification Tier</span>
+          <span class="kpi-icon-box">🛡️</span>
+        </div>
+        <div class="kpi-number text-orange" id="kpiRiskLevel">High Risk</div>
+        <div class="kpi-meta">
+          <span class="trend-neutral" id="kpiConfidenceBadge">Confidence: 94.2%</span>
+          <span class="kpi-subtext" id="kpiRiskBadgeText">ELEVATED TRANSIT RISK</span>
+        </div>
+      </div>
+
+      <!-- KPI 3: Expected Delay Window -->
       <div class="pro-card kpi-card">
         <div class="kpi-header">
-          <span class="kpi-label">Historical Disruption Rate</span>
+          <span class="kpi-label">Projected Delivery Window</span>
+          <span class="kpi-icon-box">📅</span>
+        </div>
+        <div class="kpi-number text-cyan" id="kpiDeliveryWindow">Sep 11 – Sep 14, 2026</div>
+        <div class="kpi-meta">
+          <span class="trend-neutral" id="kpiDelayVariance">+3 to +6 Days Buffer</span>
+          <span class="kpi-subtext">Includes customs & weather buffer</span>
+        </div>
+      </div>
+
+      <!-- KPI 4: Primary Bottleneck Driver -->
+      <div class="pro-card kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-label">Primary Risk Factor Driver</span>
           <span class="kpi-icon-box">⚠️</span>
         </div>
-        <div class="kpi-number text-danger">{{ analytics.kpis.disruption_rate }}</div>
+        <div class="kpi-number text-green" id="kpiPrimaryBottleneck">Clear Weather</div>
         <div class="kpi-meta">
-          <span class="trend-alert">High Vulnerability</span>
-          <span class="kpi-subtext">Weather & corridor delays</span>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="pro-card kpi-card">
-        <div class="kpi-header">
-          <span class="kpi-label">Average Transit Lead Time</span>
-          <span class="kpi-icon-box">⏱️</span>
-        </div>
-        <div class="kpi-number text-cyan">{{ analytics.kpis.avg_lead_time }}</div>
-        <div class="kpi-meta">
-          <span class="trend-neutral">End-to-End</span>
-          <span class="kpi-subtext">Standard contracted window</span>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="pro-card kpi-card">
-        <div class="kpi-header">
-          <span class="kpi-label">Average Route Distance</span>
-          <span class="kpi-icon-box">🗺️</span>
-        </div>
-        <div class="kpi-number text-green">{{ analytics.kpis.avg_distance }}</div>
-        <div class="kpi-meta">
-          <span class="trend-positive">Geodesic Arc</span>
-          <span class="kpi-subtext">Global trade lanes</span>
+          <span class="trend-positive" id="kpiBottleneckStatus">Favorable</span>
+          <span class="kpi-subtext" id="kpiCarrierRating">Carrier: 90% Reliability</span>
         </div>
       </div>
 
     </section>
 
     <!-- ==============================================================
-         3. CHARTS ROW 1: WEATHER IMPACT & CARGO CATEGORY
+         4. DYNAMIC CHARTS ROW 1: RISK GAUGE & 6-AXIS RISK RADAR
          ============================================================== -->
     <section class="analytics-charts-grid">
       
-      <!-- Chart 1: Weather Disruption Rate -->
+      <!-- Chart 1: Dynamic Disruption Probability Gauge -->
       <div class="pro-card chart-card">
         <div class="card-header-bar">
           <div class="card-header-title">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
-              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
-            <span>Weather Condition vs Disruption Rate (%)</span>
+            <span>Real-Time Disruption Probability Gauge</span>
           </div>
-          <span class="chart-badge">Primary Risk Factor</span>
+          <span class="chart-badge" id="gaugeRiskBadge">Live Inference</span>
         </div>
-        <div class="chart-wrapper">
-          <canvas id="weatherChart"></canvas>
+        <div class="chart-wrapper gauge-chart-wrapper">
+          <canvas id="gaugeChart"></canvas>
+          <div class="gauge-center-label" id="gaugeCenterLabel">
+            <span class="gauge-number" id="gaugeCenterNumber">56.5%</span>
+            <span class="gauge-caption" id="gaugeCenterCaption">Disruption Risk</span>
+          </div>
         </div>
         <div class="chart-footer-note">
-          <span>🌪️ <strong>Hurricanes</strong> cause 100% disruption; <strong>Storms</strong> cause 79.5% disruption across all routes.</span>
+          <span id="gaugeFooterNote">🎯 Real-time probability calculated via trained XGBoost pipeline with active corridor parameters.</span>
         </div>
       </div>
 
-      <!-- Chart 2: Product Category Split -->
+      <!-- Chart 2: 6-Axis Multi-Factor Risk Radar -->
       <div class="pro-card chart-card">
         <div class="card-header-bar">
           <div class="card-header-title">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-              <line x1="8" y1="21" x2="16" y2="21"></line>
-              <line x1="12" y1="17" x2="12" y2="21"></line>
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
             </svg>
-            <span>Cargo Category: Disrupted vs On-Time Shipments</span>
+            <span>6-Axis Corridor Multi-Factor Risk Radar</span>
           </div>
-          <span class="chart-badge">Volume Split</span>
+          <span class="chart-badge">Shipment vs Baseline</span>
         </div>
         <div class="chart-wrapper">
-          <canvas id="categoryChart"></canvas>
+          <canvas id="radarChart"></canvas>
         </div>
         <div class="chart-footer-note">
-          <span>📦 Textiles & Pharmaceuticals show highest sensitivity to shipping delays.</span>
+          <span id="radarFooterNote">📊 Compares current shipment risk drivers (cyan) against safe industry baseline benchmarks (green).</span>
         </div>
       </div>
 
     </section>
 
     <!-- ==============================================================
-         4. CHARTS ROW 2: TIMELINE TREND & TRANSPORT MODE
+         5. DYNAMIC CHARTS ROW 2: MODAL WHAT-IF & WEATHER STRESS-TEST
          ============================================================== -->
     <section class="analytics-charts-grid">
 
-      <!-- Chart 3: Historical Timeline -->
-      <div class="pro-card chart-card">
-        <div class="card-header-bar">
-          <div class="card-header-title">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-            </svg>
-            <span>Monthly Disruption Rate Trend (24 Months Trajectory)</span>
-          </div>
-          <span class="chart-badge">Temporal Volatility</span>
-        </div>
-        <div class="chart-wrapper">
-          <canvas id="timelineChart"></canvas>
-        </div>
-        <div class="chart-footer-note">
-          <span>📈 Disruption fluctuates between 58% and 65% based on seasonal weather patterns.</span>
-        </div>
-      </div>
-
-      <!-- Chart 4: Transport Mode Comparison -->
+      <!-- Chart 3: Modal Comparison What-If Simulation -->
       <div class="pro-card chart-card">
         <div class="card-header-bar">
           <div class="card-header-title">
@@ -205,93 +399,108 @@
               <line x1="2" y1="12" x2="22" y2="12"></line>
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
             </svg>
-            <span>Disruption Rate by Transport Mode</span>
+            <span>Corridor Transport Mode Simulation (What-If Analysis)</span>
           </div>
-          <span class="chart-badge">Corridor Modality</span>
+          <span class="chart-badge">Modality Simulation</span>
         </div>
         <div class="chart-wrapper">
-          <canvas id="modeChart"></canvas>
+          <canvas id="modeSimChart"></canvas>
         </div>
         <div class="chart-footer-note">
-          <span>🚀 Air cargo shows slight vulnerability to airport bottlenecks and storms (61.7%).</span>
+          <span id="modeSimFooterNote">🚢 Simulates disruption probabilities for this route under Sea, Air, Road, and Rail modes.</span>
+        </div>
+      </div>
+
+      <!-- Chart 4: Weather Vulnerability Stress-Test -->
+      <div class="pro-card chart-card">
+        <div class="card-header-bar">
+          <div class="card-header-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+            </svg>
+            <span>Weather Condition Stress-Test (Clear ➔ Hurricane)</span>
+          </div>
+          <span class="chart-badge">Sensitivity Analysis</span>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="weatherSimChart"></canvas>
+        </div>
+        <div class="chart-footer-note">
+          <span id="weatherSimFooterNote">⛈️ Evaluates how corridor risk scales as weather degrades from Clear skies to severe Hurricane events.</span>
         </div>
       </div>
 
     </section>
 
     <!-- ==============================================================
-         5. CHARTS ROW 3: FEATURE IMPORTANCE & HIGH-RISK HUBS
+         6. CHARTS ROW 3: DELAY WATERFALL & TACTICAL RECOMMENDATIONS
          ============================================================== -->
     <section class="analytics-charts-grid">
 
-      <!-- Chart 5: Model Feature Importance -->
+      <!-- Chart 5: Delivery Timeline & Delay Buffer Waterfall -->
       <div class="pro-card chart-card">
         <div class="card-header-bar">
           <div class="card-header-title">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
-              <line x1="18" y1="20" x2="18" y2="10"></line>
-              <line x1="12" y1="20" x2="12" y2="4"></line>
-              <line x1="6" y1="20" x2="6" y2="14"></line>
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
             </svg>
-            <span>XGBoost Machine Learning Feature Importance (%)</span>
+            <span>Transit Lead Time vs Predicted Delay Buffer (Days)</span>
           </div>
-          <span class="chart-badge">Model Architecture</span>
+          <span class="chart-badge">Schedule Analysis</span>
         </div>
         <div class="chart-wrapper">
-          <canvas id="featureChart"></canvas>
+          <canvas id="delayChart"></canvas>
         </div>
         <div class="chart-footer-note">
-          <span>🧠 Weather events contribute over 35% of model decision weights, followed by Geopolitical Risk.</span>
+          <span id="delayFooterNote">⏱️ Shows contracted lead time vs expected delay variance buffer under current route conditions.</span>
         </div>
       </div>
 
-      <!-- Hubs Table -->
+      <!-- Recommendations & Telemetry Checklist -->
       <div class="pro-card chart-card table-card">
         <div class="card-header-bar">
           <div class="card-header-title">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
-            <span>High-Risk Trading Hubs & Port Corridors</span>
+            <span>Tactical Recommendations & Route Telemetry</span>
           </div>
-          <span class="chart-badge">Volume & Risk Ranking</span>
+          <span class="chart-badge" id="telemetryStatusBadge">Action Plan</span>
         </div>
-        <div class="table-wrapper">
-          <table class="pro-data-table">
-            <thead>
-              <tr>
-                <th>Origin Port</th>
-                <th>Total Volume</th>
-                <th>Disruptions</th>
-                <th>Disruption Rate</th>
-                <th>Avg Lead Time</th>
-                <th>Risk Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for hub in analytics.hubs %}
-              <tr>
-                <td class="hub-name-cell">
-                  <span class="hub-bullet"></span>
-                  <strong>{{ hub.Origin_Port }}</strong>
-                </td>
-                <td>{{ hub.total }}</td>
-                <td>{{ hub.disrupted }}</td>
-                <td>
-                  <span class="hub-rate-pill {% if hub.rate >= 62.0 %}rate-critical{% else %}rate-high{% endif %}">
-                    {{ hub.rate }}%
-                  </span>
-                </td>
-                <td>{{ hub.avg_lead }}d</td>
-                <td>{{ hub.avg_risk }} / 5.0</td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
+        
+        <div class="recommendations-container" style="padding: 1.25rem;">
+          <div class="section-micro-title" style="margin-bottom: 0.75rem;">Tactical Mitigations for this Prediction:</div>
+          <ul class="recommendations-checklist" id="simRecommendationsList">
+            <!-- Populated dynamically via JS -->
+          </ul>
+
+          <div class="section-micro-title" style="margin-top: 1.25rem; margin-bottom: 0.75rem;">Corridor Telemetry Snapshot:</div>
+          <div class="telemetry-chips-grid" id="telemetryChipsGrid">
+            <div class="telemetry-chip">
+              <span class="chip-label">Corridor:</span>
+              <strong class="chip-val" id="chipRoute">Sri Lanka ➔ India</strong>
+            </div>
+            <div class="telemetry-chip">
+              <span class="chip-label">Transport Mode:</span>
+              <strong class="chip-val" id="chipMode">Sea Freight</strong>
+            </div>
+            <div class="telemetry-chip">
+              <span class="chip-label">Distance:</span>
+              <strong class="chip-val" id="chipDistance">1,542 km</strong>
+            </div>
+            <div class="telemetry-chip">
+              <span class="chip-label">Cargo Weight:</span>
+              <strong class="chip-val" id="chipWeight">500.0 MT</strong>
+            </div>
+            <div class="telemetry-chip">
+              <span class="chip-label">Scheduled Dispatch:</span>
+              <strong class="chip-val" id="chipDate">{{ today_date }}</strong>
+            </div>
+          </div>
         </div>
         <div class="chart-footer-note">
-          <span>🚢 Hamburg, Shanghai, and Singapore record highest disruption concentrations.</span>
+          <span>🛡️ Recommendations are dynamically calibrated based on active model risk classifications.</span>
         </div>
       </div>
 
@@ -299,17 +508,17 @@
 
     <!-- Footer -->
     <footer class="app-footer">
-      <div>SupplyChain.AI &bull; Autonomous Disruption Analytics Engine &bull; Historical Shipments Telemetry</div>
+      <div>Routexa &bull; Autonomous Supply Chain Disruption Intelligence &bull; Dynamic Simulation Engine</div>
     </footer>
 
   </div>
 
-  <!-- Inject Analytics Data JSON for Chart.js Rendering -->
+  <!-- Inject Initial Default Prediction JSON for Immediate Rendering -->
   <script>
-    window.ANALYTICS_DATA = {{ analytics | tojson | safe }};
+    window.INITIAL_PREDICTION = {{ initial_prediction | tojson | safe }};
   </script>
 
-  <!-- Script for Rendering All Charts -->
+  <!-- Script for Rendering Dynamic Prediction Visualizations -->
   <script src="{{ url_for('static', filename='js/analytics.js') }}"></script>
 </body>
 </html>
