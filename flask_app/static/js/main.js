@@ -394,9 +394,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const data = await res.json();
 
-      if (!res.ok) {
-        alert(data.error || "Prediction request failed.");
-        return;
+      // Persist prediction for Page 2 dynamic synchronization
+      try {
+        localStorage.setItem('sc_current_prediction', JSON.stringify(data));
+      } catch (e) {
+        console.warn("Could not save to localStorage", e);
       }
 
       // Render Comprehensive AI Report
