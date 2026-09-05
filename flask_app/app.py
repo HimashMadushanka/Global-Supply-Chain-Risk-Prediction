@@ -16,6 +16,11 @@ from .live_data import get_live_context
 
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY", "local-development-secret-change-me")
+app.config.update(
+    SESSION_COOKIE_HTTPONLY=True,
+    SESSION_COOKIE_SAMESITE="Lax",
+    SESSION_COOKIE_SECURE=os.getenv("SESSION_COOKIE_SECURE", "0") == "1",
+)
 
 ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "admin")
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "change-me")
@@ -95,7 +100,7 @@ for col in feature_names:
 
 @app.before_request
 def require_login():
-    if request.endpoint in {"login", "forgot_password", "reset_password", "static"}:
+    if request.endpoint in {"login", "forgot_password", "reset_password", "health", "static"}:
         return None
     if session.get("authenticated"):
         return None
@@ -130,6 +135,11 @@ def login():
 def logout():
     session.clear()
     return redirect(url_for("login"))
+
+
+@app.route("/health")
+def health():
+    return jsonify({"status": "ok"})
 
 
 @app.route("/change-password", methods=["GET", "POST"])

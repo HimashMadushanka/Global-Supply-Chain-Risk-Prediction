@@ -10,3 +10,4 @@ mysql-connector-python
 geopy
 folium
 streamlit-folium
+gunicorn

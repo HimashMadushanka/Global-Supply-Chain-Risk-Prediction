@@ -167,6 +167,66 @@ The MySQL database stores users in `users` and reset tokens in `password_reset_t
 
 Dashboard pages and `/api/*` endpoints require an authenticated session. Use the **Sign out** link in the navigation bar to end the session. Never use the development defaults in production.
 
+## Host on `www.routexa.lk`
+
+The application can be hosted on Railway, Render, Azure, or another provider that supports Python web services. Railway is convenient when using the included MySQL authentication backend.
+
+### Hosting service settings
+
+Connect the hosting service to the GitHub repository and use the included `Procfile`. The production start command is:
+
+```text
+gunicorn --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 120 run_flask:app
+```
+
+Set these environment variables in the hosting provider:
+
+```text
+FLASK_SECRET_KEY=<long-random-secret>
+SESSION_COOKIE_SECURE=1
+AUTH_DB_DRIVER=mysql
+MYSQL_HOST=<managed-mysql-host>
+MYSQL_PORT=3306
+MYSQL_USER=<managed-mysql-user>
+MYSQL_PASSWORD=<managed-mysql-password>
+MYSQL_DATABASE=routexa_auth
+ADMIN_USERNAME=<initial-admin-username>
+ADMIN_PASSWORD=<initial-admin-password>
+```
+
+Add live provider variables only when configured:
+
+```text
+TOMTOM_API_KEY=<tomtom-key>
+PORT_CONGESTION_API_URL=<port-provider-endpoint>
+```
+
+### Custom domain DNS
+
+In the hosting provider, add the custom domain:
+
+```text
+www.routexa.lk
+```
+
+The provider will show a target hostname. At the DNS provider where `routexa.lk` is registered, create:
+
+```text
+Type: CNAME
+Name: www
+Target: <hostname supplied by your hosting provider>
+TTL: Automatic or 300
+```
+
+For the root domain, redirect `routexa.lk` to `www.routexa.lk`, or configure the provider's required A/ALIAS record. Enable the provider-managed SSL certificate, then test:
+
+```text
+https://www.routexa.lk/login
+https://www.routexa.lk/health
+```
+
+The `/health` endpoint should return `{"status":"ok"}`. DNS changes may take several minutes to propagate.
+
 ### Password Management
 
 - **Change password:** sign in and select **Change password** in the dashboard navigation.
@@ -344,7 +404,7 @@ The committed report files currently contain the following results.
 | XGBoost | 0.7160 | 0.7675 | 0.7700 | 0.7687 | 0.8024 |
 | Random Forest | 0.7270 | 0.8257 | 0.7031 | 0.7595 | 0.8146 |
 
-These values should be updated whenever the model or data split changes. The dashboard currently displays a `99.4% ROC-AUC` label in some places, which does not match the committed report metrics and should be corrected before formal presentation.
+These values should be updated whenever the model or data split changes. The dashboard displays the final reported ROC-AUC rounded to `81.2%`.
 
 ## Important Limitations
 
