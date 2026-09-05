@@ -31,10 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Parameters & Sync
   const distanceInput = document.getElementById('distance_km');
   const btnSyncMapDist = document.getElementById('btnSyncMapDist');
+  const refreshLiveContextBtn = document.getElementById('refreshLiveContext');
+  const liveContextStatus = document.getElementById('liveContextStatus');
   const predictBtn = document.getElementById('predictBtn');
   const btnSpinner = document.getElementById('btnSpinner');
   const btnLabel = document.getElementById('btnLabel');
   const predictionForm = document.getElementById('predictionForm');
+  const weatherSelect = document.getElementById('weather_condition');
+  const geopoliticalRiskInput = document.getElementById('geopolitical_risk_score');
 
   // Map & Legend Elements
   const distMetricVal = document.getElementById('distMetricVal');
@@ -352,6 +356,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  async function refreshLiveContext(applyToForm = false) {
+    const origin = originSelect.value;
+    const destination = destSelect.value;
+    if (!origin || !destination || !liveContextStatus) return;
+
+    liveContextStatus.querySelector('span').textContent = 'Refreshing live weather, traffic, port, and geopolitical signals...';
+    try {
+      const res = await fetch(`/api/live-context?origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Live data request failed');
+
+      const weather = data.weather && data.weather.category ? data.weather.category : 'unavailable';
+      const geo = data.geopolitics && data.geopolitics.available
+        ? `${data.geopolitics.news_attention_score}/10 news attention`
+        : 'unavailable';
+      const trafficAvailable = Object.values(data.traffic || {}).some(item => item.available);
+      const portAvailable = Object.values(data.port_congestion || {}).some(item => item.available);
+
+      if (applyToForm && weatherSelect && Array.from(weatherSelect.options).some(option => option.value === weather)) {
+        weatherSelect.value = weather;
+      }
+      if (applyToForm && geopoliticalRiskInput && data.geopolitics && data.geopolitics.available) {
+        geopoliticalRiskInput.value = data.geopolitics.news_attention_score;
+      }
+
+      liveContextStatus.querySelector('span').textContent =
+        `Live weather: ${weather} | Geopolitical: ${geo} | Traffic: ${trafficAvailable ? 'connected' : 'provider not configured'} | Port congestion: ${portAvailable ? 'connected' : 'provider not configured'}`;
+    } catch (err) {
+      liveContextStatus.querySelector('span').textContent = `Live data unavailable: ${err.message}`;
+    }
+  }
+
+  if (refreshLiveContextBtn) {
+    refreshLiveContextBtn.addEventListener('click', () => refreshLiveContext(true));
+  }
+
   // Event Listeners
   originSelect.addEventListener('change', fetchRouteInfo);
   destSelect.addEventListener('change', fetchRouteInfo);
@@ -379,6 +419,7 @@ document.addEventListener('DOMContentLoaded', () => {
     formData.forEach((val, key) => {
       payload[key] = val;
     });
+    payload.use_live_data = true;
 
     // Loading State
     btnSpinner.style.display = 'inline-block';

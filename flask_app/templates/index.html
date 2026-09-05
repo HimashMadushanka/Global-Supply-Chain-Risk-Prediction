@@ -4,13 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-  <title>Global Supply Chain Risk Intelligence | Executive Dashboard</title>
-
-=======
   <title>Routexa | Global Supply Chain Disruption Intelligence</title>
-  
->>>>>>> f2891a5e7b1f6a145ed6011040cda3567567fcee
   <!-- Google Fonts: Outfit & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,13 +29,6 @@
          ============================================================== -->
     <header class="app-navbar">
       <div class="nav-brand-group">
-<<<<<<< HEAD
-        <div class="brand-badge-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-=======
         <div class="brand-badge-icon" title="Routexa Global Navigation Engine">
           <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -66,7 +53,6 @@
             <circle cx="5" cy="33.5" r="2.8" fill="#38bdf8"/>
             <circle cx="5" cy="14.5" r="2.8" fill="#818cf8"/>
             <circle cx="27" cy="20" r="2.8" fill="#ffffff" filter="url(#routeGlow1)"/>
->>>>>>> f2891a5e7b1f6a145ed6011040cda3567567fcee
           </svg>
         </div>
         <div>
@@ -111,6 +97,8 @@
         <div class="meta-pill meta-connectivity">
           <span>195 Global Nodes</span>
         </div>
+        <a href="{{ url_for('logout') }}" class="meta-pill meta-logout">Sign out</a>
+        <a href="{{ url_for('change_password') }}" class="meta-pill meta-logout">Change password</a>
       </div>
     </header>
 
@@ -319,6 +307,11 @@
           </div>
           {% endif %}
 
+        </div>
+
+        <div class="pro-alert alert-info" id="liveContextStatus">
+          <span>Live signals are available on demand.</span>
+          <button type="button" id="refreshLiveContext" class="btn-text-action">Refresh &amp; Apply Live Signals</button>
         </div>
 
         <!-- Predict Action Strip -->

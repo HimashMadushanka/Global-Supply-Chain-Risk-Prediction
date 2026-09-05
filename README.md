@@ -57,6 +57,13 @@ The project combines data preparation, exploratory analysis, feature engineering
 `-- README.md
 ```
 
+Authentication files:
+
+- `flask_app/schema.sql` - SQLite tables for users and password-reset tokens.
+- `flask_app/schema_mysql.sql` - MySQL tables for users and password-reset tokens.
+- `flask_app/auth_db.py` - password hashing, login verification, and token management.
+- `data/users.sqlite3` - created automatically on first Flask start.
+
 ## Technology Stack
 
 - Python
@@ -111,6 +118,69 @@ Open the dashboard at:
 http://127.0.0.1:5000
 ```
 
+### Login
+
+The Flask dashboard requires login. For local development, the default credentials are:
+
+```text
+Username: admin
+Password: change-me
+```
+
+Set your own credentials before sharing or deploying the application:
+
+```powershell
+$env:FLASK_SECRET_KEY = "replace-with-a-long-random-secret"
+$env:ADMIN_USERNAME = "your-admin-name"
+$env:ADMIN_PASSWORD = "your-strong-password"
+python run_flask.py
+```
+
+### Use MySQL for Authentication
+
+Install the dependencies and configure the MySQL connection before starting Flask:
+
+```powershell
+python -m pip install -r requirements.txt
+
+$env:AUTH_DB_DRIVER = "mysql"
+$env:MYSQL_HOST = "127.0.0.1"
+$env:MYSQL_PORT = "3306"
+$env:MYSQL_USER = "root"
+$env:MYSQL_PASSWORD = "your-mysql-password"
+$env:MYSQL_DATABASE = "routexa_auth"
+
+$env:ADMIN_USERNAME = "admin"
+$env:ADMIN_PASSWORD = "your-initial-password"
+$env:FLASK_SECRET_KEY = "replace-with-a-long-random-secret"
+
+python run_flask.py
+```
+
+The application creates the `routexa_auth` database and its tables automatically if the MySQL user has permission to create databases. You can also create it manually:
+
+```sql
+CREATE DATABASE routexa_auth CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+The MySQL database stores users in `users` and reset tokens in `password_reset_tokens`. When switching from SQLite to MySQL, the initial admin account is created from `ADMIN_USERNAME` and `ADMIN_PASSWORD`; existing accounts are not overwritten.
+
+Dashboard pages and `/api/*` endpoints require an authenticated session. Use the **Sign out** link in the navigation bar to end the session. Never use the development defaults in production.
+
+### Password Management
+
+- **Change password:** sign in and select **Change password** in the dashboard navigation.
+- **Forgot password:** select **Forgot password?** on the login page, enter the username, and open the generated reset link.
+- Reset tokens are single-use and expire after 30 minutes.
+- In this local implementation, the reset link is displayed on the recovery page. A production deployment should send it through a trusted email provider instead.
+
+The SQLite database is initialized automatically. To use a different database location, set:
+
+```powershell
+$env:AUTH_DATABASE_PATH = "D:\secure-data\routexa-users.sqlite3"
+python run_flask.py
+```
+
 Available pages:
 
 - `/` - route predictor
@@ -158,11 +228,53 @@ Example request:
   "geopolitical_risk_score": 4.0,
   "weather_condition": "Rain",
   "carrier_reliability_score": 0.85,
-  "lead_time_days": 10
+  "lead_time_days": 10,
+  "use_live_data": true
 }
 ```
 
 The response includes disruption probability, risk level, expected delay range, risk factors, recommendations, and shipment telemetry.
+
+## Live Data Integrations
+
+The Flask dashboard can collect a fresh route context when a prediction is made or when the **Refresh & Apply Live Signals** button is used.
+
+### Providers
+
+- **Weather:** Open-Meteo, enabled by default without an API key.
+- **Geopolitical attention:** GDELT recent news volume for the selected route, enabled by default as a transparent news-attention proxy.
+- **Road traffic:** TomTom Traffic Flow API when `TOMTOM_API_KEY` is configured.
+- **Port congestion:** A provider endpoint configured through `PORT_CONGESTION_API_URL`.
+
+Live weather and geopolitical attention are applied to model inputs when available. Traffic and port congestion are returned as operational context because the current trained model was not trained with those features.
+
+### Configure optional providers in PowerShell
+
+```powershell
+$env:TOMTOM_API_KEY = "your-tomtom-key"
+$env:PORT_CONGESTION_API_URL = "https://your-provider.example/api/congestion"
+$env:LIVE_DATA_TIMEOUT_SECONDS = "4"
+$env:LIVE_DATA_CACHE_TTL_SECONDS = "300"
+python run_flask.py
+```
+
+Live context endpoint:
+
+```text
+GET /api/live-context?origin=Sri%20Lanka&destination=India
+```
+
+Each provider result includes availability, source, timestamp, and an error when data cannot be retrieved. The application continues using form or training-data defaults when a provider is unavailable.
+
+The configured port-congestion endpoint should accept `?port=<port name>` and return JSON such as:
+
+```json
+{
+  "status": "moderate",
+  "congestion_score": 0.62,
+  "vessel_wait_hours": 18
+}
+```
 
 ## Run the Streamlit Application
 
@@ -240,7 +352,8 @@ These values should be updated whenever the model or data split changes. The das
 - Manually entering values far outside the training distribution can produce unreliable predictions even though the interface accepts them.
 - Route connectivity is based on the supplied route dataset and should be verified against current logistics networks.
 - Geodesic distance is an approximation and is not the same as actual sailing, road, rail, or air distance.
-- The application does not currently provide live external data feeds, user authentication, role-based access, or production monitoring.
+- Live providers can be unavailable, rate-limited, delayed, or incomplete; always inspect the provider status and timestamp.
+- The application does not currently provide user authentication, role-based access, or production monitoring.
 - The Flask runner currently enables debug mode for local development. Disable debug mode for deployment.
 
 ## Recommended Next Steps
@@ -249,7 +362,7 @@ These values should be updated whenever the model or data split changes. The das
 2. Confirm that the train/test split and feature engineering do not introduce data leakage.
 3. Add automated tests for prediction, invalid routes, missing files, and numeric validation.
 4. Add input warnings for values outside the training-data range.
-5. Add current weather, port congestion, geopolitical, and carrier data.
+5. Add live weather, port congestion, geopolitical, and traffic values as trained model features after collecting labeled historical data.
 6. Add model monitoring, periodic retraining, authentication, and production logging.
 
 ## License

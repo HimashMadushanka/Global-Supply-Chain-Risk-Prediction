@@ -99,6 +99,179 @@ body {
   box-sizing: border-box;
 }
 
+/* Authentication screen */
+.login-page {
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background-color: var(--surface-ground);
+  background-image:
+    radial-gradient(at 15% 15%, rgba(37, 99, 235, 0.22) 0, transparent 42%),
+    radial-gradient(at 85% 85%, rgba(56, 189, 248, 0.14) 0, transparent 38%);
+}
+
+.login-shell {
+  width: min(100%, 430px);
+}
+
+.login-card {
+  padding: 2.5rem;
+  background: rgba(15, 23, 42, 0.94);
+  border: 1px solid var(--border-muted);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45), var(--shadow-glow);
+}
+
+.login-brand-mark {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  place-items: center;
+  margin: 0 auto 1.25rem;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.16), rgba(99, 102, 241, 0.22));
+  border: 1px solid rgba(56, 189, 248, 0.42);
+  border-radius: 18px;
+  box-shadow: 0 0 28px rgba(56, 189, 248, 0.3);
+}
+
+.login-brand-mark svg {
+  display: block;
+}
+
+.login-eyebrow {
+  margin-bottom: 0.45rem;
+  color: var(--color-brand-cyan);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.login-card h1 {
+  color: var(--text-pure);
+  font: 700 1.8rem/1.15 var(--font-heading);
+}
+
+.login-subtitle {
+  margin: 0.7rem 0 1.8rem;
+  color: var(--text-muted);
+}
+
+.login-form {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.login-form label {
+  margin-top: 0.35rem;
+  color: var(--text-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  color: var(--text-main);
+  background: var(--surface-input);
+  border: 1px solid var(--border-muted);
+  border-radius: var(--radius-sm);
+  outline: none;
+  font: inherit;
+}
+
+.login-form input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px var(--border-focus-glow);
+}
+
+.login-submit {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  color: #03111d;
+  background: var(--color-brand-cyan);
+  border: 0;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font: 700 0.95rem var(--font-heading);
+  transition: var(--transition-fast);
+}
+
+.login-submit:hover {
+  background: #7dd3fc;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.login-error {
+  margin-bottom: 1rem;
+  padding: 0.75rem 0.85rem;
+  color: #fecaca;
+  background: var(--color-danger-bg);
+  border: 1px solid var(--color-danger-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+}
+
+.login-success {
+  margin-bottom: 1rem;
+  padding: 0.75rem 0.85rem;
+  color: #bbf7d0;
+  background: var(--color-success-bg);
+  border: 1px solid var(--color-success-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+}
+
+.login-back-link {
+  display: block;
+  margin-top: 1.25rem;
+  color: var(--color-brand-cyan);
+  font-size: 0.85rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.login-back-link:hover {
+  color: var(--text-pure);
+}
+
+.reset-link-box {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  color: var(--text-main);
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+}
+
+.reset-link-box a {
+  color: var(--color-brand-cyan);
+  overflow-wrap: anywhere;
+}
+
+.reset-link-box small {
+  color: var(--text-muted);
+}
+
+.login-note {
+  margin-top: 1.5rem;
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.meta-logout {
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.meta-logout:hover {
+  color: var(--text-pure);
+  border-color: var(--border-focus);
+}
+
 /* Professional Enterprise Card */
 .pro-card {
   background: var(--surface-card);
@@ -347,6 +520,8 @@ body {
   align-items: center;
   gap: 0.5rem;
   flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   white-space: nowrap !important;
 }
 
@@ -380,6 +555,41 @@ body {
   background: rgba(56, 189, 248, 0.08);
   color: var(--color-brand-cyan);
   border-color: rgba(56, 189, 248, 0.2);
+}
+
+@media (max-width: 1800px) and (min-width: 981px) {
+  .app-navbar {
+    gap: 0.65rem;
+    padding-inline: 0.85rem;
+  }
+
+  .nav-brand-group {
+    gap: 0.6rem;
+  }
+
+  .brand-title {
+    font-size: 1.45rem;
+  }
+
+  .brand-tag {
+    font-size: 0.55rem;
+  }
+
+  .nav-links-tabs {
+    gap: 0.2rem;
+    padding: 0.25rem 0.3rem;
+  }
+
+  .nav-tab {
+    gap: 0.4rem;
+    padding-inline: 0.8rem;
+    font-size: 0.86rem;
+  }
+
+  .meta-pill {
+    padding-inline: 0.55rem;
+    font-size: 0.68rem;
+  }
 }
 
 @media (max-width: 1550px) {

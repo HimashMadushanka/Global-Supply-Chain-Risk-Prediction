@@ -1,0 +1,13 @@
+# Local authentication database
+/data/users.sqlite3
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example

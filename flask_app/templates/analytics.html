@@ -94,6 +94,8 @@
         <div class="meta-pill meta-connectivity">
           <span id="syncStatusBadge">⚡ Live Simulation Mode</span>
         </div>
+        <a href="{{ url_for('logout') }}" class="meta-pill meta-logout">Sign out</a>
+        <a href="{{ url_for('change_password') }}" class="meta-pill meta-logout">Change password</a>
       </div>
     </header>
 
@@ -513,16 +515,9 @@
 
   </div>
 
-<<<<<<< HEAD
-  <!-- Inject Analytics Data JSON for Chart.js Rendering -->
-  <script id="analytics-data" type="application/json">{{ analytics | tojson | safe }}</script>
-  <script>
-    window.ANALYTICS_DATA = JSON.parse(document.getElementById('analytics-data').textContent || '{}');
-=======
   <!-- Inject Initial Default Prediction JSON for Immediate Rendering -->
   <script>
     window.INITIAL_PREDICTION = {{ initial_prediction | tojson | safe }};
->>>>>>> f2891a5e7b1f6a145ed6011040cda3567567fcee
   </script>
 
   <!-- Script for Rendering Dynamic Prediction Visualizations -->

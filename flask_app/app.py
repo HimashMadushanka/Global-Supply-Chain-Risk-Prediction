@@ -1,12 +1,25 @@
 import os
 from datetime import date
 from pathlib import Path
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, session, url_for
 import pandas as pd
 import joblib
 from geopy.distance import geodesic
+from .auth_db import (
+    consume_reset_token,
+    create_reset_token,
+    ensure_admin_user,
+    update_password,
+    verify_user,
+)
+from .live_data import get_live_context
 
 app = Flask(__name__)
+app.secret_key = os.getenv("FLASK_SECRET_KEY", "local-development-secret-change-me")
+
+ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "admin")
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "change-me")
+ensure_admin_user(ADMIN_USERNAME, ADMIN_PASSWORD)
 
 # --------------------------------------------------
 # PATHS & CONFIGURATION
@@ -79,6 +92,98 @@ for col in feature_names:
 # --------------------------------------------------
 # HELPER FUNCTIONS
 # --------------------------------------------------
+
+@app.before_request
+def require_login():
+    if request.endpoint in {"login", "forgot_password", "reset_password", "static"}:
+        return None
+    if session.get("authenticated"):
+        return None
+    if request.path.startswith("/api/"):
+        return jsonify({"error": "Authentication required."}), 401
+    return redirect(url_for("login", next=request.path))
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if session.get("authenticated"):
+        return redirect(url_for("index"))
+
+    error = None
+    if request.method == "POST":
+        username = request.form.get("username", "")
+        password = request.form.get("password", "")
+        if verify_user(username, password):
+            session.clear()
+            session["authenticated"] = True
+            session["username"] = username
+            next_url = request.form.get("next", "/")
+            if not next_url.startswith("/") or next_url.startswith("//"):
+                next_url = "/"
+            return redirect(next_url)
+        error = "Invalid username or password."
+
+    return render_template("login.html", error=error, next_url=request.args.get("next", "/"))
+
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect(url_for("login"))
+
+
+@app.route("/change-password", methods=["GET", "POST"])
+def change_password():
+    error = None
+    success = None
+    if request.method == "POST":
+        current_password = request.form.get("current_password", "")
+        new_password = request.form.get("new_password", "")
+        confirm_password = request.form.get("confirm_password", "")
+        username = session.get("username", "")
+
+        if not verify_user(username, current_password):
+            error = "Your current password is incorrect."
+        elif len(new_password) < 8:
+            error = "The new password must contain at least 8 characters."
+        elif new_password != confirm_password:
+            error = "The new passwords do not match."
+        else:
+            update_password(username, new_password)
+            success = "Your password has been changed successfully."
+
+    return render_template("change_password.html", error=error, success=success)
+
+
+@app.route("/forgot-password", methods=["GET", "POST"])
+def forgot_password():
+    reset_url = None
+    message = None
+    if request.method == "POST":
+        username = request.form.get("username", "").strip()
+        token = create_reset_token(username)
+        message = "If that account exists, a password-reset link has been created."
+        if token:
+            reset_url = url_for("reset_password", token=token, _external=True)
+    return render_template("forgot_password.html", message=message, reset_url=reset_url)
+
+
+@app.route("/reset-password/<token>", methods=["GET", "POST"])
+def reset_password(token):
+    error = None
+    success = None
+    if request.method == "POST":
+        new_password = request.form.get("new_password", "")
+        confirm_password = request.form.get("confirm_password", "")
+        if len(new_password) < 8:
+            error = "The new password must contain at least 8 characters."
+        elif new_password != confirm_password:
+            error = "The new passwords do not match."
+        elif consume_reset_token(token, new_password):
+            success = "Password reset successfully. You can now sign in."
+        else:
+            error = "This reset link is invalid or expired."
+    return render_template("reset_password.html", token=token, error=error, success=success)
 
 def get_route_connectivity(origin_port, destination_port):
     """
@@ -330,6 +435,18 @@ def run_full_prediction(payload):
             else:
                 input_row[col] = ""
 
+    live_context = None
+    if payload.get("use_live_data", True):
+        live_context = get_live_context(origin, destination, PORT_LOCATIONS)
+        live_weather = live_context.get("weather", {}).get("category")
+        weather_options = FEATURE_METADATA.get("weather_condition", {}).get("options", [])
+        if live_weather in weather_options:
+            input_row["weather_condition"] = live_weather
+
+        live_geo = live_context.get("geopolitics", {})
+        if live_geo.get("available") and "news_attention_score" in live_geo:
+            input_row["geopolitical_risk_score"] = float(live_geo["news_attention_score"])
+
     input_df = pd.DataFrame([input_row])[feature_names]
 
     try:
@@ -461,7 +578,8 @@ def run_full_prediction(payload):
                 "carrier_reliability_score": carrier_score,
                 "geopolitical_risk_score": geo_score,
                 "date": ship_date_str
-            }
+            },
+            "live_context": live_context
         }, 200
 
     except Exception as e:
@@ -547,6 +665,17 @@ def route_info():
         "allowed_modes": allowed_modes,
         "unavailable_modes": unavailable_modes
     })
+
+
+@app.route("/api/live-context", methods=["GET"])
+def live_context():
+    origin = request.args.get("origin", "").strip()
+    destination = request.args.get("destination", "").strip()
+
+    if not origin or not destination:
+        return jsonify({"error": "Missing origin or destination"}), 400
+
+    return jsonify(get_live_context(origin, destination, PORT_LOCATIONS))
 
 
 @app.route("/api/predict", methods=["POST"])
