@@ -229,8 +229,7 @@
           {% if "distance_km" in feature_metadata %}
           <div class="form-group">
             <label for="distance_km">Distance (km)</label>
-            <input type="number" step="1" id="distance_km" name="distance_km" class="pro-input"
-              min="{{ feature_metadata['distance_km']['min'] }}" max="{{ feature_metadata['distance_km']['max'] }}"
+            <input type="number" step="any" id="distance_km" name="distance_km" class="pro-input"
               value="{{ feature_metadata['distance_km']['median'] }}" required>
           </div>
           {% endif %}
@@ -239,8 +238,7 @@
           {% if "weight_mt" in feature_metadata %}
           <div class="form-group">
             <label for="weight_mt">Cargo Weight (MT)</label>
-            <input type="number" step="1" id="weight_mt" name="weight_mt" class="pro-input"
-              min="{{ feature_metadata['weight_mt']['min'] }}" max="{{ feature_metadata['weight_mt']['max'] }}"
+            <input type="number" step="any" id="weight_mt" name="weight_mt" class="pro-input"
               value="{{ feature_metadata['weight_mt']['median'] }}" required>
           </div>
           {% endif %}
@@ -263,9 +261,7 @@
           {% if "lead_time_days" in feature_metadata %}
           <div class="form-group">
             <label for="lead_time_days">Lead Time (Days)</label>
-            <input type="number" step="1" id="lead_time_days" name="lead_time_days" class="pro-input"
-              min="{{ feature_metadata['lead_time_days']['min'] }}"
-              max="{{ feature_metadata['lead_time_days']['max'] }}"
+            <input type="number" step="any" id="lead_time_days" name="lead_time_days" class="pro-input"
               value="{{ feature_metadata['lead_time_days']['median'] }}">
           </div>
           {% endif %}
@@ -274,10 +270,8 @@
           {% if "carrier_reliability_score" in feature_metadata %}
           <div class="form-group">
             <label for="carrier_reliability_score">Carrier Reliability</label>
-            <input type="number" step="0.01" id="carrier_reliability_score" name="carrier_reliability_score"
-              class="pro-input" min="{{ feature_metadata['carrier_reliability_score']['min'] }}"
-              max="{{ feature_metadata['carrier_reliability_score']['max'] }}"
-              value="{{ feature_metadata['carrier_reliability_score']['median'] }}">
+            <input type="number" step="any" id="carrier_reliability_score" name="carrier_reliability_score"
+              class="pro-input" value="{{ feature_metadata['carrier_reliability_score']['median'] }}">
           </div>
           {% endif %}
 
@@ -285,10 +279,8 @@
           {% if "geopolitical_risk_score" in feature_metadata %}
           <div class="form-group">
             <label for="geopolitical_risk_score">Geopolitical Risk (0-5)</label>
-            <input type="number" step="0.1" id="geopolitical_risk_score" name="geopolitical_risk_score"
-              class="pro-input" min="{{ feature_metadata['geopolitical_risk_score']['min'] }}"
-              max="{{ feature_metadata['geopolitical_risk_score']['max'] }}"
-              value="{{ feature_metadata['geopolitical_risk_score']['median'] }}">
+            <input type="number" step="any" id="geopolitical_risk_score" name="geopolitical_risk_score"
+              class="pro-input" value="{{ feature_metadata['geopolitical_risk_score']['median'] }}">
           </div>
           {% endif %}
 
