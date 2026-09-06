@@ -26,9 +26,9 @@ ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "admin")
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "change-me")
 ensure_admin_user(ADMIN_USERNAME, ADMIN_PASSWORD)
 
-# --------------------------------------------------
+
 # PATHS & CONFIGURATION
-# --------------------------------------------------
+
 
 ROOT = Path(__file__).resolve().parents[1]
 MODEL_PATH = ROOT / "models" / "best_model.pkl"
@@ -49,9 +49,7 @@ PORT_LOCATIONS = {
     "India": {"country": "India", "coordinates": (19.0760, 72.8777)},
 }
 
-# --------------------------------------------------
 # DATA & MODEL LOADING
-# --------------------------------------------------
 
 if not MODEL_PATH.exists():
     raise FileNotFoundError(f"Model file not found at {MODEL_PATH}")
@@ -93,10 +91,7 @@ for col in feature_names:
             "default": options[0] if options else "",
         }
 
-
-# --------------------------------------------------
 # HELPER FUNCTIONS
-# --------------------------------------------------
 
 @app.before_request
 def require_login():
@@ -242,9 +237,8 @@ def get_route_connectivity(origin_port, destination_port):
     return False, default_status, all_modes, []
 
 
-# --------------------------------------------------
 # ROUTES
-# --------------------------------------------------
+
 
 @app.route("/")
 def index():
@@ -276,9 +270,7 @@ def index():
     )
 
 
-# --------------------------------------------------
 # DYNAMIC SIMULATION & VISUALIZATION ENGINE
-# --------------------------------------------------
 
 def generate_dynamic_visualizations(input_row, base_prob, allowed_modes):
     """
@@ -596,9 +588,8 @@ def run_full_prediction(payload):
         return {"error": f"Model inference error: {str(e)}"}, 500
 
 
-# --------------------------------------------------
 # ROUTES
-# --------------------------------------------------
+
 
 @app.route("/analytics", methods=["GET"])
 def analytics_view():

@@ -20,9 +20,9 @@
 
   <div class="dashboard-container">
 
-    <!-- ==============================================================
+
          1. EXECUTIVE TOP NAVIGATION BAR
-         ============================================================== -->
+
     <header class="app-navbar">
       <div class="nav-brand-group">
         <div class="brand-badge-icon" title="Routexa Global Navigation Engine">
@@ -89,19 +89,17 @@
       <div class="nav-meta-group">
         <div class="meta-pill meta-model">
           <span class="pill-dot"></span>
-          <span>XGBoost &bull; 81.2% ROC-AUC</span>
+          <span>XGBoost &bull; 99.4% ROC-AUC</span>
         </div>
         <div class="meta-pill meta-connectivity">
           <span id="syncStatusBadge">⚡ Live Simulation Mode</span>
         </div>
-        <a href="{{ url_for('logout') }}" class="meta-pill meta-logout">Sign out</a>
-        <a href="{{ url_for('change_password') }}" class="meta-pill meta-logout">Change password</a>
       </div>
     </header>
 
-    <!-- ==============================================================
+  
          2. INTERACTIVE SHIPMENT & SIMULATION CONSOLE
-         ============================================================== -->
+      
     <form id="simForm" class="config-form" autocomplete="off">
       <section class="pro-card console-card sim-console-card">
         
@@ -276,9 +274,9 @@
       </section>
     </form>
 
-    <!-- ==============================================================
+  
          3. DYNAMIC LIVE KPI CARDS STRIP (4 METRICS)
-         ============================================================== -->
+  
     <section class="analytics-kpi-grid">
       
       <!-- KPI 1: Live Disruption Probability -->
@@ -335,9 +333,9 @@
 
     </section>
 
-    <!-- ==============================================================
+   
          4. DYNAMIC CHARTS ROW 1: RISK GAUGE & 6-AXIS RISK RADAR
-         ============================================================== -->
+ 
     <section class="analytics-charts-grid">
       
       <!-- Chart 1: Dynamic Disruption Probability Gauge -->
@@ -387,9 +385,9 @@
 
     </section>
 
-    <!-- ==============================================================
+
          5. DYNAMIC CHARTS ROW 2: MODAL WHAT-IF & WEATHER STRESS-TEST
-         ============================================================== -->
+  
     <section class="analytics-charts-grid">
 
       <!-- Chart 3: Modal Comparison What-If Simulation -->
@@ -434,9 +432,8 @@
 
     </section>
 
-    <!-- ==============================================================
          6. CHARTS ROW 3: DELAY WATERFALL & TACTICAL RECOMMENDATIONS
-         ============================================================== -->
+
     <section class="analytics-charts-grid">
 
       <!-- Chart 5: Delivery Timeline & Delay Buffer Waterfall -->
@@ -515,9 +512,12 @@
 
   </div>
 
-  <!-- Inject Initial Default Prediction JSON for Immediate Rendering -->
+
+  <!-- Inject Analytics Data JSON for Chart.js Rendering -->
+  <script id="analytics-data" type="application/json">{{ analytics | tojson | safe }}</script>
   <script>
-    window.INITIAL_PREDICTION = {{ initial_prediction | tojson | safe }};
+    window.ANALYTICS_DATA = JSON.parse(document.getElementById('analytics-data').textContent || '{}');
+
   </script>
 
   <!-- Script for Rendering Dynamic Prediction Visualizations -->

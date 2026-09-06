@@ -1,24 +1,17 @@
-/* ==========================================================================
-   SUPPLYCHAIN.AI - EXECUTIVE ENTERPRISE DESIGN SYSTEM
-   ========================================================================== */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap');
 
 :root {
-  /* Core Surface Palette */
   --surface-ground: #070a13;
   --surface-card: #0f172a;
   --surface-card-subtle: #141f36;
   --surface-input: #0a0f1d;
   --surface-popover: #1e293b;
 
-  /* Borders & Accents */
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-muted: rgba(255, 255, 255, 0.14);
   --border-focus: #38bdf8;
   --border-focus-glow: rgba(56, 189, 248, 0.25);
 
-  /* Typography */
   --text-pure: #ffffff;
   --text-main: #e2e8f0;
   --text-muted: #94a3b8;
@@ -27,7 +20,6 @@
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Status Colors */
   --color-brand-cyan: #38bdf8;
   --color-brand-blue: #2563eb;
   --color-success: #10b981;
@@ -42,7 +34,6 @@
   --color-warning-bg: rgba(245, 158, 11, 0.12);
   --color-warning-border: rgba(245, 158, 11, 0.3);
 
-  /* Radii & Shadows */
   --radius-xs: 4px;
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -87,7 +78,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Master Centered Workspace */
 .dashboard-container {
   width: 100%;
   max-width: 1380px;
@@ -99,7 +89,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Authentication screen */
 .login-page {
   display: grid;
   place-items: center;
@@ -272,7 +261,6 @@ body {
   border-color: var(--border-focus);
 }
 
-/* Professional Enterprise Card */
 .pro-card {
   background: var(--surface-card);
   border: 1px solid var(--border-subtle);
@@ -323,9 +311,6 @@ body {
   background: rgba(56, 189, 248, 0.1);
 }
 
-/* --------------------------------------------------
-   1. EXECUTIVE NAVIGATION BAR
-   -------------------------------------------------- */
 
 .app-navbar {
   display: flex;
@@ -409,9 +394,7 @@ body {
   white-space: nowrap;
 }
 
-/* ==============================================================
-   PAGE NAVIGATION TABS (BIGGER, FIXED SIZING, STABLE)
-   ============================================================== */
+
 
 .nav-links-tabs {
   display: flex;
@@ -470,7 +453,6 @@ body {
   filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.7));
 }
 
-/* Corridor Badge */
 .nav-center-corridor {
   display: flex;
   align-items: center;
@@ -514,7 +496,6 @@ body {
   font-size: 0.78rem;
 }
 
-/* Meta Pills Group */
 .nav-meta-group {
   display: flex;
   align-items: center;
@@ -629,10 +610,6 @@ body {
   }
 }
 
-/* --------------------------------------------------
-   2. UNIFIED CONFIGURATION CONSOLE
-   -------------------------------------------------- */
-
 .console-card {
   padding: 0 0 0.5rem 0;
 }
@@ -735,7 +712,6 @@ body {
   color: #fff;
 }
 
-/* Alerts */
 .pro-alert {
   margin: 0.5rem 1.25rem;
   padding: 0.6rem 0.85rem;
@@ -759,7 +735,6 @@ body {
   border: 1px solid var(--color-warning-border);
 }
 
-/* Feasibility Matrix Badges Strip */
 .feasibility-strip {
   padding: 0.6rem 1.25rem 0.9rem 1.25rem;
   border-bottom: 1px solid var(--border-subtle);
@@ -818,7 +793,6 @@ body {
   box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
 }
 
-/* Parameters Matrix Grid (8 boxes) */
 .params-matrix-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -832,7 +806,6 @@ body {
   }
 }
 
-/* Action Strip */
 .action-strip {
   display: flex;
   align-items: center;
@@ -893,9 +866,6 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* --------------------------------------------------
-   3. TWIN INTELLIGENCE WORKSPACE (MAP & REPORT)
-   -------------------------------------------------- */
 
 .twin-workspace-grid {
   display: grid;
@@ -910,7 +880,6 @@ body {
   }
 }
 
-/* Left Card: Map */
 .map-workspace-card {
   display: flex;
   flex-direction: column;
@@ -969,7 +938,6 @@ body {
   display: inline-block;
 }
 
-/* Right Card: AI Disruption Intelligence Center */
 .report-workspace-card {
   display: flex;
   flex-direction: column;
@@ -985,7 +953,6 @@ body {
   border: 1px solid rgba(56, 189, 248, 0.25);
 }
 
-/* Idle State (Before Run) */
 .report-idle-state {
   flex: 1;
   display: flex;
@@ -1029,7 +996,6 @@ body {
   line-height: 1.5;
 }
 
-/* Evaluated State (After Run) */
 .report-evaluated-state {
   padding: 1rem 1.25rem;
   display: flex;
@@ -1043,7 +1009,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Outcome Hero Banner */
 .outcome-hero-banner {
   background: var(--surface-card-subtle);
   border: 1px solid var(--border-subtle);
@@ -1115,7 +1080,7 @@ body {
   color: #34d399;
 }
 
-/* Progress Meter */
+
 .meter-track {
   width: 100%;
   height: 8px;
@@ -1173,7 +1138,6 @@ body {
   line-height: 1.35;
 }
 
-/* Delivery Metrics (2 boxes) */
 .delivery-metrics-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1210,7 +1174,6 @@ body {
   color: var(--color-brand-cyan);
 }
 
-/* Factors Section */
 .section-micro-title {
   font-size: 0.7rem;
   font-weight: 700;
@@ -1284,7 +1247,6 @@ body {
   color: #f87171;
 }
 
-/* Recommendations Checklist */
 .recommendations-container {
   background: rgba(10, 16, 30, 0.8);
   border: 1px solid rgba(56, 189, 248, 0.2);
@@ -1316,7 +1278,6 @@ body {
   margin-top: 0.05rem;
 }
 
-/* Footer */
 .app-footer {
   text-align: center;
   font-size: 0.74rem;
@@ -1324,9 +1285,6 @@ body {
   padding: 0.75rem 0;
 }
 
-/* ==============================================================
-   ANALYTICS & VISUALIZATIONS PAGE STYLING
-   ============================================================== */
 
 .analytics-kpi-grid {
   display: grid;
@@ -1411,7 +1369,6 @@ body {
 .text-cyan { color: #38bdf8 !important; }
 .text-green { color: #34d399 !important; }
 
-/* Analytics Charts Grid */
 .analytics-charts-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1455,7 +1412,6 @@ body {
   background: rgba(11, 17, 32, 0.4);
 }
 
-/* Data Table */
 .table-card {
   min-height: 350px;
 }
@@ -1529,9 +1485,6 @@ body {
   color: #fb923c !important;
 }
 
-/* ==============================================================
-   DYNAMIC SIMULATION CONSOLE & REAL-TIME VISUALIZATIONS
-   ============================================================== */
 
 .sim-notice-tag {
   font-size: 0.74rem;
@@ -1543,7 +1496,6 @@ body {
   font-weight: 600;
 }
 
-/* Speedometer Gauge Layout */
 .gauge-chart-wrapper {
   display: flex;
   align-items: center;
@@ -1580,7 +1532,6 @@ body {
   margin-top: 0.25rem;
 }
 
-/* Jump to Analytics Banner (on Page 1) */
 .analytics-jump-banner {
   margin-top: 0.6rem;
   background: linear-gradient(135deg, rgba(56, 189, 248, 0.12), rgba(15, 23, 42, 0.8));
@@ -1638,7 +1589,6 @@ body {
   box-shadow: 0 6px 18px rgba(56, 189, 248, 0.5);
 }
 
-/* Telemetry Chips Grid */
 .telemetry-chips-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -1670,4 +1620,3 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-

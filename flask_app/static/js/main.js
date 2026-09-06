@@ -1,7 +1,3 @@
-/**
- * SupplyChain.AI - Executive Dashboard Controller
- */
-
 document.addEventListener('DOMContentLoaded', () => {
   // Navigation elements
   const navOriginText = document.getElementById('navOriginText');
